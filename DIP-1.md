@@ -11,7 +11,7 @@
 1. [What is a DIP ?](#WhatisaDIP)
 2. [Dip Rationale](#DipRationale)
 3. [Dip Editors](#DipEditors)
-
+3. [Dip Types](#DipTypes)
 
 
 
@@ -45,13 +45,13 @@ Editors don’t pass judgment on DIPs, they merely do the administrative & edito
 
 ## DIP Types <a name="DIPTypes"></a>
 There are three types of DIP:
-  *	A Standard Track DIP describes any change that affects most or all DERO implementations, such as a change to the network protocol, a change in block or transaction validity rules, proposed application standards/conventions, or any change or addition that affects the interoperability of applications using DERO. Furthermore Standard DIPs can be broken down into the following categories. Standards Track DIPs consist of three parts, a design document, implementation, and finally if warranted an update to the formal specification.
-   * Core - improvements requiring a consensus fork as well as changes that are not necessarily consensus critical but may be relevant to core dev discussions such as miner/node strategy changes.
-   * Networking – core dev to comment
-o	Interface - includes improvements around client API/RPC specifications and standards and also certain language-level standards. The label “interface” aligns with the interface repository and discussion should primarily occur in that repository before a DIP is submitted to the DIPs repository.
-o	ERC - application-level standards and conventions, including contract standards such as token standards, name registries, URI schemes, library/package formats and wallet formats.
-•	A Meta DIP describes a process surrounding Ethereum or proposes a change to (or an event in) a process. Process DIPs are like Standards Track DIPs but apply to areas other than the DERO protocol itself. They may propose an implementation, but not to DERO’s codebase; they often require community consensus; unlike Informational DIPs, they are more than recommendations, and users are typically not free to ignore them. Examples include procedures, guidelines, changes to the decision-making process, and changes to the tools or environment used in DERO development. Any meta-DIP is also considered a Process DIP.
-•	An Informational DIP describes a DERO design issue, or provides general guidelines or information to the DERO community, but does not propose a new feature. Informational DIPs do not necessarily represent DERO community consensus or a recommendation, so users and implementers are free to ignore Informational DIPs or follow their advice.
+  *	A **Standard Track DIP** describes any change that affects most or all DERO implementations, such as a change to the network protocol, a change in block or transaction validity rules, proposed application standards/conventions, or any change or addition that affects the interoperability of applications using DERO. Furthermore Standard DIPs can be broken down into the following categories. Standards Track DIPs consist of three parts, a design document, implementation, and finally if warranted an update to the formal specification.
+    * **Core** - improvements requiring a consensus fork as well as changes that are not necessarily consensus critical but may be relevant to core dev discussions such as miner/node strategy changes.
+    * **Networking** – core dev to comment
+    *	**Interface** - includes improvements around client API/RPC specifications and standards and also certain language-level standards. The label “interface” aligns with the interface repository and discussion should primarily occur in that repository before a DIP is submitted to the DIPs repository.
+    *	**ERC** - application-level standards and conventions, including contract standards such as token standards, name registries, URI schemes, library/package formats and wallet formats.
+  *	A **Meta DIP** describes a process surrounding Ethereum or proposes a change to (or an event in) a process. Process DIPs are like Standards Track DIPs but apply to areas other than the DERO protocol itself. They may propose an implementation, but not to DERO’s codebase; they often require community consensus; unlike Informational DIPs, they are more than recommendations, and users are typically not free to ignore them. Examples include procedures, guidelines, changes to the decision-making process, and changes to the tools or environment used in DERO development. Any meta-DIP is also considered a Process DIP.
+  *	An Informational DIP describes a DERO design issue, or provides general guidelines or information to the DERO community, but does not propose a new feature. Informational DIPs do not necessarily represent DERO community consensus or a recommendation, so users and implementers are free to ignore Informational DIPs or follow their advice.
 It is highly recommended that a single DIP contain a single key proposal or new idea. The more focused the DIP, the more successful it tends to be. A change to one client doesn’t require an DIP; a change that affects multiple clients, or defines a standard for multiple apps to use, does.
 A DIP must meet certain minimum criteria. It must be a clear and complete description of the proposed enhancement. The enhancement must represent a net improvement. The proposed implementation, if applicable, must be solid and must not complicate the protocol unduly.
 
