@@ -7,12 +7,12 @@
 
 ## Table of contents
 1. [What is a DIP ?](#WhatisaDIP)
-2. [Dip Rationale](#DipRationale)
-3. [Dip Editors](#DipEditors)
-4. [Dip Types](#DipTypes)
-5. [Dip Formats and templates](#DipFormats)
-6. [Dip Workflow](#DipWorkflow)
-7. [What makes a succesfull DIP](#DipSuccess)
+2. [What makes a succesfull DIP](#DipSuccess)
+3. [Dip Rationale](#DipRationale)
+4. [Dip Editors](#DipEditors)
+5. [Dip Types](#DipTypes)
+6. [Dip Formats and templates](#DipFormats)
+7. [Dip Workflow](#DipWorkflow)
 8. [DIP Header Preamble](#DipPreamble)
 9. [History](#DipHistory)
 10. [Copyright](#DipCopyright)
@@ -21,6 +21,20 @@
 ## What is a DIP ? <a name="WhatisaDIP"></a>
 DIP stands for Dero Improvement Proposal. A DIP is a design document providing information to the Dero community, describing a new feature or its processes or environment. The DIP provides a concise technical specification of the feature and a rationale for the feature. The DIP author is responsible for building consensus within the community and documenting dissenting opinions.
 
+## What belongs in a successful EIP? <a name="DIPSucces"></a>
+Each EIP should have the following parts:
+
+  * **Preamble** - RFC 822 style headers containing metadata about the DIP, including the DIP number, a short descriptive title (limited to a maximum of 44 characters), and the author details. See [below for details](#DipPreamble).
+  * **Simple Summary** - “If you can’t explain it simply, you don’t understand it well enough.” Provide a simplified and layman-accessible explanation of the EIP.
+  * **Abstract** - a short (~200 word) description of the technical issue being addressed.
+  * **Motivation** (*optional) - The motivation is critical for DIPs that want to change the Ethereum protocol. It should clearly explain why the existing protocol specification is inadequate to address the problem that the DIP solves. DIP submissions without sufficient motivation may be rejected outright.
+  * **Specification** - The technical specification should describe the syntax and semantics of any new feature. The specification should be detailed enough to allow competing, interoperable implementations for any of the current DERO platforms **<< NEEDS REVIEW IF APPLICABLE**.
+  * **Rationale** - The rationale fleshes out the specification by describing what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work, e.g. how the feature is supported in other languages. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.
+  * **Backwards Compatibility** - All DIPs that introduce backwards incompatibilities must include a section describing these incompatibilities and their severity. The DIP must explain how the author proposes to deal with these incompatibilities. DIP submissions without a sufficient backwards compatibility treatise may be rejected outright.
+  * **Test Cases** - Test cases for an implementation are mandatory for DIPs that are affecting consensus changes. Other DIPs can choose to include links to test cases if applicable.
+  * **Implementations** - The implementations must be completed before any DIP is given status “Final”, but it need not be completed before the DIP is merged as draft. While there is merit to the approach of reaching consensus on the specification and rationale before writing code, the principle of “rough consensus and running code” is still useful when it comes to resolving many discussions of API details.
+  * **Copyright Waiver** - All DIPs must be in the public domain. See the bottom of this DIP for an example [copyright waiver](#DIPCopyright).
+  
 ## DIP Rationale <a name="DIPRationale"></a>
 We intend DIPs to be the primary instrument for proposing new features, for collecting community technical input on an issue, and for documenting the design decisions that have in result gone into Dero. DIPs are maintained as documents with a revision control. For DERO implementers, DIPs are a convenient way to track the progress of their implementation. Ideally each implementation maintainer would list the DIPs that they have implemented. This will give end users a convenient way to know the current status of a given implementation or library.
 
@@ -94,20 +108,6 @@ Other exceptional statuses include:
   * **Active** – This is similar to Final, but denotes an DIP which may be updated without changing its DIP number.
   * **Superseded** – An DIP which was previously final but is no longer considered state-of-the-art. Another DIP will be in Final status and reference the Superseded DIP.
   
-## What belongs in a successful EIP? <a name="DIPSucces"></a>
-Each EIP should have the following parts:
-
-  * **Preamble** - RFC 822 style headers containing metadata about the DIP, including the DIP number, a short descriptive title (limited to a maximum of 44 characters), and the author details. See [below for details](#DipPreamble).
-  * **Simple Summary** - “If you can’t explain it simply, you don’t understand it well enough.” Provide a simplified and layman-accessible explanation of the EIP.
-  * **Abstract** - a short (~200 word) description of the technical issue being addressed.
-  * **Motivation** (*optional) - The motivation is critical for DIPs that want to change the Ethereum protocol. It should clearly explain why the existing protocol specification is inadequate to address the problem that the DIP solves. DIP submissions without sufficient motivation may be rejected outright.
-  * **Specification** - The technical specification should describe the syntax and semantics of any new feature. The specification should be detailed enough to allow competing, interoperable implementations for any of the current DERO platforms **<< NEEDS REVIEW IF APPLICABLE**.
-  * **Rationale** - The rationale fleshes out the specification by describing what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work, e.g. how the feature is supported in other languages. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.
-  * **Backwards Compatibility** - All DIPs that introduce backwards incompatibilities must include a section describing these incompatibilities and their severity. The DIP must explain how the author proposes to deal with these incompatibilities. DIP submissions without a sufficient backwards compatibility treatise may be rejected outright.
-  * **Test Cases** - Test cases for an implementation are mandatory for DIPs that are affecting consensus changes. Other DIPs can choose to include links to test cases if applicable.
-  * **Implementations** - The implementations must be completed before any DIP is given status “Final”, but it need not be completed before the DIP is merged as draft. While there is merit to the approach of reaching consensus on the specification and rationale before writing code, the principle of “rough consensus and running code” is still useful when it comes to resolving many discussions of API details.
-  * **Copyright Waiver** - All DIPs must be in the public domain. See the bottom of this DIP for an example [copyright waiver](#DIPCopyright).
-
 # EIP Header Preamble <a name="DIPPreamble"></a>
 Each EIP must begin with an RFC 822 style header preamble, preceded and followed by three hyphens (`---`). The headers must appear in the following order. Headers marked with “*” are optional and are described below. All other headers are required.
 
