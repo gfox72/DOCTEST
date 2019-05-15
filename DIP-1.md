@@ -1,8 +1,6 @@
-**AUTHOR:** DCAB, Dank
-
-**STATUS:** Active
-
-**Created** 2019-05-14
+**AUTHOR:** DCAB, Dank<br/>
+**STATUS:** Active<br/>
+**Created:** 2019-05-14<br/>
 
 
 # DIP-1: DIP Purpose and Guidelines 
