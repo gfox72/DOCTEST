@@ -24,11 +24,11 @@
 ## What is a DIP ? <a name="WhatisaDIP"></a>
 DIP stands for Dero Improvement Proposal. A DIP is a design document providing information to the Dero community, describing a new feature or its processes or environment. The DIP provides a concise technical specification of the feature and a rationale for the feature. The DIP author is responsible for building consensus within the community and documenting dissenting opinions.
 
-## What makes a successful EIP? <a name="DIPSucces"></a>
-Each EIP should have the following parts:
+## What makes a successful DIP? <a name="DIPSucces"></a>
+Each DIP should have the following parts:
 
   * **Preamble** - RFC 822 style headers containing metadata about the DIP, including the DIP number, a short descriptive title (limited to a maximum of 44 characters), and the author details. See [below for details](#DipPreamble).
-  * **Simple Summary** - “If you can’t explain it simply, you don’t understand it well enough.” Provide a simplified and layman-accessible explanation of the EIP.
+  * **Simple Summary** - “If you can’t explain it simply, you don’t understand it well enough.” Provide a simplified and layman-accessible explanation of the DIP.
   * **Abstract** - a short (~200 word) description of the technical issue being addressed.
   * **Motivation** (*optional) - The motivation is critical for DIPs that want to change the Ethereum protocol. It should clearly explain why the existing protocol specification is inadequate to address the problem that the DIP solves. DIP submissions without sufficient motivation may be rejected outright.
   * **Specification** - The technical specification should describe the syntax and semantics of any new feature. The specification should be detailed enough to allow competing, interoperable implementations for any of the current DERO platforms **<< NEEDS REVIEW IF APPLICABLE**.
@@ -172,10 +172,10 @@ No `discussions-to` header is necessary if the DIP is being discussed privately 
 As a single exception, discussions-to cannot point to GitHub pull requests.
 
 `type` header
-The `type` header specifies the type of EIP: Standards Track, Meta, or Informational. If the track is Standards please include the subcategory (core, networking, interface, or ERC).
+The `type` header specifies the type of DIP: Standards Track, Meta, or Informational. If the track is Standards please include the subcategory (core, networking, interface, or ERC).
 
 `category` header
-The `category` header specifies the EIP’s category. This is required for standards-track EIPs only.
+The `category` header specifies the DIP’s category. This is required for standards-track DIPs only.
 
 `created header`
 The `created` header records the date that the DIP was assigned a number. Both headers should be in yyyy-mm-dd format, e.g. 2001-08-14.
