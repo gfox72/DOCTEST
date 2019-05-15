@@ -1,9 +1,16 @@
+---
+dip: 1
+title: DIP Purpose and guidelines
+author: gfox, dank
+created: 2019-05-14
+status: ACTIVE
+type: DIP
+category: guideline
+---
+
+
+
 <img align="right" src="/ASSETS/DERO_LOGO_320x320.png" width="80">
-
-
-**AUTHOR:** DCAB, Dank<br/>
-**STATUS:** Active<br/>
-**Created:** 2019-05-14<br/>
 
 
 # DIP-1: DIP Purpose and Guidelines 
@@ -177,7 +184,7 @@ The `type` header specifies the type of DIP: Standards Track, Meta, or Informati
 `category` header
 The `category` header specifies the DIP’s category. This is required for standards-track DIPs only.
 
-`created header`
+`created` header
 The `created` header records the date that the DIP was assigned a number. Both headers should be in yyyy-mm-dd format, e.g. 2001-08-14.
 
 `updated` header
