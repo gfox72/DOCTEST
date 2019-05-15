@@ -27,3 +27,15 @@ The current DIP editors are (discord handles):
 
 Dank - Dank#8384<br/>
 Captain - Captain#0795<br/>
+
+## DIP Editor Responsibilities
+For each new DIP submitted, an editor does the following:
+•	Read the DIP to check if it is ready: sound and complete. The ideas must make technical sense, even if they don’t seem likely to get to final status.
+•	The title should accurately describe the content.
+•	Check the DIP for language (spelling, grammar, sentence structure, etc.), markup, code style.
+If the DIP isn’t ready, the editor will send it back to the author for revision with specific instructions.
+Once the DIP is ready for the repository, the DIP editor will:
+•	Assign a DIP number (generally the PR number or, if preferred by the author, the Issue # if there was discussion in the Issues section of this repository about this DIP)
+•	Send a message back to the DIP author with the next step.
+Many DIPs are written and maintained by developers with write access to the DERO codebase. The DIP editors monitor DIP changes and correct any structure, grammar, spelling, or markup mistakes they see.
+Editors don’t pass judgment on DIPs, they merely do the administrative & editorial part.
