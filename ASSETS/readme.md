@@ -7,5 +7,6 @@
 ![alt text][IMG_PROJECT]
 ![alt text][IMG_BANNER]
 
-# RESCALING EXAMPLE
+# RESCALING AND ALIGNMENT EXAMPLES
 <img src="https://github.com/gfox72/DOCTEST/blob/master/ASSETS/DERO_PROJECT.png" alt="alt text" width="800">
+<img style="float: right;" src="https://github.com/gfox72/DOCTEST/blob/master/ASSETS/DERO_LOGO.png" alt="DERO RULES" width="80">
