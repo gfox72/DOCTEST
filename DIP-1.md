@@ -1,3 +1,6 @@
+<img align="right" src="/ASSETS/DERO_LOGO_320x320.png" width="80">
+
+
 **AUTHOR:** DCAB, Dank<br/>
 **STATUS:** Active<br/>
 **Created:** 2019-05-14<br/>
