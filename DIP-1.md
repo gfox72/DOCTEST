@@ -60,9 +60,36 @@ It is highly recommended that a single DIP contain a single key proposal or new 
 A DIP must meet certain minimum criteria. It must be a clear and complete description of the proposed enhancement. The enhancement must represent a net improvement. The proposed implementation, if applicable, must be solid and must not complicate the protocol unduly.
 
 ## DIP Formats and Templates <a name="DIPFormats"></a>
-DIPs should be written in [markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) style. Image files should be included in a subdirectory of the `assets` folder for that DIP as follows: `assets/dip-X` (for dip X). When linking to an image in the DIP, use relative links such as ../assets/dip-X/image.png.
-
-
-
+DIPs should be written in [markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) style. Image files should be included in a subdirectory of the `assets` folder for that DIP as follows: `assets/dip-X` (for dip X). When linking to an image in the DIP, use relative links such as `../assets/dip-X/image.png`.
 
 ## DIP Workflow <a name="DIPWorkflow"></a>
+Parties involved in the process are you, the champion or DIP author, the DIP editors, and the DERO Core Developpers
+
+**:warning:** Before you begin, vet your idea, this will save you time. Ask the DERO community first if an idea is original to avoid wasting time on something that will be rejected based on prior research (searching the Internet does not always do the trick). It also helps to make sure the idea is applicable to the entire community and not just the author. Just because an idea sounds good to the author does not mean it will work for most people in most areas where DERO is used. Examples of appropriate public forums to gauge interest around your DIP include DERO discord (general channel), the DERO Community Advisory Board members or DERO telegram.
+
+Your role as the champion is to write the DIP using the style and format described below, shepherd the discussions in the appropriate forums, and build community consensus around the idea. Following is the process that a successful DIP will move along:
+
+`[WIP] -> [DRAFT] -> [LAST CALL] -> [ACCEPTED] -> [FINAL]`
+
+Each status change is requested by the DIP author and reviewed by the DIP editors. Please include a link to where people should continue discussing your DIP. The DIP editors will process these requests as per the conditions below.
+  * **Active** – Some Informational and Process DIPs may also have a status of “Active” if they are never meant to be completed. 
+  * **Work in progress** (WIP) – Once the champion has asked the community whether an idea has any chance of support, they will write a draft DIP as a pull request **<<NEEDS LINK**. Consider including an implementation if this will aid people in studying the DIP.
+    * :arrow_right: Draft – If agreeable, DIP editor will assign the DIP a number (generally the issue or PR number related to the DIP). The DIP editor will not unreasonably deny an DIP.
+    * :x: Draft – Reasons for denying draft status include being too unfocused, too broad, duplication of effort, being technically unsound, not providing proper motivation or addressing backwards compatibility, or not in keeping with the DERO philosophy **<<NEEDS CREATION&LINK**.
+  * **Draft** – Once the first draft has been merged, you may submit follow-up pull requests with further changes to your draft until such point as you believe the DIP to be mature and ready to proceed to the next status. An DIP in draft status must be implemented to be considered for promotion to the next status (ignore this requirement for core DIPs).
+    * :arrow_right: Last Call – If agreeable, the DIP editor will assign Last Call status and set a review end date `(review-period-end)`, normally 14 days later.
+    * :x: Last Call – A request for Last Call status will be denied if material changes are still expected to be made to the draft. We hope that DIPs only enter Last Call once, so as to avoid unnecessary noise on the RSS feed.
+  * **Last Call** – This DIP will listed prominently on the website **<<NEEDS LINKK** (subscribe via RSS at last-call.xml **<<NEEDS LINKK**).
+    * :x: A Last Call which results in material changes or substantial unaddressed technical complaints will cause the DIP to revert to Draft.
+    * :arrow_right: Accepted (Core DIPs only) – A successful Last Call without material changes or unaddressed technical complaints will become Accepted.
+    * :arrow_right: Final (Not core DIPs) – A successful Last Call without material changes or unaddressed technical complaints will become Final.
+  * **Accepted (Core DIPs only)** – This DIP is in the hands of the Ethereum client developers. Their process for deciding whether to encode it into their clients as part of a hard fork is not part of the DIP process.
+    * :arrow_right: Final – Standards Track Core DIPs must be implemented in at least three viable Ethereum clients before it can be considered Final. When the implementation is complete and adopted by the community, the status will be changed to “Final”.
+  * **Final** – This DIP represents the current state-of-the-art. A Final DIP should only be updated to correct errata.
+  
+Other exceptional statuses include:
+
+  * **Deferred** – This is for core DIPs that have been put off for a future hard fork.
+  * **Rejected** – An DIP that is fundamentally broken or a Core DIP that was rejected by the Core Devs and will not be implemented.
+  * **Active** – This is similar to Final, but denotes an DIP which may be updated without changing its DIP number.
+  * **Superseded** – An DIP which was previously final but is no longer considered state-of-the-art. Another DIP will be in Final status and reference the Superseded DIP.
