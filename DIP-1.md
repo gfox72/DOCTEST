@@ -21,7 +21,7 @@
 ## What is a DIP ? <a name="WhatisaDIP"></a>
 DIP stands for Dero Improvement Proposal. A DIP is a design document providing information to the Dero community, describing a new feature or its processes or environment. The DIP provides a concise technical specification of the feature and a rationale for the feature. The DIP author is responsible for building consensus within the community and documenting dissenting opinions.
 
-## What belongs in a successful EIP? <a name="DIPSucces"></a>
+## What makes a successful EIP? <a name="DIPSucces"></a>
 Each EIP should have the following parts:
 
   * **Preamble** - RFC 822 style headers containing metadata about the DIP, including the DIP number, a short descriptive title (limited to a maximum of 44 characters), and the author details. See [below for details](#DipPreamble).
