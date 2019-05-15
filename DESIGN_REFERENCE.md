@@ -4,6 +4,7 @@ ref: 1
 title: DERO DOCUMENT DESIGN REFERENCE
 author: gfox
 created: 2019/05/14
+status: DRAFT
 ---
 
 <img align="right" src="/ASSETS/DERO_LOGO_320x320.png" width="80">
@@ -74,6 +75,7 @@ at top of the document:
 > `title:`</br>
 > `author:`</br>
 > `created:`</br>
+> `status:`</br>
 > `---`</br>
 
 Then, the DERO logo should be used:
