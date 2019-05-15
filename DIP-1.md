@@ -108,10 +108,10 @@ Other exceptional statuses include:
   * **Active** – This is similar to Final, but denotes an DIP which may be updated without changing its DIP number.
   * **Superseded** – An DIP which was previously final but is no longer considered state-of-the-art. Another DIP will be in Final status and reference the Superseded DIP.
   
-# EIP Header Preamble <a name="DIPPreamble"></a>
-Each EIP must begin with an RFC 822 style header preamble, preceded and followed by three hyphens (`---`). The headers must appear in the following order. Headers marked with “*” are optional and are described below. All other headers are required.
+# DIP Header Preamble <a name="DIPPreamble"></a>
+Each DIP must begin with an RFC 822 style header preamble, preceded and followed by three hyphens (`---`). The headers must appear in the following order. Headers marked with “*” are optional and are described below. All other headers are required.
 
-`eip:` (this is determined by the EIP editor)
+`dip:` (this is determined by the DIP editor)
 
 `title:`
 
@@ -131,20 +131,20 @@ status: <Draft	Last Call	Accepted	Final	Active	Deferred	Rejected	Superseded>
 
 `* updated:`
 
-`* requires:` <EIP number(s)>
+`* requires:` <DIP number(s)>
 
-`* replaces:` <EIP number(s)>
+`* replaces:` <DIP number(s)>
 
-`* superseded-by:` <EIP number(s)>
+`* superseded-by:` <DIP number(s)>
 
-`* resolution:` <a url pointing to the resolution of this EIP>
+`* resolution:` <a url pointing to the resolution of this DIP>
 
 Headers that permit lists must separate elements with commas.
 
 Headers requiring dates will always do so in the format of ISO 8601 (yyyy-mm-dd).
 
 `author` header
-The `author` header optionally lists the names, email addresses or usernames of the authors/owners of the EIP. Those who prefer anonymity may use a username only, or a first name and a username. The format of the author header value must be:
+The `author` header optionally lists the names, email addresses or usernames of the authors/owners of the DIP. Those who prefer anonymity may use a username only, or a first name and a username. The format of the author header value must be:
 
 > Random J. User <address@dom.ain>
 
