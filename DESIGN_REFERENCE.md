@@ -30,7 +30,7 @@ This document provides guidelines to the process of documentation creation. It c
 and will also with some examples, provide guidance how these documents should be created and formatted. It is expected that once the basic documentation 
 is established, the community will use this document to support further creation and editing.
 
-## Who does what ? <a name="about"></a>
+## Who does what ? <a name="whoDoesWhat"></a>
 The Dero project involves several groups of people interacting with eachother:
   * **Core** development team : develops technology and master all the technical knowhow
   * **Staff** members : interact with Core development team and perform specifc trusted functions such as moderator, marketing, documentation
@@ -64,7 +64,7 @@ prioritized and directed to document authors, approved and published.
 
 `source of request > documentation lead > document creation by author > approval by doc lead  > publish`
 
-## Design guidelines <a name="docWorkflow"></a>
+## Design guidelines <a name="docDesign"></a>
 Following design guidelines apply to all types of documentation and are to be applied by document authors:
 
 Each document should be written in markdown format and start with a header as descrived also in DIB-1 which will provide a table structure 
