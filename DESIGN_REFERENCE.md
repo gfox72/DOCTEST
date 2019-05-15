@@ -94,18 +94,19 @@ After the document title, there should be a table of contents.
 > `2. [Chapter2](#link2)` </br>
 > `3. [You get the point](#link3)` </br>
 
-The the first reference/chapter with the link used for the table of contents or reference within the document:
+Then the first reference/chapter with the link used for the table of contents or reference within the document:
 > `## Chapter 1 <a name="link1"></a>`
 
 For formatting you can reference the [general markdown syntax for github](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) but hereafter some quick examples of the most commonly used ones:
 
 `**bold text**`gives **bold text**
-` * first bullet`gives a bullet like below
+` * first bullet`gives a bullet like below</br>
   * first bullet
-`    * second bullet`givess a secondary bullet like below
+
+`    * second bullet`givess a secondary bullet like below</br>
     * second bullet
     
-This document itself can also be reviewed for most common MD syntax.
+:info: This document itself can also be reviewed for most common MD syntax.
 
 
 
