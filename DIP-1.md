@@ -11,6 +11,9 @@ category: guideline
 <img align="right" src="/ASSETS/DERO_LOGO_320x320.png" width="80">
 
 
+
+
+
 # DIP-1: DIP Purpose and Guidelines 
 
 ## Table of contents
