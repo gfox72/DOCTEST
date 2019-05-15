@@ -2,7 +2,7 @@
 type: INFO
 ref: 1
 title: DERO DOCUMENT DESIGN REFERENCE
-author: Gfox
+author: gfox
 created: 2019/05/14
 ---
 
@@ -99,14 +99,14 @@ Then the first reference/chapter with the link used for the table of contents or
 
 For formatting you can reference the [general markdown syntax for github](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) but hereafter some quick examples of the most commonly used ones:
 
-`**bold text**`gives **bold text**
+`**bold text**`gives **bold text**</br>
 ` * first bullet`gives a bullet like below</br>
   * first bullet
 
 `    * second bullet`givess a secondary bullet like below</br>
     * second bullet
     
-:info: This document itself can also be reviewed for most common MD syntax.
+:exclamation: This document itself can also be reviewed for most common MD syntax.
 
 
 
