@@ -25,9 +25,5 @@ We intend DIPs to be the primary instrument for proposing new features, for coll
 ## DIP Editors <a name="DIPEditors"></a>
 The current DIP editors are (discord handles):
 
-Dank - Dank#8384 . 
-Captain - Captain#0795
-
-
-
-
+Dank - Dank#8384<br/>
+Captain - Captain#0795<br/>
