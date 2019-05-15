@@ -11,7 +11,9 @@
 1. [What is a DIP ?](#WhatisaDIP)
 2. [Dip Rationale](#DipRationale)
 3. [Dip Editors](#DipEditors)
-3. [Dip Types](#DipTypes)
+4. [Dip Types](#DipTypes)
+5. [Dip Formats and templates](#DipFormats)
+6. [Dip Workflow](#DipWorkflow)
 
 
 
@@ -25,8 +27,8 @@ We intend DIPs to be the primary instrument for proposing new features, for coll
 ## DIP Editors <a name="DIPEditors"></a>
 The current DIP editors are (discord handles):
 
-Dank - Dank#8384<br/>
-Captain - Captain#0795<br/>
+  * `Dank - Dank#8384` <br/>
+  * `Captain - Captain#0795` <br/>
 
 ## DIP Editor Responsibilities
 For each new DIP submitted, an editor does the following:
@@ -51,7 +53,16 @@ There are three types of DIP:
     *	**Interface** - includes improvements around client API/RPC specifications and standards and also certain language-level standards. The label “interface” aligns with the interface repository and discussion should primarily occur in that repository before a DIP is submitted to the DIPs repository.
     *	**ERC** - application-level standards and conventions, including contract standards such as token standards, name registries, URI schemes, library/package formats and wallet formats.
   *	A **Meta DIP** describes a process surrounding Ethereum or proposes a change to (or an event in) a process. Process DIPs are like Standards Track DIPs but apply to areas other than the DERO protocol itself. They may propose an implementation, but not to DERO’s codebase; they often require community consensus; unlike Informational DIPs, they are more than recommendations, and users are typically not free to ignore them. Examples include procedures, guidelines, changes to the decision-making process, and changes to the tools or environment used in DERO development. Any meta-DIP is also considered a Process DIP.
-  *	An Informational DIP describes a DERO design issue, or provides general guidelines or information to the DERO community, but does not propose a new feature. Informational DIPs do not necessarily represent DERO community consensus or a recommendation, so users and implementers are free to ignore Informational DIPs or follow their advice.
+  *	An **Informational DIP** describes a DERO design issue, or provides general guidelines or information to the DERO community, but does not propose a new feature. Informational DIPs do not necessarily represent DERO community consensus or a recommendation, so users and implementers are free to ignore Informational DIPs or follow their advice.
+
 It is highly recommended that a single DIP contain a single key proposal or new idea. The more focused the DIP, the more successful it tends to be. A change to one client doesn’t require an DIP; a change that affects multiple clients, or defines a standard for multiple apps to use, does.
+
 A DIP must meet certain minimum criteria. It must be a clear and complete description of the proposed enhancement. The enhancement must represent a net improvement. The proposed implementation, if applicable, must be solid and must not complicate the protocol unduly.
 
+## DIP Formats and Templates <a name="DIPFormats"></a>
+DIPs should be written in [markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) style. Image files should be included in a subdirectory of the `assets` folder for that DIP as follows: `assets/dip-X` (for dip X). When linking to an image in the DIP, use relative links such as ../assets/dip-X/image.png.
+
+
+
+
+## DIP Workflow <a name="DIPWorkflow"></a>
