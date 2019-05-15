@@ -1,11 +1,11 @@
 ---
-dip: 1
+category: DIP
+ref: 1
 title: DIP Purpose and guidelines
 author: gfox, dank
+type: CORE
 created: 2019-05-14
 status: ACTIVE
-type: DIP
-category: guideline
 ---
 
 <img align="right" src="/ASSETS/DERO_LOGO_320x320.png" width="80">
@@ -120,7 +120,9 @@ Other exceptional statuses include:
 # DIP Header Preamble <a name="DIPPreamble"></a>
 Each DIP must begin with an RFC 822 style header preamble, preceded and followed by three hyphens (`---`). The headers must appear in the following order. Headers marked with “*” are optional and are described below. All other headers are required.
 
-`dip:` (this is determined by the DIP editor)
+`category:` DIP
+
+`ref:` sequential number determined by the author
 
 `title:`
 
@@ -134,7 +136,6 @@ status: <Draft	Last Call	Accepted	Final	Active	Deferred	Rejected	Superseded>
 
 `type:` <Standards Track (Core, Networking, Interface, ERC)	Informational	Meta>
 
-`* category:` <Core	Networking	Interface	ERC>
 
 `created:`
 
