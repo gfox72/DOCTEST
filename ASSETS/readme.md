@@ -9,4 +9,5 @@
 
 # RESCALING AND ALIGNMENT EXAMPLES
 <img src="https://github.com/gfox72/DOCTEST/blob/master/ASSETS/DERO_PROJECT.png" alt="alt text" width="800">
-<img style="float: right;" src="https://github.com/gfox72/DOCTEST/blob/master/ASSETS/DERO_LOGO.png" alt="DERO RULES" width="80">
+
+<img style="float: right;" src="https://github.com/gfox72/DOCTEST/blob/master/ASSETS/DERO_LOGO_320x320.png" alt="DERO RULES" width="80">
