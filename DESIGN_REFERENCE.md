@@ -1,5 +1,5 @@
 ---
-type: INFO
+category: INFO
 ref: 1
 title: DERO DOCUMENT DESIGN REFERENCE
 author: gfox
@@ -16,7 +16,7 @@ created: 2019/05/14
 1. [Why content management system ?](#whyCMS)
 2. [What is this document about ?](#about)
 3. [Who does what ?](#whoDoesWhat)
-4. [Document types](#docTypes)
+4. [Document types](#docCat)
 5. [Documentation workflow](#docWorkflow)
 6. [Design guidelines](#docDesign)
 
@@ -47,9 +47,8 @@ For documentation creation and management, there is a lead Staff member working 
 Once the document management structured is established and standardization and formatting are proven to work efficiently, more involvement 
 from the community will be encouraged and facilitated to make Dero's documentation decentralized and a best in class reference for its users.
 
-## Document types <a name="docTypes"></a>
-As the project grows, decisions on different document types may evolve in function of the demand from its community and individuals 
-developping on the Dero blockchain. Currently, the following types/categories are considered required to start with:
+## Document categories<a name="docCat"></a>
+As the project grows, decisions on different document types may evolve in function of the demand from its community and individuals developping on the Dero blockchain. Currently, the following categories are considered required to start with:
   * DIP : Dero Improvement Process documents - see DIP-1 for reference
   * INFO : Informational and guidelines (as this very document)
   * APP : Application notes demonstrating technical possiblities
@@ -70,7 +69,7 @@ Following design guidelines apply to all types of documentation and are to be ap
 Each document should be written in markdown format and start with a header as descrived also in DIB-1 which will provide a table structure 
 at top of the document:
 > `---` </br>
-> `type:`</br>
+> `category:`</br>
 > `ref:`</br>
 > `title:`</br>
 > `author:`</br>
