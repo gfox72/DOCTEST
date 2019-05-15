@@ -16,7 +16,8 @@
 6. [Dip Workflow](#DipWorkflow)
 7. [What makes a succesfull DIP](#DipSuccess)
 8. [DIP Header Preamble](#DipPreamble)
-
+9. [History](#DipHistory)
+10. [Copyright](#DipCopyright)
 
 
 ## What is a DIP ? <a name="WhatisaDIP"></a>
@@ -98,88 +99,101 @@ Other exceptional statuses include:
 ## What belongs in a successful EIP? <a name="DIPSucces"></a>
 Each EIP should have the following parts:
 
-  * **Preamble** - RFC 822 style headers containing metadata about the EIP, including the EIP number, a short descriptive title (limited to a maximum of 44 characters), and the author details. See [below for details](#DipPreamble).
+  * **Preamble** - RFC 822 style headers containing metadata about the DIP, including the DIP number, a short descriptive title (limited to a maximum of 44 characters), and the author details. See [below for details](#DipPreamble).
   * **Simple Summary** - “If you can’t explain it simply, you don’t understand it well enough.” Provide a simplified and layman-accessible explanation of the EIP.
   * **Abstract** - a short (~200 word) description of the technical issue being addressed.
-  * **Motivation** (*optional) - The motivation is critical for EIPs that want to change the Ethereum protocol. It should clearly explain why the existing protocol specification is inadequate to address the problem that the EIP solves. EIP submissions without sufficient motivation may be rejected outright.
-  * **Specification** - The technical specification should describe the syntax and semantics of any new feature. The specification should be detailed enough to allow competing, interoperable implementations for any of the current Ethereum platforms (cpp-ethereum, go-ethereum, parity, ethereumJ, ethereumjs-lib, and others.
+  * **Motivation** (*optional) - The motivation is critical for DIPs that want to change the Ethereum protocol. It should clearly explain why the existing protocol specification is inadequate to address the problem that the DIP solves. DIP submissions without sufficient motivation may be rejected outright.
+  * **Specification** - The technical specification should describe the syntax and semantics of any new feature. The specification should be detailed enough to allow competing, interoperable implementations for any of the current DERO platforms **<< NEEDS REVIEW IF APPLICABLE**.
   * **Rationale** - The rationale fleshes out the specification by describing what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work, e.g. how the feature is supported in other languages. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.
-  * **Backwards Compatibility** - All EIPs that introduce backwards incompatibilities must include a section describing these incompatibilities and their severity. The EIP must explain how the author proposes to deal with these incompatibilities. EIP submissions without a sufficient backwards compatibility treatise may be rejected outright.
-  * **Test Cases** - Test cases for an implementation are mandatory for EIPs that are affecting consensus changes. Other EIPs can choose to include links to test cases if applicable.
-  * **Implementations** - The implementations must be completed before any EIP is given status “Final”, but it need not be completed before the EIP is merged as draft. While there is merit to the approach of reaching consensus on the specification and rationale before writing code, the principle of “rough consensus and running code” is still useful when it comes to resolving many discussions of API details.
-  * **Copyright Waiver** - All EIPs must be in the public domain. See the bottom of this DIP for an example copyright waiver.
+  * **Backwards Compatibility** - All DIPs that introduce backwards incompatibilities must include a section describing these incompatibilities and their severity. The DIP must explain how the author proposes to deal with these incompatibilities. DIP submissions without a sufficient backwards compatibility treatise may be rejected outright.
+  * **Test Cases** - Test cases for an implementation are mandatory for DIPs that are affecting consensus changes. Other DIPs can choose to include links to test cases if applicable.
+  * **Implementations** - The implementations must be completed before any DIP is given status “Final”, but it need not be completed before the DIP is merged as draft. While there is merit to the approach of reaching consensus on the specification and rationale before writing code, the principle of “rough consensus and running code” is still useful when it comes to resolving many discussions of API details.
+  * **Copyright Waiver** - All DIPs must be in the public domain. See the bottom of this DIP for an example [copyright waiver](#DIPCopyright).
 
 # EIP Header Preamble <a name="DIPPreamble"></a>
-Each EIP must begin with an RFC 822 style header preamble, preceded and followed by three hyphens (---). The headers must appear in the following order. Headers marked with “*” are optional and are described below. All other headers are required.
+Each EIP must begin with an RFC 822 style header preamble, preceded and followed by three hyphens (`---`). The headers must appear in the following order. Headers marked with “*” are optional and are described below. All other headers are required.
 
-eip: (this is determined by the EIP editor)
+`eip:` (this is determined by the EIP editor)
 
-title:
+`title:`
 
-author: <a list of the author’s or authors’ name(s) and/or username(s), or name(s) and email(s). Details are below.>
+`author:` <a list of the author’s or authors’ name(s) and/or username(s), or name(s) and email(s). Details are below.>
 
-* discussions-to: <a url pointing to the official discussion thread>
+`* discussions-to:` <a url pointing to the official discussion thread>
 
 status: <Draft	Last Call	Accepted	Final	Active	Deferred	Rejected	Superseded>
-* review-period-end:
 
-type: <Standards Track (Core, Networking, Interface, ERC)	Informational	Meta>
-* category: <Core	Networking	Interface	ERC>
-created:
+`* review-period-end:`
 
-* updated:
+`type:` <Standards Track (Core, Networking, Interface, ERC)	Informational	Meta>
 
-* requires: <EIP number(s)>
+`* category:` <Core	Networking	Interface	ERC>
 
-* replaces: <EIP number(s)>
+`created:`
 
-* superseded-by: <EIP number(s)>
+`* updated:`
 
-* resolution: <a url pointing to the resolution of this EIP>
+`* requires:` <EIP number(s)>
+
+`* replaces:` <EIP number(s)>
+
+`* superseded-by:` <EIP number(s)>
+
+`* resolution:` <a url pointing to the resolution of this EIP>
 
 Headers that permit lists must separate elements with commas.
 
 Headers requiring dates will always do so in the format of ISO 8601 (yyyy-mm-dd).
 
-author header
-The author header optionally lists the names, email addresses or usernames of the authors/owners of the EIP. Those who prefer anonymity may use a username only, or a first name and a username. The format of the author header value must be:
+`author` header
+The `author` header optionally lists the names, email addresses or usernames of the authors/owners of the EIP. Those who prefer anonymity may use a username only, or a first name and a username. The format of the author header value must be:
 
-Random J. User <address@dom.ain>
+> Random J. User <address@dom.ain>
 
 or
 
-Random J. User (@username)
+> Random J. User (@username)
 
 if the email address or GitHub username is included, and
 
-Random J. User
+> Random J. User
 
 if the email address is not given.
 
-resolution header
-The resolution header is required for Standards Track EIPs only. It contains a URL that should point to an email message or other web resource where the pronouncement about the EIP is made.
+`resolution header`
+The `resolution` header is required for Standards Track DIPs only. It contains a URL that should point to an email message or other web resource where the pronouncement about the DIP is made.
 
-discussions-to header
-While an EIP is a draft, a discussions-to header will indicate the mailing list or URL where the EIP is being discussed. As mentioned above, examples for places to discuss your EIP include Ethereum topics on Gitter, an issue in this repo or in a fork of this repo, Ethereum Magicians (this is suitable for EIPs that may be contentious or have a strong governance aspect), and Reddit r/ethereum.
+`discussions-to header`
+While an DIP is a draft, a discussions-to header will indicate the mailing list or URL where the DIP is being discussed. As mentioned above, examples for places to discuss your DIP include Dero topics on Gitter, an issue in this repo or in a fork of this repo, Dero devs (this is suitable for DIPs that may be contentious or have a strong governance aspect), and Reddit r/dero ** << NEEDS A CHECK WHERE THIS WOULD BE **.
 
-No discussions-to header is necessary if the EIP is being discussed privately with the author.
+No `discussions-to` header is necessary if the DIP is being discussed privately with the author.
 
 As a single exception, discussions-to cannot point to GitHub pull requests.
 
-type header
-The type header specifies the type of EIP: Standards Track, Meta, or Informational. If the track is Standards please include the subcategory (core, networking, interface, or ERC).
+`type` header
+The `type` header specifies the type of EIP: Standards Track, Meta, or Informational. If the track is Standards please include the subcategory (core, networking, interface, or ERC).
 
-category header
-The category header specifies the EIP’s category. This is required for standards-track EIPs only.
+`category` header
+The `category` header specifies the EIP’s category. This is required for standards-track EIPs only.
 
-created header
-The created header records the date that the EIP was assigned a number. Both headers should be in yyyy-mm-dd format, e.g. 2001-08-14.
+`created header`
+The `created` header records the date that the DIP was assigned a number. Both headers should be in yyyy-mm-dd format, e.g. 2001-08-14.
 
-updated header
-The updated header records the date(s) when the EIP was updated with “substantial” changes. This header is only valid for EIPs of Draft and Active status.
+`updated` header
+The `updated` header records the date(s) when the DIP was updated with “substantial” changes. This header is only valid for DIPs of Draft and Active status.
 
-requires header
-EIPs may have a requires header, indicating the EIP numbers that this EIP depends on.
+`requires` header
+DIPs may have a `requires` header, indicating the DIP numbers that this DIP depends on.
 
-superseded-by and replaces headers
-EIPs may also have a superseded-by header indicating that an EIP has been rendered obsolete by a later document; the value is the number of the EIP that replaces the current document. The newer EIP must have a replaces header containing the number of the EIP that it rendered obsolete.
+`superseded-by` and `replaces` headers
+DIPs may also have a `superseded-by` header indicating that an DIP has been rendered obsolete by a later document; the value is the number of the DIP that replaces the current document. The newer DIP must have a replaces header containing the number of the DIP that it rendered obsolete.
+
+# History <a name="DIPHistory"></a>
+This document was derived heavily from Etherium's [EIP-1](https://eips.ethereum.org/EIPS/eip-1) which was in turn derived from Bitcoin’s [BIP-0001](https://github.com/bitcoin/bips) written by Amir Taaki which in turn was derived from Python’s [PEP-0001](https://www.python.org/dev/peps/). In many places text was simply copied and modified. These original authors are not responsible for its use in the Dero Improvement Process, and should not be bothered with technical questions specific to Dero or the DIP. Please direct all comments to the DIP editors.
+
+May 15, 2019: DIP 1 initial drafted
+
+See the revision history for further details, which is also available by clicking on the History button in the top right of the DIP.
+
+# Copyright <a name="DIPCopyright"></a>
+Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
