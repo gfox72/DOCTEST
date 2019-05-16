@@ -188,48 +188,52 @@ currenty unstable height. This method is called without parameters.
 
 | Result    | Type  | Description             |
 | ----------|:-----:| ----------------------- |
-| "count"   | uint64| The current blockheight |
+| "count"   | | uint64 || The current blockheight |
 | "status"  | Strin | Always returns "OK"     |
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Results of getblockcount**
 
 ```python
 payload = {'jsonrpc':'2.0','id':'1','method':'getblockcount'}
 result ={
- 'count`: 384982,
- 'status':'OK'
+'count`: 384982,
+'status':'OK'
 }
 ````
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Example of getblockcount output**
 
-# 3.2.1 get_info
+# 3.2.2 get_info
 The method "get_info" returns various info about the daemon and the state of the network. This
 method has no parameters.
 
 | Result    | Type  | Description             |
 | ----------|:-----:| ----------------------- |
-| "alt_blocks_count" | uint64 | Unused |
-| "difficulty" | uint64 | The current difficulty |
-| "grey_peerlist_size" | uint64 | Unused |
+| "alt_blocks_count" | | uint64 | | Unused |
+| "difficulty" | | uint64 | | The current difficulty |
+| "grey_peerlist_size" | | uint64 | | Unused |
 | "height" | int64 | Current blockchain height |
 | "stableheight" | int64 | Current stable height |
 | "topoheight" | int64 | Current topoheight |
 | "averageblocktime50" | float32 | Average blocktime of the last 50 blocks |
-| "incoming_connections_count" | uint64 | Unused |
-| "outgoing_connections_count" | uint64 | Unused |
-| "target" | uint64 | Target blocktime in seconds |
-| "target_height" | uint64 | Unused |
+| "incoming_connections_count" | | uint64 | | Unused |
+| "outgoing_connections_count" | | uint64 | | Unused |
+| "target" | | uint64 | | Target blocktime in seconds |
+| "target_height" | | uint64 | | Unused |
 | "testnet" | bool | Indicates if this is a testnet |
 | "top_block_hash" | string | Block ID of the newest block |
-| "tx_count" | uint64 | Unused |
-| "tx_pool_size" | uint64 | Number of pending transactions in the mempool |
-| "dynamic_fee_per_kb" | uint64 | Transaction fee |
-| "total_supply" | uint64 | Total coin supply (minus premine) |
-| "median_block_Size" | uint64 | Max blocksize in bytes (currently 1.25 MB) |
-| "white_peerlist_size" | uint64 | Unused |
+| "tx_count" | | uint64 | | Unused |
+| "tx_pool_size" | | uint64 | | Number of pending transactions in the mempool |
+| "dynamic_fee_per_kb" | | uint64 | | Transaction fee |
+| "total_supply" | | uint64 | | Total coin supply (minus premine) |
+| "median_block_Size" | | uint64 | | Max blocksize in bytes (currently 1.25 MB) |
+| "white_peerlist_size" | | uint64 | | Unused |
 | "version" | string | Daemon version |
 | "status" | string | Always returns "OK" |
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Results of get_info**
-````
+
+````python
 payload = {'jsonrpc':'2.0','id':'1','method':'get_info'}
 
 result = {
@@ -258,4 +262,51 @@ result = {
 ````
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Results of get_info output**
+
+# 3.2.3 getblocktemplate
+Return a block template (used for mining a block).
+
+| Parameter | Type  | Description             |
+| ----------|:-----:| ----------------------- |
+| "wallet_address" | string | Hexdecimal string of the wallet address which receives the mining reward |
+| "reserve_size" | uint64 | should be > 0 and < 255 |
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Parameters for getblocktemplate**
+
+| Result | Type  | Description             |
+| ----------|:-----:| -------------------- |
+| "blocktemplate_blob" | string | Hexdecimal string of the blocktemplate data |
+| "blockhashing_blob" | string | Returns the getwork style blob, ready for either submitting the block or doing Pow Calculations |
+| "expected_reward" | uint64 | Always returns 0, not implemented yet |
+| "difficulty" | uint64 | The difficulty of the block |
+| "height" | uint64 | The height of the block |
+| "prev_hash" | string | The hash of the previous block |
+| "reserved_offset" | uint64 | Returns the byte position of the extra nonce in the blockhashing blob |
+| "epoch" | uint64 | The expiry time of this block |
+| "status" | string | Always returns "OK" |
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Results of getblocktemplate**
+
+````python
+payload = {'jsonrpc':'2.0','id':'1','method':'getblocktemplate', "params":{
+  "wallet_address":" dERokSea2psYGJ ... ", "reserve_size":10}}
+result = {
+'blocktemplate_blob':'02028 ed7b2db05cb99daea00000000000000000...',
+'blockhashing_blob':'02028 eab6c5b00fe0311b61b2fd324cfb7b01f...',
+'expected_reward': 0,
+'difficulty': 1804159513,
+'height': 392836,
+'prev_hash':' a7e861a0a3362e9eb713f4cc1f3da04952914636107266ee5dbbfe ...',
+'reserved_offset':43,
+'epoch': 1533848474,
+'status':'OK'
+}
+````
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Example of getblocktemplate output**
+
+
+
+
+
+
 
