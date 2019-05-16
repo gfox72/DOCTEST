@@ -188,7 +188,7 @@ currenty unstable height. This method is called without parameters.
 
 | Result    | Type  | Description             |
 | ----------|:-----:| ----------------------- |
-|"count" | | uint64 || The current blockheight |
+|"count" | uint64 | The current blockheight |
 |"status"| Strin | Always returns"OK"   |
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Results of getblockcount*
@@ -209,25 +209,25 @@ method has no parameters.
 
 | Result    | Type  | Description             |
 | ----------|:-----:| ----------------------- |
-|"alt_blocks_count"| | uint64 | | Unused |
-|"difficulty"| | uint64 | | The current difficulty |
-|"grey_peerlist_size"| | uint64 | | Unused |
+|"alt_blocks_count" | uint64 | Unused |
+|"difficulty" | uint64 | The current difficulty |
+|"grey_peerlist_size" | uint64 | Unused |
 |"height"| int64 | Current blockchain height |
-|"stableheight"| int64 | Current stable height |
-|"topoheight"| int64 | Current topoheight |
-|"averageblocktime50"| float32 | Average blocktime of the last 50 blocks |
-|"incoming_connections_count"| | uint64 | | Unused |
-|"outgoing_connections_count"| | uint64 | | Unused |
-|"target"| | uint64 | | Target blocktime in seconds |
-|"target_height"| | uint64 | | Unused |
+|"stableheight" | int64 | Current stable height |
+|"topoheight" | int64 | Current topoheight |
+|"averageblocktime50" | float32 | Average blocktime of the last 50 blocks |
+|"incoming_connections_count" | uint64 | Unused |
+|"outgoing_connections_count" | uint64 | Unused |
+|"target" | uint64 | | Target blocktime in seconds |
+|"target_height" | uint64 | | Unused |
 |"testnet"| bool | Indicates if this is a testnet |
 |"top_block_hash"| string | Block ID of the newest block |
-|"tx_count"| | uint64 | | Unused |
-|"tx_pool_size"| | uint64 | | Number of pending transactions in the mempool |
-|"dynamic_fee_per_kb"| | uint64 | | Transaction fee |
-|"total_supply"| | uint64 | | Total coin supply (minus premine) |
-|"median_block_Size"| | uint64 | | Max blocksize in bytes (currently 1.25 MB) |
-|"white_peerlist_size"| | uint64 | | Unused |
+|"tx_count"| uint64 | | Unused |
+|"tx_pool_size"| uint64 | Number of pending transactions in the mempool |
+|"dynamic_fee_per_kb"| | uint64 | Transaction fee |
+|"total_supply"| uint64 | Total coin supply (minus premine) |
+|"median_block_Size"| uint64 | Max blocksize in bytes (currently 1.25 MB) |
+|"white_peerlist_size"| uint64 | Unused |
 |"version"| string | Daemon version |
 |"status"| string | Always returns"OK"|
 
