@@ -87,7 +87,8 @@ side blocks.
 The examples provided for each method are written in Python - using the ’request’ package to
 build the HTTP request and perform the JSON encoding.
 
-```
+```python
+
 #construct payload for HTTP request
 payload = {'jsonrpc': '2.0', 'id':'1','method': 'getblockcount'}
 
