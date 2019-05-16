@@ -4,7 +4,7 @@ ref: 0
 title: DERO DOCUMENTATION CATALOG
 author: gfox
 created: 2019-05-16
-UPDATED:
+STATUS: ACTIVE
 ---
 
 <img align="right" src="/ASSETS/DERO_LOGO_320x320.png" width="80">
@@ -22,4 +22,5 @@ UPDATED:
 ## DERO IMPROVEMENT PROCESS
   * [DIP-1](/DIP-1.md) : DERO IMPROVEMENT PROCESS OVERVIEW
   
-
+# UPDATES
+here we'll keep track of which documents where added and when
