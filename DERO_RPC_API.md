@@ -183,7 +183,7 @@ if (r. status_code == requests.codes.ok):
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example Phyton script*
 
 # 3.2.1 getblockcount
-The method"getblockcount"returns the height of the (currently synced) chain. This is also the
+The method "getblockcount" returns the height of the (currently synced) chain. This is also the
 currenty unstable height. This method is called without parameters.
 
 | Result    | Type  | Description             |
@@ -204,7 +204,7 @@ result ={
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of getblockcount output*
 
 # 3.2.2 get_info
-The method"get_info"returns various info about the daemon and the state of the network. This
+The method "get_info" returns various info about the daemon and the state of the network. This
 method has no parameters.
 
 | Result    | Type  | Description             |
@@ -335,7 +335,7 @@ Answer : {
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of submitblock output*
 
 # 3.2.5 getlastblockheader
-The method"getlastblockheader"returns the latest blockheader of the (currently synced) chain.
+The method "getlastblockheader" returns the latest blockheader of the (currently synced) chain.
 This is equal to the top unstable height. This method is called without parameters.
 
 | Result | Type  | Description             |
@@ -390,7 +390,7 @@ result = {
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of getlastblockheader output*
 
 # 3.2.6 getblockheaderbyhash
-The method"getblockheaderbyhash"returns the blockheader for the supplied blocks hash.
+The method "getblockheaderbyhash" returns the blockheader for the supplied blocks hash.
 
 | Parameter | Type  | Description             |
 | ----------|:-----:| ----------------------- |
@@ -433,7 +433,7 @@ result =
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of getblockheaderbyhash output*
 
 # 3.2.7 getblockheaderbytopoheight
-The method"getblockheaderbytopoheight"returns the blockheader for the supplied topoheight.
+The method "getblockheaderbytopoheight" returns the blockheader for the supplied topoheight.
 
 | Parameter | Type  | Description             |
 | ----------|:-----:| ----------------------- |
@@ -478,7 +478,7 @@ result = {
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of getblockheaderbytopoheight output*
 
 # 3.2.8 getblockheaderbyheight
-The method"getblockheaderbyheight"returns the blockheader for the supplied blockchain topoheight,
+The method "getblockheaderbyheight" returns the blockheader for the supplied blockchain topoheight,
 it does the same as the getblockheaderbytopoheight function.
 
 | Parameter | Type  | Description             |
@@ -520,8 +520,94 @@ eb2258c6459e05966d88bcc6b46191910a512ffa17f7f813c480fe0682456f38'],
 'status':'OK'
 }
 ````
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of getblockheaderbyheight output*
 
+# 3.2.9 getblock
+The method "getblock" returns the data of a block from either the given height or hash.
 
+| Parameter | Type  | Description             |
+| ----------|:-----:| ----------------------- |
+| "hash" | string | Hash (block ID) of the block |
+| "height" | uint64 | height of the block |
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Parameters for getblock*
+
+| Result | Type  | Description             |
+| ----------|:-----:| -------------------- |
+| "blob" | string | Hexdecimal blob of the block data |
+| "json" | string | String with the block data in JSON format |
+| "block_header" | block_header | The block header, description of this structure can be found in 3.2.5 |
+| "status" | string | Always returns "OK" |
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Results of getblock*
+
+```python
+payload = {'jsonrpc': '2.0', 'id':'1', 'method': 'getblock', "params":{ "hash":"ded835887cea53195ca4e1d294d5158c ... "}}
+
+result = {
+'blob': '0202 dbc5aedb059080245b6b6a71c24e06d48b00 ... ',
+'json':
+{
+  "major_version ":2,
+  "minor_version ":2,
+  "timestamp" :1533780699,
+  "nonce" :1529118864,
+  "miner_tx":
+  {
+  "version":2,
+  "unlock_time" :404016,
+  "Vin" :[{ " Height " :403956}],
+  "Vout":[
+  {
+  "Amount":0,
+  "Target":{" Key ":" 94507 a4d702b85f601ea51a97 ... "}}],
+  "Extra":" AYyPD2XX6QEB19Xx9J0V3 + UpXxZHEcQ2rGENQVHR2738 ",
+  "RctSignature ":
+  {
+  "Message":" 00000000000000... ",
+  "MixRing":null ,
+  "ECdhInfo":null ,
+  "OutPk":null ,
+  "Txid":" 000000000000000000... ",
+  "BulletSigs":null ,
+  "MlsagSigs": null
+  }
+  },
+  "tips":[" d7fc7c9d060e26bd9ca222 ... "],
+  "tx_hashes": null
+}',
+'block_header': see getlastblockheader
+
+}
+````
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of getblockheaderbyheight output*
+
+# 3.2.10 gettxpool
+The method "gettxpool" returns the tx hashes that are currently in the mempool. This method
+has no parameters.
+
+| Result | Type  | Description             |
+| ----------|:-----:| -------------------- |
+| "tx" | [ ]string | Tx hashes that are in the mempool |
+| "status" | string | Always returns "OK" |
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Results of gettxpool*
+
+```python
+payload = {'jsonrpc': '2.0', 'id':'1', 'method': 'gettxpool'}
+
+#(If txpool empty)
+Result = {
+'status ': 'OK'
+}
+
+#else
+Result = {
+'txs ': ['d1a63adf3385f44a20f451a9c38a3b3f6ce0071876b32a3ff7de12b92ccba6c2', '0c237ebf3daaab36acde2cfbbad31e5d5435a114d691abeaf2b407d3c03560ac', 'e5b3e7f49b911734196835fe9a0718fab5f17432aa69c55a035cdee2a1765a7d'],
+'status': 'OK'
+}
+````
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of gettxpool output*
 
 
 
