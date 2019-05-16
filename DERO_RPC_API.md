@@ -81,7 +81,7 @@ The topological height is unique for each block, while at each blockchain height
 multiple blocks associated. Each blockchain height contains at least a main block and optional
 side blocks.
 
-<img align="center" src="/ASSETS/DEV1/DEV1_1.png" width="320">
+<img align="center" src="/ASSETS/DEV1/DEV1_1.png" width="800">
 
 # 1.2 Code examples
 
@@ -116,8 +116,6 @@ curl -X POST http://127.0.0.1:20206/json_rpc -d '{"jsonrpc":"2.0","id ":"1","met
 
 # Chapter 2
 ## Quick Overview
-
-  * Daemon RPC methods
   
 | Method     | Section           | Description  |
 | ------------- |:-------------:| ----- |
@@ -136,7 +134,7 @@ curl -X POST http://127.0.0.1:20206/json_rpc -d '{"jsonrpc":"2.0","id ":"1","met
 | sendrawtransaction | 3.3.3 | Send a raw transaction to the network |
 | is_key_image_spent | 3.3.4 | Checks if one of the supplied key images has been spent |
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Wallet RPC methods**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Daemon RPC methods**
   
 | Method     | Section           | Description  |
 | ------------- |:-------------:| ----- |
@@ -152,7 +150,7 @@ curl -X POST http://127.0.0.1:20206/json_rpc -d '{"jsonrpc":"2.0","id ":"1","met
 | get_transfer_by_txid | 4.2.10 | Get transfer information by ID |
 | get_transfers | 4.2.11 | Get all out/ingoing transactions from a wallet |
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **Wallet RPC methods**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Wallet RPC methods**
   
 
 
