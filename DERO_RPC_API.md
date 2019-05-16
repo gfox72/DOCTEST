@@ -183,7 +183,6 @@ if (r. status_code == requests.codes.ok):
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Example Phyton script**
 
 # 3.2.1 getblockcount
-
 The method "getblockcount" returns the height of the (currently synced) chain. This is also the
 currenty unstable height. This method is called without parameters.
 
@@ -193,16 +192,39 @@ currenty unstable height. This method is called without parameters.
 | "status"  | Strin | Always returns "OK"     |
 
 ```python
-payload = {'jsonrpc ': '2.0', 'id':'1', 'method': 'getblockcount'}
+payload = {'jsonrpc': '2.0', 'id':'1', 'method': 'getblockcount'}
 result ={
   'count`: 384982 ,
   'status': 'OK'
 }
 ````
-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Example of getblockcount output**
 
+# 3.2.1 get_info
+The method "get_info" returns various info about the daemon and the state of the network. This
+method has no parameters.
 
-
-
+| Result    | Type  | Description             |
+| ----------|:-----:| ----------------------- |
+| "alt_blocks_count" | uint64 | Unused |
+| "difficulty" | uint64 | The current difficulty |
+| "grey_peerlist_size" | uint64 Unused |
+| "height" | int64 | Current blockchain height |
+| "stableheight" | int64 | Current stable height |
+| "topoheight" | int64 | Current topoheight |
+| "averageblocktime50" | float32 | Average blocktime of the last 50 blocks |
+| "incoming_connections_count" | uint64 | Unused |
+| "outgoing_connections_count" | uint64 | Unused |
+| "target" | uint64 | Target blocktime in seconds |
+| "target_height" | uint64 Unused |
+| "testnet" | bool | Indicates if this is a testnet |
+| "top_block_hash" | string | Block ID of the newest block |
+| "tx_count" | uint64 | Unused |
+| "tx_pool_size" | uint64 | Number of pending transactions in the mempool |
+| "dynamic_fee_per_kb" | uint64 | Transaction fee |
+| "total_supply" | uint64 | Total coin supply (minus premine) |
+| "median_block_Size" | uint64 | Max blocksize in bytes (currently 1.25 MB) |
+| "white_peerlist_size" | uint64 | Unused |
+| "version" | string | Daemon version |
+| "status" | string | Always returns "OK"
 
