@@ -136,7 +136,7 @@ curl -X POST http://127.0.0.1:20206/json_rpc -d '{"jsonrpc":"2.0","id ":"1","met
 | sendrawtransaction | 3.3.3 | Send a raw transaction to the network |
 | is_key_image_spent | 3.3.4 | Checks if one of the supplied key images has been spent |
 
-  * Wallet RPC methods
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Wallet RPC methods**
   
 | Method     | Section           | Description  |
 | ------------- |:-------------:| ----- |
@@ -152,7 +152,7 @@ curl -X POST http://127.0.0.1:20206/json_rpc -d '{"jsonrpc":"2.0","id ":"1","met
 | get_transfer_by_txid | 4.2.10 | Get transfer information by ID |
 | get_transfers | 4.2.11 | Get all out/ingoing transactions from a wallet |
 
-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **Wallet RPC methods**
   
 
 
