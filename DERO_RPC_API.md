@@ -8,7 +8,7 @@ status: DRAFT
 version: 2.0
 ---
 
-<img align="right" src="/ASSETS/DERO_LOGO_320x320.png" width="80">
+<img align="right"src="/ASSETS/DERO_LOGO_320x320.png"width="80">
 </br>
 </br>
 
@@ -81,7 +81,7 @@ The topological height is unique for each block, while at each blockchain height
 multiple blocks associated. Each blockchain height contains at least a main block and optional
 side blocks.
 
-<img align="center" src="/ASSETS/DEV1/DEV1_1.png" width="800">
+<img align="center"src="/ASSETS/DEV1/DEV1_1.png"width="800">
 
 # 1.2 Code examples
 
@@ -109,7 +109,7 @@ if (r. status_code == requests.codes.ok):
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example in python*
 
 ```curl
-curl -X POST http://127.0.0.1:20206/json_rpc -d'{"jsonrpc":"2.0","id ":"1","method":"getblockcount"}'-H'Content-Type: application / json'
+curl -X POST http://127.0.0.1:20206/json_rpc -d'{"jsonrpc":"2.0","id":"1","method":"getblockcount"}'-H'Content-Type: application / json'
 ```
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example in Curl*
 
@@ -183,13 +183,13 @@ if (r. status_code == requests.codes.ok):
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example Phyton script*
 
 # 3.2.1 getblockcount
-The method "getblockcount" returns the height of the (currently synced) chain. This is also the
+The method"getblockcount"returns the height of the (currently synced) chain. This is also the
 currenty unstable height. This method is called without parameters.
 
 | Result    | Type  | Description             |
 | ----------|:-----:| ----------------------- |
-| "count"   | | uint64 || The current blockheight |
-| "status"  | Strin | Always returns "OK"     |
+|"count" | | uint64 || The current blockheight |
+|"status"| Strin | Always returns"OK"   |
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Results of getblockcount*
 
@@ -204,32 +204,32 @@ result ={
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of getblockcount output*
 
 # 3.2.2 get_info
-The method "get_info" returns various info about the daemon and the state of the network. This
+The method"get_info"returns various info about the daemon and the state of the network. This
 method has no parameters.
 
 | Result    | Type  | Description             |
 | ----------|:-----:| ----------------------- |
-| "alt_blocks_count" | | uint64 | | Unused |
-| "difficulty" | | uint64 | | The current difficulty |
-| "grey_peerlist_size" | | uint64 | | Unused |
-| "height" | int64 | Current blockchain height |
-| "stableheight" | int64 | Current stable height |
-| "topoheight" | int64 | Current topoheight |
-| "averageblocktime50" | float32 | Average blocktime of the last 50 blocks |
-| "incoming_connections_count" | | uint64 | | Unused |
-| "outgoing_connections_count" | | uint64 | | Unused |
-| "target" | | uint64 | | Target blocktime in seconds |
-| "target_height" | | uint64 | | Unused |
-| "testnet" | bool | Indicates if this is a testnet |
-| "top_block_hash" | string | Block ID of the newest block |
-| "tx_count" | | uint64 | | Unused |
-| "tx_pool_size" | | uint64 | | Number of pending transactions in the mempool |
-| "dynamic_fee_per_kb" | | uint64 | | Transaction fee |
-| "total_supply" | | uint64 | | Total coin supply (minus premine) |
-| "median_block_Size" | | uint64 | | Max blocksize in bytes (currently 1.25 MB) |
-| "white_peerlist_size" | | uint64 | | Unused |
-| "version" | string | Daemon version |
-| "status" | string | Always returns "OK" |
+|"alt_blocks_count"| | uint64 | | Unused |
+|"difficulty"| | uint64 | | The current difficulty |
+|"grey_peerlist_size"| | uint64 | | Unused |
+|"height"| int64 | Current blockchain height |
+|"stableheight"| int64 | Current stable height |
+|"topoheight"| int64 | Current topoheight |
+|"averageblocktime50"| float32 | Average blocktime of the last 50 blocks |
+|"incoming_connections_count"| | uint64 | | Unused |
+|"outgoing_connections_count"| | uint64 | | Unused |
+|"target"| | uint64 | | Target blocktime in seconds |
+|"target_height"| | uint64 | | Unused |
+|"testnet"| bool | Indicates if this is a testnet |
+|"top_block_hash"| string | Block ID of the newest block |
+|"tx_count"| | uint64 | | Unused |
+|"tx_pool_size"| | uint64 | | Number of pending transactions in the mempool |
+|"dynamic_fee_per_kb"| | uint64 | | Transaction fee |
+|"total_supply"| | uint64 | | Total coin supply (minus premine) |
+|"median_block_Size"| | uint64 | | Max blocksize in bytes (currently 1.25 MB) |
+|"white_peerlist_size"| | uint64 | | Unused |
+|"version"| string | Daemon version |
+|"status"| string | Always returns"OK"|
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Results of get_info*
 
@@ -268,28 +268,28 @@ Return a block template (used for mining a block).
 
 | Parameter | Type  | Description             |
 | ----------|:-----:| ----------------------- |
-| "wallet_address" | string | Hexdecimal string of the wallet address which receives the mining reward |
-| "reserve_size" | uint64 | should be > 0 and < 255 |
+|"wallet_address"| string | Hexdecimal string of the wallet address which receives the mining reward |
+|"reserve_size"| uint64 | should be > 0 and < 255 |
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Parameters for getblocktemplate*
 
 | Result | Type  | Description             |
 | ----------|:-----:| -------------------- |
-| "blocktemplate_blob" | string | Hexdecimal string of the blocktemplate data |
-| "blockhashing_blob" | string | Returns the getwork style blob, ready for either submitting the block or doing Pow Calculations |
-| "expected_reward" | uint64 | Always returns 0, not implemented yet |
-| "difficulty" | uint64 | The difficulty of the block |
-| "height" | uint64 | The height of the block |
-| "prev_hash" | string | The hash of the previous block |
-| "reserved_offset" | uint64 | Returns the byte position of the extra nonce in the blockhashing blob |
-| "epoch" | uint64 | The expiry time of this block |
-| "status" | string | Always returns "OK" |
+|"blocktemplate_blob"| string | Hexdecimal string of the blocktemplate data |
+|"blockhashing_blob"| string | Returns the getwork style blob, ready for either submitting the block or doing Pow Calculations |
+|"expected_reward"| uint64 | Always returns 0, not implemented yet |
+|"difficulty"| uint64 | The difficulty of the block |
+|"height"| uint64 | The height of the block |
+|"prev_hash"| string | The hash of the previous block |
+|"reserved_offset"| uint64 | Returns the byte position of the extra nonce in the blockhashing blob |
+|"epoch"| uint64 | The expiry time of this block |
+|"status"| string | Always returns"OK"|
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Results of getblocktemplate*
 
 ````python
-payload = {'jsonrpc':'2.0','id':'1','method':'getblocktemplate', "params":{
-  "wallet_address":" dERokSea2psYGJ ... ", "reserve_size":10}}
+payload = {'jsonrpc':'2.0','id':'1','method':'getblocktemplate',"params":{
+"wallet_address":"dERokSea2psYGJ ...","reserve_size":10}}
 result = {
 'blocktemplate_blob':'02028 ed7b2db05cb99daea00000000000000000...',
 'blockhashing_blob':'02028 eab6c5b00fe0311b61b2fd324cfb7b01f...',
@@ -318,14 +318,14 @@ blocktemplate_blob and blockhashing_blob in hex |
 
 | Result | Type  | Description             |
 | ----------|:-----:| -------------------- |
-| "blid" | string | The new Block ID |
-| "status" | string | Returns "OK" if ok, otherwise an error message
-e.g. "Could NOT decode block", "REJECTED" etc. |
+|"blid"| string | The new Block ID |
+|"status"| string | Returns"OK"if ok, otherwise an error message
+e.g."Could NOT decode block","REJECTED"etc. |
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Results of submitblock*
 
 ````python
-payload = {'jsonrpc':'2.0','id':'1','method':'submitblock', "params":blockDatainHEX}
+payload = {'jsonrpc':'2.0','id':'1','method':'submitblock',"params":blockDatainHEX}
 Answer : {
 'blid': 591042,
 'status':'OK'
@@ -335,32 +335,32 @@ Answer : {
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of submitblock output*
 
 # 3.2.5 getlastblockheader
-The method "getlastblockheader" returns the latest blockheader of the (currently synced) chain.
+The method"getlastblockheader"returns the latest blockheader of the (currently synced) chain.
 This is equal to the top unstable height. This method is called without parameters.
 
 | Result | Type  | Description             |
 | ----------|:-----:| -------------------- |
-"block_header" block_header The block header
-"status" string Always returns "OK"
+"block_header"block_header The block header
+"status"string Always returns"OK"
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Results of getlastblockheader*
 
 | Key | Type  | Description             |
 | ----------|:-----:| ----------------- |
-| "depth" | int64 | The difference between the current blockchain height and the height of this block |
-| "difficulty" | string | Difficulty of this block |
-| "hash" | string | Hash of the block, serves as block ID |
-| "height" | int64 | The height of the block |
-| "topoheight" | int64 | The topheight of the block |
-| "major_version" | uint64 | Current Atlanis blocks have major version "2" |
-| "minor_version" | uint64 | Current Atlanis blocks have minor version "2" |
-| "nonce" | string | The block nonce |
-| "orphan_status" | bool | Indicates if a block is orphaned, should not happen with Atlantis |
-| "syncblock" | bool | Indicates wether a block is a syncblock, that is a single stable block used for rebuilding the chain |
-| "txcount" | int64 | Number of transactions included in the block |
-| "reward" | uint64 | The reward (base + fees) for this block |
-| "tips" | []string | Block IDs of the parent of this block |
-| "timestamp" | uint64 | The timestamp of the block |
+|"depth"| int64 | The difference between the current blockchain height and the height of this block |
+|"difficulty"| string | Difficulty of this block |
+|"hash"| string | Hash of the block, serves as block ID |
+|"height"| int64 | The height of the block |
+|"topoheight"| int64 | The topheight of the block |
+|"major_version"| uint64 | Current Atlanis blocks have major version"2"|
+|"minor_version"| uint64 | Current Atlanis blocks have minor version"2"|
+|"nonce"| string | The block nonce |
+|"orphan_status"| bool | Indicates if a block is orphaned, should not happen with Atlantis |
+|"syncblock"| bool | Indicates wether a block is a syncblock, that is a single stable block used for rebuilding the chain |
+|"txcount"| int64 | Number of transactions included in the block |
+|"reward"| uint64 | The reward (base + fees) for this block |
+|"tips"| []string | Block IDs of the parent of this block |
+|"timestamp"| uint64 | The timestamp of the block |
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*JSON structure block_header*
 
@@ -370,19 +370,19 @@ payload = {'jsonrpc':'2.0','id':'1','method':'getlastblockheader'}
 result = {
 'block_header':
 {
- 'depth': 0,
- 'difficulty':'2049682764',
- 'hash':'5 d49e6e9eea00a7c066e14f4ebc05473b39306d8ba05d741f3955658f17322e2',
- 'height': 397287 ,
- 'topoheight': 563285 ,
- 'major_version': 2,
- 'minor_version': 2,
- 'nonce': 806404222,
- 'orphan_status': False,
- 'syncblock': False,
- 'txcount': 0,
- 'reward': 1496206893845,
- 'tips': ['7527285409f6b7133153a25a1f2f9848dc95758a0be7e9d79365ac3854841644','e9f065645839501f43ce1aae95e491d19ae542fabd99a33b049793862720647c'],'timestamp': 1533702138
+'depth': 0,
+'difficulty':'2049682764',
+'hash':'5 d49e6e9eea00a7c066e14f4ebc05473b39306d8ba05d741f3955658f17322e2',
+'height': 397287 ,
+'topoheight': 563285 ,
+'major_version': 2,
+'minor_version': 2,
+'nonce': 806404222,
+'orphan_status': False,
+'syncblock': False,
+'txcount': 0,
+'reward': 1496206893845,
+'tips': ['7527285409f6b7133153a25a1f2f9848dc95758a0be7e9d79365ac3854841644','e9f065645839501f43ce1aae95e491d19ae542fabd99a33b049793862720647c'],'timestamp': 1533702138
 },
 'status':'OK'
 }
@@ -390,44 +390,139 @@ result = {
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of getlastblockheader output*
 
 # 3.2.6 getblockheaderbyhash
-The method "getblockheaderbyhash" returns the blockheader for the supplied blocks hash.
+The method"getblockheaderbyhash"returns the blockheader for the supplied blocks hash.
 
 | Parameter | Type  | Description             |
 | ----------|:-----:| ----------------------- |
-| "hash" | string | The hash (block ID) |
+|"hash"| string | The hash (block ID) |
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Parameters for getblockheaderbyhash*
 
 | Result | Type  | Description             |
 | ----------|:-----:| -------------------- |
-| "block_header" | block_header | The block header, description of this structure can be found in 3.2.5 |
-| "status" | string | Always returns "OK" |
+|"block_header"| block_header | The block header, description of this structure can be found in 3.2.5 |
+|"status"| string | Always returns"OK"|
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Results of getblockheaderbyhash*
 
 ````python
-payload = {'jsonrpc':'2.0','id':'1','method':'getblockheaderbyhash', "params ": {" hash ":'7 b6113e05eb72f7ed4231079f97f2708 ...'}}
+payload = {'jsonrpc':'2.0','id':'1','method':'getblockheaderbyhash',"params": {"hash":'7 b6113e05eb72f7ed4231079f97f2708 ...'}}
 
 result =
 {'block_header':
 {
-  'depth': 112634 ,
-  'difficulty':'1938163580',
-  'hash':'7 b6113e05eb72f7ed4231079f97f2708c6c0eff8cb8a0eb2c079b7ebcdd90157',
-  'height': 320166 ,
-  'topoheight': 432401 ,
-  'major_version': 2,
-  'minor_version': 2,
-  'nonce': 2754379831 ,
-  'orphan_status': False ,
-  'syncblock': True ,
-  'txcount': 0,
-  'reward': 1515705893956 ,
-  'tips': ['59 a67a563e768da4e8d30940485c37fa22beea1da80c8850da6e690a2467ae5a'],
-  'timestamp': 1532790081
+'depth': 112634 ,
+'difficulty':'1938163580',
+'hash':'7 b6113e05eb72f7ed4231079f97f2708c6c0eff8cb8a0eb2c079b7ebcdd90157',
+'height': 320166 ,
+'topoheight': 432401 ,
+'major_version': 2,
+'minor_version': 2,
+'nonce': 2754379831 ,
+'orphan_status': False ,
+'syncblock': True ,
+'txcount': 0,
+'reward': 1515705893956 ,
+'tips': ['59 a67a563e768da4e8d30940485c37fa22beea1da80c8850da6e690a2467ae5a'],
+'timestamp': 1532790081
 },
 'status':'OK'
 }
 ````
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of getblockheaderbyhash output*
+
+# 3.2.7 getblockheaderbytopoheight
+The method"getblockheaderbytopoheight"returns the blockheader for the supplied topoheight.
+
+| Parameter | Type  | Description             |
+| ----------|:-----:| ----------------------- |
+|"topheight"| uint64 | The topoheight |
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Parameters for getblockheaderbytopoheight*
+
+| Result | Type  | Description             |
+| ----------|:-----:| -------------------- |
+|"block_header"| block_header | he block header, description of this structure can be found in 3.2.5 |
+|"status"| string | Always returns"OK"|
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Results of getblockheaderbytopoheight*
+
+
+````python
+payload = {'jsonrpc':'2.0','id':'1','method':'getblockheaderbytopoheight',"params":{"topoheight":320000}}
+
+result = {
+'block_header':
+{
+ 'depth': 185434 ,
+ 'difficulty':'1967934625',
+ 'hash':'d4fb3bbba2e6c0260330169f0b7f947c8c470b10a4e2f37d27d3047fd74d4bea',
+ 'height': 247366 ,
+ 'topoheight': 320000 ,
+ 'major_version': 2,
+ 'minor_version': 2,
+ 'nonce': 3346301122 ,
+ 'orphan_status': False ,
+ 'syncblock': False ,
+ 'txcount': 0,
+ 'reward': 1027132841775 ,
+ 'basereward': 1027132841775 ,
+ 'tips': ['2cc6b73cc75b81accb9867befb72fff1b4031a44792607f21a9d9ed049baab92','
+     eb2258c6459e05966d88bcc6b46191910a512ffa17f7f813c480fe0682456f38'],
+'timestamp': 1531920078
+},
+'status':'OK'
+}
+````
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of getblockheaderbytopoheight output*
+
+# 3.2.8 getblockheaderbyheight
+The method"getblockheaderbyheight"returns the blockheader for the supplied blockchain topoheight,
+it does the same as the getblockheaderbytopoheight function.
+
+| Parameter | Type  | Description             |
+| ----------|:-----:| ----------------------- |
+|"height"| uint64 | The blockchain height |
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Parameters for getblockheaderbyheight*
+
+| Result | Type  | Description             |
+| ----------|:-----:| -------------------- |
+|"block_header"| block_header | The block header, description of this structure can be found in 3.2.5 |
+|"status"| string | Always returns"OK"|
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Results of getblockheaderbyheight*
+
+````python
+payload = {'jsonrpc':'2.0','id':'1','method':'getblockheaderbyheight',"
+params":{"height":320000}}
+result = {
+'block_header':
+{
+'depth': 185434 ,
+'difficulty':'1967934625',
+'hash':'d4fb3bbba2e6c0260330169f0b7f947c8c470b10a4e2f37d27d3047fd74d4bea',
+'height': 247366 ,
+'topoheight': 320000 ,
+'major_version': 2,
+'minor_version': 2,
+'nonce': 3346301122 ,
+'orphan_status': False ,
+'syncblock': False ,
+'txcount': 0,
+'reward': 1027132841775 ,
+'basereward': 1027132841775 ,
+'tips': ['2 cc6b73cc75b81accb9867befb72fff1b4031a44792607f21a9d9ed049baab92','
+eb2258c6459e05966d88bcc6b46191910a512ffa17f7f813c480fe0682456f38'],
+'timestamp': 1531920078
+},
+'status':'OK'
+}
+````
+
+
+
+
 
 
