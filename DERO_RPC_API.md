@@ -1038,6 +1038,118 @@ Answer:{
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of make_integrated_address output*
 
+## 4.2.9 split_integrated_address
+The method "split_integrated_address" is used to get the payment_id and normal wallet address
+from an integrated address.
+
+| Parameter | Type  | Description             |
+| ----------|:-----:| ----------------------- |
+| "integrated_address" | string | The integrated address |
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Parameters of split_integrated_address*
+
+| Result | Type  | Description             |
+| ----------|:-----:| -------------------- |
+| "standard_address" | string | The normal wallet address |
+| "payment_id" | string | The payment ID used |
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Results for split_integrated_address*
+
+```python
+payload = {'jsonrpc': '2.0', 'id':'1', 'method':'split_integrated_address', "params": {"integrated_address": "dERimcuo7YfYGJNCC3KFpTNSZJm5ZEbfbb2hViv..."}}
+
+result = {
+'standard_address': 'dERokSea2psYGJNCC3KFpTNSZJm5ZEbfbb2hVqm4Nns72s...',
+' payment_id': '533f1a4dc4f0a15095d384fafab07187222b13c9f18c02e6a289e36a5d6a5049'
+}
+````
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of split_integrated_address output*
+
+## 4.2.10 get_transfer_by_txid
+The method "get_transfer_by_txid" is used to get transaction details for a specific transaction ID.
+
+| Parameter | Type  | Description             |
+| ----------|:-----:| ----------------------- |
+| "txid" | string | Transaction ID |
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Parameters of get_transfer_by_txid*
+
+| Result | Type  | Description             |
+| ----------|:-----:| -------------------- |
+| "payments" | Transfer_Details | The transaction details |
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Results of get_transfer_by_txid*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*(The "Transfer_Details" structure can be found in 4.2.6)*
+
+```python
+payload = {'jsonrpc': '2.0', 'id':'1', 'method': 'get_transfer_by_txid', "params ": {"txid": "b6d200a5da00dac27f0f5020fc92870b96f583bc25f8d0f7ff3096f5d64f7e4a"}}
+
+result = {
+'payments ': {
+'tx_hash': 'b6d200a5da00dac27f0f5020fc92870b96f583bc25f8d0f7ff3096f5d64f7e4a',
+'payment_id': '533f1a4dc4f0a15095d384fafab07187222b13c9f18c02e6a289e36a5d6a5049',
+'block_height': 421258,
+'amount': 983800000000,
+'unlock_time': 0,
+'type': 'in'}
+}
+````
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of get_transfer_by_txid output*
+
+## 4.2.11 get_transfers
+The method "get_transfers" is used to get all out/ingoing transactions from a wallet. You can use
+the min_height and max_height parameters to narrow down the scope.
+
+| Parameter | Type  | Description             |
+| ----------|:-----:| ----------------------- |
+| "in" | bool | Get the incoming transfers |
+| "out" | bool | Get the outgoing transfers |
+| "pending" | bool | Unused |
+| "failed" | bool | Unused |
+| "pool" | bool | Unused |
+| "filter_by_height" | bool | Unused |
+| "min_height" | unint64 | Minimal blockheight |
+| "max_height" | unint64 | Maximum blockheight (if 0, up to current block) |
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Parameters for get_transfers*
+
+| Result | Type  | Description             |
+| ----------|:-----:| -------------------- |
+| "in" | [ ]Transfer_Details | If requested, the ingoing transactions |
+| "out" | [ ]Transfer_Details | If requested, the outgoing transactions |
+| "pending" | [ ]Transfer_Details | Unused |
+| "failed" | [ ]Transfer_Details | Unused |
+| "pool" | [ ]Transfer_Details | Unused |
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Results of get_transfers*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*(The "Transfer_Details" structure can be found in 4.2.6)*
+
+```python
+# get all outgoing transactions
+payload = {'jsonrpc':'2.0', 'id':'1', 'method': 'get_transfers', "params": {"In": False, "Out":True, "Min_Height":0, "Max_Heigh ":0}}
+
+result = {
+  'out': [{ 'tx_hash':'e72a3437676aca4a0621c794e9c9c9efdbe0146b53070a51aac6aacf97ade2f6',
+  'block_height':422416,
+  'amount':2165799999700,
+  'unlock_time':0,
+  'type': 'out'
+  }]
+}
+````
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example output of get_transfers*
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
