@@ -71,6 +71,16 @@ For more information visit http://www.dero.io
 Dero is written in Go, so we give the data types of the parameters and results in Go format. It is
 pretty straightforward to convert them to other languages.
 Amounts in Dero have a resolution of 112 decimals and are handled as unsigned 64 bit integers.
+
 `e.g. 1.5 Dero is encoded as 1500000000000`
+
+As Dero combines DAG and Blockchain, it uses different height information than traditional
+blockchains. Dero blocks have an additional height value, called the topological height.
+The topological height is unique for each block, while at each blockchain height there can be
+multiple blocks associated. Each blockchain height contains at least a main block and optional
+side blocks.
+
+<img align="center" src="/ASSETS/DEV1_1.jpg" width="320">
+
 
 
