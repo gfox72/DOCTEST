@@ -107,12 +107,12 @@ if (r. status_code == requests.codes.ok):
 #  ’status’: ’OK’
 # }
 ```
-    * Example in Phython
+
 
 ```curl
 curl -X POST http://127.0.0.1:20206/json_rpc -d '{"jsonrpc":"2.0","id ":"1","method":"getblockcount"}' -H 'Content-Type: application / json'
 ```
-    * Example using Curl
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Example in Curl**
 
 # Chapter 2
 ## Quick Overview
@@ -152,7 +152,30 @@ curl -X POST http://127.0.0.1:20206/json_rpc -d '{"jsonrpc":"2.0","id ":"1","met
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Wallet RPC methods**
   
+# Chapter 3
 
+## DERO Daemon RPC Interface
 
+# 3.1 Introduction
+When launched, the Dero daemon automatically starts the RPC server interface at port 20206.
+You can change the port by using the rpc-bind parameter:
+`.\ dero - wallet - cli . exe --rpc - bind =127.0.0.1:20206`
 
+# 3.2 Methods via POST
+Most RPC methods work by issuing HTTP POST requests and sending the parameters in the
+payload.
 
+```` python
+# construct payload
+payload = {'jsonrpc ': '2.0 ', 'id ': '1', 'method ': 'getheight '}
+#send request
+r = requests . post ('http ://127.0.0.1:20206/ json_rpc ', json = payload , headers ={ '
+Connection ': 'close '})
+#read response
+i f (r. status_code == requests . codes .ok):
+jsondata = r. json ()
+result = jsondata [" result "]
+#result = {
+# ’height’:416543
+````
+fd
