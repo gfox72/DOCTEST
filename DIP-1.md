@@ -50,8 +50,9 @@ We intend DIPs to be the primary instrument for proposing new features, for coll
 ## DIP Editors <a name="DIPEditors"></a>
 The current DIP editors are (discord handles):
 
-  * `Dank - Dank#8384` <br/>
-  * `Captain - Captain#0795` <br/>
+  * `Captain - captain#0795` <br/>
+  * `Dank - dank#8384` <br/>
+  * `Gfox - gfox#0522` <br/>
 
 ## DIP Editor Responsibilities
 For each new DIP submitted, an editor does the following:
