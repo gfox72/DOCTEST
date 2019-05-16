@@ -8,7 +8,7 @@ status: DRAFT
 version: 2.0
 ---
 
-<img align="right"src="/ASSETS/DERO_LOGO_320x320.png"width="80">
+<img align="right" src="/ASSETS/DERO_LOGO_320x320.png" width="80">
 </br>
 </br>
 
@@ -81,7 +81,7 @@ The topological height is unique for each block, while at each blockchain height
 multiple blocks associated. Each blockchain height contains at least a main block and optional
 side blocks.
 
-<img align="center"src="/ASSETS/DEV1/DEV1_1.png"width="800">
+<img align="center" src="/ASSETS/DEV1/DEV1_1.png" width="800">
 
 # 1.2 Code examples
 
