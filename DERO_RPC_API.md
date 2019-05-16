@@ -53,4 +53,24 @@ version: 2.0
     4.2.10 get_transfer_by_txid</br>
     4.2.11 get_transfers</br>
 
+# Chapter 1
+## Introduction
+This document describes the RPC API for the Dero daemon and wallet which are implemented
+according to the JSON RPC 2.0 standard.
+We will give a description of the available RPC methods with their parameters and results and
+provide code examples for calling the methods and the data returned.
+Dero is the first crypto project to combine a Proof of Work blockchain with a DAG (Directed
+Acyclic Graph) block structure and wholly anonymous transactions. The fully distributed ledger
+processes transactions with a twelve-second average block time and is secure against majority
+hashrate attacks.
+Dero will be the first CryptoNote blockchain to have smart contracts on its native chain without
+any extra layers or secondary blockchains.
+For more information visit http://www.dero.io
+
+# 1.1 Data types
+Dero is written in Go, so we give the data types of the parameters and results in Go format. It is
+pretty straightforward to convert them to other languages.
+Amounts in Dero have a resolution of 112 decimals and are handled as unsigned 64 bit integers.
+`e.g. 1.5 Dero is encoded as 1500000000000`
+
 
