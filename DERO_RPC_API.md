@@ -657,8 +657,61 @@ result = {
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of gettxpool output*
 
+# 3.3.2 gettransactions
+The method "gettransactions" returns the transaction data for a list of transaction IDs in hex and
+JSON format.
 
+| Parameter | Type  | Description             |
+| ----------|:-----:| ----------------------- |
+| "txs_hashes" | []string | The tx hashes |
+| "decode_as_json" | uint64 | Unused |
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Parameters for gettransactions*
+
+| Result | Type  | Description             |
+| ----------|:-----:| -------------------- |
+| "txs_as_hex" | [ ]string | Tx data as hex |
+| "txs_as_json" | [ ]string | unused |
+| "txs" | [ ]Tx_Related_Info | JSON structures of Tx data |
+| "status" | string | "OK" or "TX NOT FOUND" |
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Results of gettransactions*
+
+```python
+payload = {"txs_hashes":[
+    'db408453b56de5e9973ce4b0fd46edd6b0460437602f84e2bd7861c2a0ca4468', 
+    '0c237ebf3daaab36acde2cfbbad31e5d5435a114d691abeaf2b407d3c03560ac']}
+r = requests.get('http://127.0.0.1:20206/gettransactions', json=payload,
+    headers ={ 'Connection': 'close'})
+    
+#(If tx is not found)
+Result = {
+"txs_as_hex":[""],
+"txs_as_json":null,
+"txs":null,
+"status":"TX NOT FOUND"}
+}
+
+#else
+Result = {
+'txs_as_hex': ['020003020005 e9b032a2e501f28b10b6cc06 ... '],
+'txs_as_json': None ,
+'txs': [ {
+  'as_hex': '',
+  'as_json': '',
+  'block_height': 596325 ,
+  'reward': 0,
+  'ignored': False ,
+  'in_pool': False ,
+  'output_indices': [1532913] ,
+  'tx_hash': '',
+  'valid_block': '53c9fac4bee2e01c9576cb30e6deb7261fc71492fae32e14a042f917e506a857 ',
+  'invalid_block ': None ,
+  'ring ': [...]
+]
+}
+````
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of gettransactions output*
 
 
 
