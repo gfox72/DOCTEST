@@ -4,7 +4,7 @@ ref: 0
 title: DERO DOCUMENTATION CATALOG
 author: gfox
 created: 2019-05-16
-status: ACTIVE
+UPDATED:
 ---
 
 <img align="right" src="/ASSETS/DERO_LOGO_320x320.png" width="80">
