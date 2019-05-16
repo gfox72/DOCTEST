@@ -118,6 +118,7 @@ curl -X POST http://127.0.0.1:20206/json_rpc -d '{"jsonrpc":"2.0","id ":"1","met
 ## Quick Overview
 
   * Daemon RPC methods
+  
 | Method     | Section           | Description  |
 | ------------- |:-------------:| ----- |
 | getblockcount | 3.2.1 | Returns the currently synced height of the chain |
@@ -136,6 +137,7 @@ curl -X POST http://127.0.0.1:20206/json_rpc -d '{"jsonrpc":"2.0","id ":"1","met
 | is_key_image_spent | 3.3.4 | Checks if one of the supplied key images has been spent |
 
   * Wallet RPC methods
+  
 | Method     | Section           | Description  |
 | ------------- |:-------------:| ----- |
 | getaddress | 4.2.1 | Return wallet address |
