@@ -180,7 +180,7 @@ if (r. status_code == requests.codes.ok):
 # ’height’:416543
 #}
 ````
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Example in Phyton**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Example Phyton script**
 
 # 3.2.1 getblockcount
 
@@ -191,5 +191,18 @@ currenty unstable height. This method is called without parameters.
 | ----------|:-----:| ----------------------- |
 | "count"   | uint64| The current blockheight |
 | "status"  | Strin | Always returns "OK"     |
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Results of getblockcount**
+
+```python
+payload = {'jsonrpc ': '2.0', 'id':'1', 'method': 'getblockcount'}
+result ={
+  'count`: 384982 ,
+  'status': 'OK'
+}
+````
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Example of getblockcount output**
+
+
+
+
 
