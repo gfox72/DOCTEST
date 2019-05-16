@@ -117,6 +117,7 @@ curl -X POST http://127.0.0.1:20206/json_rpc -d '{"jsonrpc":"2.0","id ":"1","met
 # Chapter 2
 ## Quick Overview
 
+  * Daemon RPC methods
 | Method     | Section           | Description  |
 | ------------- |:-------------:| ----- |
 | getblockcount | 3.2.1 | Returns the currently synced height of the chain |
@@ -134,7 +135,23 @@ curl -X POST http://127.0.0.1:20206/json_rpc -d '{"jsonrpc":"2.0","id ":"1","met
 | sendrawtransaction | 3.3.3 | Send a raw transaction to the network |
 | is_key_image_spent | 3.3.4 | Checks if one of the supplied key images has been spent |
 
+  * Wallet RPC methods
+| Method     | Section           | Description  |
+| ------------- |:-------------:| ----- |
+| getaddress | 4.2.1 | Return wallet address |
+| getbalance | 4.2.2 | Return wallet balance |
+| getheight | 4.2.3 | Return wallet height |
+| transfer | 4.2.4 | Send Dero to another wallet address |
+| transfer_split | 4.2.5 | Same as transfer |
+| get_bulk_payments | 4.2.6 | Return payments with requested paymentIDs and filtered by height requested |
+| query_key | 4.2.7 | eturn seed or view key |
+| make_integrated_address | 4.2.8 | Generate integrated address with specified payment IDs |
+| split_integrated_address | 4.2.9 | Split integrated address into standard wallet addressand payment ID |
+| get_transfer_by_txid | 4.2.10 | Get transfer information by ID |
+| get_transfers | 4.2.11 | Get all out/ingoing transactions from a wallet |
 
+
+  
 
 
 
