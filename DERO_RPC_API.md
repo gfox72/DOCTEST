@@ -17,8 +17,8 @@ version: 2.0
 ## Table of contents
 
 1 Introduction</br>
-  1.1 Data types</br>
-  1.2 Code examples</br>
+  1.1 [Data types](#1.1)</br>
+  1.2 [Code examples](#1.2)</br>
 2 Quick Overview</br>
 3 DERO Daemon RPC Interface</br>
   3.1 Introduction</br>
@@ -53,8 +53,8 @@ version: 2.0
     4.2.10 get_transfer_by_txid</br>
     4.2.11 get_transfers</br>
 
-# Chapter 1
-## Introduction
+# Chapter 1 <a name="Chapter1"></a>
+## Introduction <a name="Introduction"></a>
 This document describes the RPC API for the Dero daemon and wallet which are implemented
 according to the JSON RPC 2.0 standard.
 We will give a description of the available RPC methods with their parameters and results and
@@ -67,7 +67,7 @@ Dero will be the first CryptoNote blockchain to have smart contracts on its nati
 any extra layers or secondary blockchains.
 For more information visit http://www.dero.io
 
-## 1.1 Data types
+## 1.1 Data types <a name="1.1"></a>
 Dero is written in Go, so we give the data types of the parameters and results in Go format. It is
 pretty straightforward to convert them to other languages.
 Amounts in Dero have a resolution of 112 decimals and are handled as unsigned 64 bit integers.
@@ -83,7 +83,7 @@ side blocks.
 
 <img align="center" src="/ASSETS/DEV1/DEV1_1.png" width="800">
 
-## 1.2 Code examples
+## 1.2 Code examples <a name="1.2"></a>
 
 The examples provided for each method are written in Python - using the ’request’ package to
 build the HTTP request and perform the JSON encoding.
@@ -113,8 +113,8 @@ curl -X POST http://127.0.0.1:20206/json_rpc -d'{"jsonrpc":"2.0","id":"1","metho
 ```
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example in Curl*
 
-# Chapter 2
-## Quick Overview
+# Chapter 2 <a name="Chapter2"></a>
+## Quick Overview <a name="Overview"></a>
   
 | Method     | Section           | Description  |
 | ------------- |:-------------:| ----- |
@@ -151,16 +151,16 @@ curl -X POST http://127.0.0.1:20206/json_rpc -d'{"jsonrpc":"2.0","id":"1","metho
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Wallet RPC methods*
   
-# Chapter 3
+# Chapter 3 <a name="Chapter3"></a>
 
 ## DERO Daemon RPC Interface
 
-## 3.1 Introduction
+## 3.1 Introduction <a name="3.1"></a>
 When launched, the Dero daemon automatically starts the RPC server interface at port 20206.
 You can change the port by using the rpc-bind parameter:
 `.\ dero - wallet - cli . exe --rpc - bind =127.0.0.1:20206`
 
-## 3.2 Methods via POST
+## 3.2 Methods via POST <a name="3.2"></a>
 Most RPC methods work by issuing HTTP POST requests and sending the parameters in the
 payload.
 
