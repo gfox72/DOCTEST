@@ -118,7 +118,7 @@ curl -X POST http://127.0.0.1:20206/json_rpc -d '{"jsonrpc":"2.0","id ":"1","met
 ## Quick Overview
 
 | Method     | Section           | Description  |
-| ------------- |:-------------:| -----:|
+| ------------- |:-------------:| ----- |
 | getblockcount | 3.2.1 | Returns the currently synced height of the chain |
 | get_info | 3.2.2 | Returns various info about the daemon and network |
 | getblocktemplate | 3.2.3 | Return a block template (used for mining a block) |
