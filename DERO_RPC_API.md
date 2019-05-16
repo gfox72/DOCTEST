@@ -805,9 +805,129 @@ The default port number for the wallet is 20209, but this can be also changed:
 
 Note: the Dero daemon has to also be started to sync up the wallet transactions.
 
-## 4.1 Introduction
+## 4.2 Methods via POST
 All wallet RPC methods work by issuing HTTP POST requests and sending the parameters in
 the payload.
+
+````python
+payload = {'jsonrpc : '2.0', 'id': '1', 'method': 'getheight'}
+r = requests.post('http://127.0.0.1:20209/json_rpc', json=payload, headers={'Connection ': 'close'})
+if (r.status_code == requests.codes.ok):
+    jsondata = r.json()
+    result = jsondata ["result"]
+
+result = {
+  'height ': 416543
+}
+`````
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example Python script*
+
+## 4.2.1 getaddress
+The method "getaddress" method is used to the address from the wallet. This method has no
+parameters.
+
+| Result | Type  | Description             |
+| ----------|:-----:| -------------------- |
+| "address" | string | The wallet address |
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Results of getaddress*
+
+```python
+payload = {'jsonrpc': '2.0', 'id':'1', 'method': 'getaddress'}
+
+Result = {
+'address ': 'dERokSea2psYGJNCC3KFpTNSZJm5ZEbfbb2hVq...'
+}
+````
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of getaddress output*
+
+## 4.2.2 getbalance
+The method "getbalance" method is used to get the current balance and unlocked from the wallet.
+This method has no parameters.
+
+| Result | Type  | Description             |
+| ----------|:-----:| -------------------- |
+| "balance" | uint64 | The wallet balance |
+| "unlocked_balance" | uint64 | The unlocked balance |
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Results of getbalance*
+
+```python
+payload = {'jsonrpc': '2.0', 'id':'1', 'method': 'getbalance'}
+
+Result = {
+  'balance': 0,
+  'unlocked_balance': 0
+}
+````
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of getbalance output*
+
+## 4.2.3 getheight
+The method "getheight" method is used to get the currently synced blockchain height from the
+wallet. This method has no parameters.
+
+| Result | Type  | Description             |
+| ----------|:-----:| -------------------- |
+| "height" | uint64 | The wallet height |
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Results of getheight*
+
+```python
+payload = {'jsonrpc': '2.0', 'id':'1', 'method': 'getheight'}
+
+Result = {
+'height ': 416543
+}
+````
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of getheight output*
+
+## 4.2.4 transfer
+The method "transfer" method is used to create one or multiple transactions from a list of destinations.
+The optionally returned tx_key can used to prove that the amount was sent to the address
+using the Dero block explorer.
+
+| Parameter | Type  | Description             |
+| ----------|:-----:| ----------------------- |
+| "destinations" | [ ]Destination | The transfer addresses & amounts |
+| "fee" | uint64 | Unused |
+| "mixin" | uint64 | The mixin (anonymity setting) |
+| "unlock_time" | uint64 | The block height when the payment shall be unlocked |
+| "payment_id" | string | The payment id |
+| "get_tx_key" | bool | If the tx key shall be returned |
+| "priority" | uint64 | Unused |
+| "do_not_relay" | bool | Unused |
+| "get_tx_hex" | bool | If the tx shall be returned as hex blob |
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Parameters of transfer*
+
+| Result | Type  | Description             |
+| ----------|:-----:| -------------------- |
+| "amount" | uint64 | The amount of Dero to be send |
+| "address" | string | The address where Dero shall be send |
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*JSON "destinations" structure*
+
+| Result | Type  | Description             |
+| ----------|:-----:| -------------------- |
+| "fee" | uint64 | The fee spent |
+| "tx_key" | string | The tx key |
+| "tx_hash" | string | The tx ID |
+| "tx_blob" | string | The tx data in hex |
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Results of transfer*
+
+```python
+payload = {'jsonrpc': '2.0', 'id': '1', 'method': 'transfer', "params":{"destinations" :[{ "amount": amount , "address": address }], "Mixin":6, "unlock_time":0, "payment_id": payment_id, "get_tx_key":True, "priority":1.0, "do_not_relay":False, "get_tx_hex":True }}
+
+Result = {
+  'fee': 4500000000, # 0,0045 Dero
+  'tx_key': 'b8cd3a1f6e8675606b9637ced1f1df40afb531d71b0ca2044b10938e9023500f',
+  'tx_hash': 'c5238d0b0638fc8d2a0ca9252ed6c41df894c27dbcac9cb6e050bc89a99062a8',
+  'tx_blob': '026402020006 ffec1d97c71d...'
+}
+````
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of transfer output*
+
 
 
 
