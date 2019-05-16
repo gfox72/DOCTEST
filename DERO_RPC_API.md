@@ -926,7 +926,7 @@ Result = {
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of transfer output*
 
 ## 4.2.5 transfer_split <a name="4.2.5"></a>
-The method "transfer_split" is equal to the "transfer" method in 4.2.4 and kept for compatibility
+The method "transfer_split" is equal to the "transfer" method in [4.2.4](4.2.4) and kept for compatibility
 reasons.
 
 ```python
@@ -1076,7 +1076,7 @@ The method "get_transfer_by_txid" is used to get transaction details for a speci
 | "payments" | Transfer_Details | The transaction details |
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Results of get_transfer_by_txid*
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*(The "Transfer_Details" structure can be found in 4.2.6)*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*(The "Transfer_Details" structure can be found in [4.2.6](4.2.6))*
 
 ```python
 payload = {'jsonrpc': '2.0', 'id':'1', 'method': 'get_transfer_by_txid', "params ": {"txid": "b6d200a5da00dac27f0f5020fc92870b96f583bc25f8d0f7ff3096f5d64f7e4a"}}
@@ -1119,7 +1119,7 @@ the min_height and max_height parameters to narrow down the scope.
 | "pool" | [ ]Transfer_Details | Unused |
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Results of get_transfers*
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*(The "Transfer_Details" structure can be found in 4.2.6)*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*(The "Transfer_Details" structure can be found in [4.2.6](4.2.6))*
 
 ```python
 # get all outgoing transactions
