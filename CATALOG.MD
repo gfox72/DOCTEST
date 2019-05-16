@@ -1,3 +1,25 @@
+--- 
+category: INFO
+ref: 0
+title: DERO DOCUMENTATION CATALOG
+author: gfox
+created: 2019-05-16
+status: ACTIVE
 ---
-test
----
+
+<img align="right" src="/assets/DERO_LOGO_320x320.png" width="80">
+</br>
+</br>
+
+# DERO DOCUMENTATION CATALOG
+
+## INFO
+  * INFO-1 : DOCUMENTATION DESIGN GUIDELINES
+  
+## DEVELOPER
+  * DEV-1 : DERO ATLANTIS RPC API REFERENCE
+  
+## DERO IMPROVEMENT PROCESS
+  * DIP-1 : DERO IMPROVEMENT PROCESS OVERVIEW
+  
+  
