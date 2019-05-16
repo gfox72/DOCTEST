@@ -90,7 +90,7 @@ build the HTTP request and perform the JSON encoding.
 
 ```python
 #construct payload for HTTP request
-payload = {'jsonrpc': '2.0', 'id':'1','method': 'getblockcount'}
+payload = {'jsonrpc':'2.0','id':'1','method':'getblockcount'}
 
 #send request
 r = requests.post('http://127.0.0.1:20206/json_rpc', json=payload, headers ={'Connection':'close'})
@@ -109,7 +109,7 @@ if (r. status_code == requests.codes.ok):
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Example in pytho**
 
 ```curl
-curl -X POST http://127.0.0.1:20206/json_rpc -d '{"jsonrpc":"2.0","id ":"1","method":"getblockcount"}' -H 'Content-Type: application / json'
+curl -X POST http://127.0.0.1:20206/json_rpc -d'{"jsonrpc":"2.0","id ":"1","method":"getblockcount"}' -H'Content-Type: application / json'
 ```
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Example in Curl**
 
@@ -166,10 +166,10 @@ payload.
 
 ```` python
 # construct payload
-payload = {'jsonrpc ': '2.0', 'id': '1', 'method': 'getheight'}
+payload = {'jsonrpc':'2.0','id':'1','method':'getheight'}
 
 #send request
-r = requests.post('http://127.0.0.1:20206/json_rpc', json=payload, headers ={'Connection': 'close'})
+r = requests.post('http://127.0.0.1:20206/json_rpc', json=payload, headers ={'Connection':'close'})
 
 #read response
 if (r. status_code == requests.codes.ok):
@@ -192,10 +192,10 @@ currenty unstable height. This method is called without parameters.
 | "status"  | Strin | Always returns "OK"     |
 
 ```python
-payload = {'jsonrpc': '2.0', 'id':'1', 'method': 'getblockcount'}
+payload = {'jsonrpc':'2.0','id':'1','method':'getblockcount'}
 result ={
-  'count`: 384982 ,
-  'status': 'OK'
+ 'count`: 384982,
+ 'status':'OK'
 }
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Example of getblockcount output**
@@ -208,7 +208,7 @@ method has no parameters.
 | ----------|:-----:| ----------------------- |
 | "alt_blocks_count" | uint64 | Unused |
 | "difficulty" | uint64 | The current difficulty |
-| "grey_peerlist_size" | uint64 Unused |
+| "grey_peerlist_size" | uint64 | Unused |
 | "height" | int64 | Current blockchain height |
 | "stableheight" | int64 | Current stable height |
 | "topoheight" | int64 | Current topoheight |
@@ -216,7 +216,7 @@ method has no parameters.
 | "incoming_connections_count" | uint64 | Unused |
 | "outgoing_connections_count" | uint64 | Unused |
 | "target" | uint64 | Target blocktime in seconds |
-| "target_height" | uint64 Unused |
+| "target_height" | uint64 | Unused |
 | "testnet" | bool | Indicates if this is a testnet |
 | "top_block_hash" | string | Block ID of the newest block |
 | "tx_count" | uint64 | Unused |
@@ -226,5 +226,36 @@ method has no parameters.
 | "median_block_Size" | uint64 | Max blocksize in bytes (currently 1.25 MB) |
 | "white_peerlist_size" | uint64 | Unused |
 | "version" | string | Daemon version |
-| "status" | string | Always returns "OK"
+| "status" | string | Always returns "OK" |
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Results of get_info**
+````
+payload = {'jsonrpc':'2.0','id':'1','method':'get_info'}
+
+result = {
+'alt_blocks_count': 0,
+'difficulty': 2053657306,
+'grey_peerlist_size': 0,
+'height': 406525,
+'stableheight': 406510,
+'topoheight': 579299,
+'averageblocktime50': 6,
+'incoming_connections_count': 0,
+'outgoing_connections_count': 0,
+'target': 12,
+'target_height': 0,
+'testnet': False,
+'top_block_hash':'4db40b72dba3b179dd10ecf7e90d55934509ee17c3b6de57bca5fefa3237315e',
+'tx_count': 0,
+'tx_pool_size': 0,
+'dynamic_fee_per_kb': 1000000000,
+'total_supply': 3393288,
+'median_block_size': 1310720,
+'white_peerlist_size': 0,
+'version':'2.0.1 -3.alpha.atlantis+04072018',
+'status':'OK'
+}
+````
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Results of get_info output**
 
