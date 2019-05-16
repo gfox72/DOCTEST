@@ -67,7 +67,7 @@ Dero will be the first CryptoNote blockchain to have smart contracts on its nati
 any extra layers or secondary blockchains.
 For more information visit http://www.dero.io
 
-# 1.1 Data types
+## 1.1 Data types
 Dero is written in Go, so we give the data types of the parameters and results in Go format. It is
 pretty straightforward to convert them to other languages.
 Amounts in Dero have a resolution of 112 decimals and are handled as unsigned 64 bit integers.
@@ -83,7 +83,7 @@ side blocks.
 
 <img align="center" src="/ASSETS/DEV1/DEV1_1.png" width="800">
 
-# 1.2 Code examples
+## 1.2 Code examples
 
 The examples provided for each method are written in Python - using the ’request’ package to
 build the HTTP request and perform the JSON encoding.
@@ -155,12 +155,12 @@ curl -X POST http://127.0.0.1:20206/json_rpc -d'{"jsonrpc":"2.0","id":"1","metho
 
 ## DERO Daemon RPC Interface
 
-# 3.1 Introduction
+## 3.1 Introduction
 When launched, the Dero daemon automatically starts the RPC server interface at port 20206.
 You can change the port by using the rpc-bind parameter:
 `.\ dero - wallet - cli . exe --rpc - bind =127.0.0.1:20206`
 
-# 3.2 Methods via POST
+## 3.2 Methods via POST
 Most RPC methods work by issuing HTTP POST requests and sending the parameters in the
 payload.
 
@@ -182,7 +182,7 @@ if (r. status_code == requests.codes.ok):
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example Phyton script*
 
-# 3.2.1 getblockcount
+## 3.2.1 getblockcount
 The method "getblockcount" returns the height of the (currently synced) chain. This is also the
 currenty unstable height. This method is called without parameters.
 
@@ -203,7 +203,7 @@ result ={
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of getblockcount output*
 
-# 3.2.2 get_info
+## 3.2.2 get_info
 The method "get_info" returns various info about the daemon and the state of the network. This
 method has no parameters.
 
@@ -263,7 +263,7 @@ result = {
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Results of get_info output*
 
-# 3.2.3 getblocktemplate
+## 3.2.3 getblocktemplate
 Return a block template (used for mining a block).
 
 | Parameter | Type  | Description             |
@@ -304,7 +304,7 @@ result = {
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of getblocktemplate output*
 
-# 3.2.4 submitblock
+## 3.2.4 submitblock
 Submits a processed blocktemplate_blob and blockhashing_blob to the daemon. The parameter
 is unnamed as the data is transmitted as array and accessed by-position
 (see https://www.jsonrpc.org/specification#parameter_structures).
@@ -334,7 +334,7 @@ Answer : {
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of submitblock output*
 
-# 3.2.5 getlastblockheader
+## 3.2.5 getlastblockheader
 The method "getlastblockheader" returns the latest blockheader of the (currently synced) chain.
 This is equal to the top unstable height. This method is called without parameters.
 
@@ -389,7 +389,7 @@ result = {
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of getlastblockheader output*
 
-# 3.2.6 getblockheaderbyhash
+## 3.2.6 getblockheaderbyhash
 The method "getblockheaderbyhash" returns the blockheader for the supplied blocks hash.
 
 | Parameter | Type  | Description             |
@@ -432,7 +432,7 @@ result =
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of getblockheaderbyhash output*
 
-# 3.2.7 getblockheaderbytopoheight
+## 3.2.7 getblockheaderbytopoheight
 The method "getblockheaderbytopoheight" returns the blockheader for the supplied topoheight.
 
 | Parameter | Type  | Description             |
@@ -477,7 +477,7 @@ result = {
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of getblockheaderbytopoheight output*
 
-# 3.2.8 getblockheaderbyheight
+## 3.2.8 getblockheaderbyheight
 The method "getblockheaderbyheight" returns the blockheader for the supplied blockchain topoheight,
 it does the same as the getblockheaderbytopoheight function.
 
@@ -522,7 +522,7 @@ eb2258c6459e05966d88bcc6b46191910a512ffa17f7f813c480fe0682456f38'],
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of getblockheaderbyheight output*
 
-# 3.2.9 getblock
+## 3.2.9 getblock
 The method "getblock" returns the data of a block from either the given height or hash.
 
 | Parameter | Type  | Description             |
@@ -582,7 +582,7 @@ result = {
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of getblockheaderbyheight output*
 
-# 3.2.10 gettxpool
+## 3.2.10 gettxpool
 The method "gettxpool" returns the tx hashes that are currently in the mempool. This method
 has no parameters.
 
@@ -609,7 +609,7 @@ Result = {
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of gettxpool output*
 
-# 3.3 Methods via GET
+## 3.3 Methods via GET
 For compability reasons, some RPC methods work using HTTP GET requests. Thereby the
 method name is part of the URL and the parameters are transmitted in the payload.
 
@@ -633,7 +633,7 @@ r = requests.get('http://127.0.0.1:20206/ is_key_image_spent', json=payload,
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example Python script*
 
-# 3.3.1 getheight
+## 3.3.1 getheight
 The method "getheight" returns the different heights of the blockchain. It is called without parameters.
 
 | Result | Type  | Description             |
@@ -657,7 +657,7 @@ result = {
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of gettxpool output*
 
-# 3.3.2 gettransactions
+## 3.3.2 gettransactions
 The method "gettransactions" returns the transaction data for a list of transaction IDs in hex and
 JSON format.
 
@@ -713,7 +713,7 @@ Result = {
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of gettransactions output*
 
-# 3.3.3 sendrawtransaction
+## 3.3.3 sendrawtransaction
 The method "sendrawtransaction" takes a transaction as hex data and submits it into the mempool
 if valid. Various checks are performed to ensure the transaction is valid, however the boolean
 result fields are not used, so you have to check the "status" value.
@@ -762,7 +762,7 @@ Answer : {
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of sendrawtransaction output*
 
-# 3.3.4 is_key_image_spent
+## 3.3.4 is_key_image_spent
 The method "is_key_image_spent" is used to check the status of a list of key_images.
 
 | Parameter | Type  | Description             |
@@ -779,7 +779,7 @@ The method "is_key_image_spent" is used to check the status of a list of key_ima
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Results of is_key_image_spent*
 
 ```python
-payload = {"key_images": ['7ab535bac7d0900cc4b71362e7a303 ... ']}
+payload = {"key_images": ['7ab535bac7d0900cc4b71362e7a303... ']}
 
 result = {
 'spent_status': [1],
@@ -787,6 +787,30 @@ result = {
 }
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of is_key_image_spent output*
+
+
+# Chapter 4 
+
+## DERO Wallet RPC Interface
+
+## 4.1 Introduction
+To the use the RPC interface, the wallet has to be started with the rpc-server function enabled:
+`.\dero -wallet-cli.exe --rpc-server`
+
+If your machine is accessible from the outside, you should setup a rpc login to access the wallet:
+`.\dero -wallet -cli.exe --rpc -server --rpc -login =<username:password>`
+
+The default port number for the wallet is 20209, but this can be also changed:
+`.\dero-wallet-cli.exe --rpc -server --rpc -login=<username:password> --rpc -bind=<127.0.0.1:20209>`
+
+Note: the Dero daemon has to also be started to sync up the wallet transactions.
+
+## 4.1 Introduction
+All wallet RPC methods work by issuing HTTP POST requests and sending the parameters in
+the payload.
+
+
+
 
 
 
