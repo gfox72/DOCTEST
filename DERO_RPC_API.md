@@ -106,12 +106,12 @@ if (r. status_code == requests.codes.ok):
 #  ’status’: ’OK’
 # }
 ```
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Example in pytho**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example in python*
 
 ```curl
-curl -X POST http://127.0.0.1:20206/json_rpc -d'{"jsonrpc":"2.0","id ":"1","method":"getblockcount"}' -H'Content-Type: application / json'
+curl -X POST http://127.0.0.1:20206/json_rpc -d'{"jsonrpc":"2.0","id ":"1","method":"getblockcount"}'-H'Content-Type: application / json'
 ```
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Example in Curl**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example in Curl*
 
 # Chapter 2
 ## Quick Overview
@@ -133,7 +133,7 @@ curl -X POST http://127.0.0.1:20206/json_rpc -d'{"jsonrpc":"2.0","id ":"1","meth
 | sendrawtransaction | 3.3.3 | Send a raw transaction to the network |
 | is_key_image_spent | 3.3.4 | Checks if one of the supplied key images has been spent |
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Daemon RPC methods**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Daemon RPC methods*
   
 | Method     | Section           | Description  |
 | ------------- |:-------------:| ----- |
@@ -149,7 +149,7 @@ curl -X POST http://127.0.0.1:20206/json_rpc -d'{"jsonrpc":"2.0","id ":"1","meth
 | get_transfer_by_txid | 4.2.10 | Get transfer information by ID |
 | get_transfers | 4.2.11 | Get all out/ingoing transactions from a wallet |
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Wallet RPC methods**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Wallet RPC methods*
   
 # Chapter 3
 
@@ -180,7 +180,7 @@ if (r. status_code == requests.codes.ok):
 # ’height’:416543
 #}
 ````
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Example Phyton script**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example Phyton script*
 
 # 3.2.1 getblockcount
 The method "getblockcount" returns the height of the (currently synced) chain. This is also the
@@ -191,7 +191,7 @@ currenty unstable height. This method is called without parameters.
 | "count"   | | uint64 || The current blockheight |
 | "status"  | Strin | Always returns "OK"     |
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Results of getblockcount**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Results of getblockcount*
 
 ```python
 payload = {'jsonrpc':'2.0','id':'1','method':'getblockcount'}
@@ -201,7 +201,7 @@ result ={
 }
 ````
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Example of getblockcount output**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of getblockcount output*
 
 # 3.2.2 get_info
 The method "get_info" returns various info about the daemon and the state of the network. This
@@ -231,7 +231,7 @@ method has no parameters.
 | "version" | string | Daemon version |
 | "status" | string | Always returns "OK" |
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Results of get_info**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Results of get_info*
 
 ````python
 payload = {'jsonrpc':'2.0','id':'1','method':'get_info'}
@@ -261,7 +261,7 @@ result = {
 }
 ````
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Results of get_info output**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Results of get_info output*
 
 # 3.2.3 getblocktemplate
 Return a block template (used for mining a block).
@@ -271,7 +271,7 @@ Return a block template (used for mining a block).
 | "wallet_address" | string | Hexdecimal string of the wallet address which receives the mining reward |
 | "reserve_size" | uint64 | should be > 0 and < 255 |
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Parameters for getblocktemplate**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Parameters for getblocktemplate*
 
 | Result | Type  | Description             |
 | ----------|:-----:| -------------------- |
@@ -285,7 +285,7 @@ Return a block template (used for mining a block).
 | "epoch" | uint64 | The expiry time of this block |
 | "status" | string | Always returns "OK" |
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Results of getblocktemplate**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Results of getblocktemplate*
 
 ````python
 payload = {'jsonrpc':'2.0','id':'1','method':'getblocktemplate', "params":{
@@ -296,13 +296,99 @@ result = {
 'expected_reward': 0,
 'difficulty': 1804159513,
 'height': 392836,
-'prev_hash':' a7e861a0a3362e9eb713f4cc1f3da04952914636107266ee5dbbfe ...',
+'prev_hash':'a7e861a0a3362e9eb713f4cc1f3da04952914636107266ee5dbbfe ...',
 'reserved_offset':43,
 'epoch': 1533848474,
 'status':'OK'
 }
 ````
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Example of getblocktemplate output**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of getblocktemplate output*
+
+# 3.2.4 submitblock
+Submits a processed blocktemplate_blob and blockhashing_blob to the daemon. The parameter
+is unnamed as the data is transmitted as array and accessed by-position
+(see https://www.jsonrpc.org/specification#parameter_structures).
+
+| Parameter | Type  | Description             |
+| ----------|:-----:| ----------------------- |
+| Parameter Type Description | [ ]string | Array (without name) containing the processed
+blocktemplate_blob and blockhashing_blob in hex |
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Parameters for submitblock*
+
+| Result | Type  | Description             |
+| ----------|:-----:| -------------------- |
+| "blid" | string | The new Block ID |
+| "status" | string | Returns "OK" if ok, otherwise an error message
+e.g. "Could NOT decode block", "REJECTED" etc. |
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Results of submitblock*
+
+````
+payload = {'jsonrpc':'2.0','id':'1','method':'submitblock', "params":blockDatainHEX}
+Answer : {
+'blid': 591042,
+'status':'OK'
+}
+````
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of submitblock output*
+
+# 3.2.5 getlastblockheader
+The method "getlastblockheader" returns the latest blockheader of the (currently synced) chain.
+This is equal to the top unstable height. This method is called without parameters.
+
+| Result | Type  | Description             |
+| ----------|:-----:| -------------------- |
+"block_header" block_header The block header
+"status" string Always returns "OK"
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Results of getlastblockheader*
+
+| Key | Type  | Description             |
+| ----------|:-----:| ----------------- |
+| "depth" | int64 | The difference between the current blockchain height and the height of this block |
+| "difficulty" | string | Difficulty of this block |
+| "hash" | string | Hash of the block, serves as block ID |
+| "height" | int64 | The height of the block |
+| "topoheight" | int64 | The topheight of the block |
+| "major_version" | uint64 | Current Atlanis blocks have major version "2" |
+| "minor_version" | uint64 | Current Atlanis blocks have minor version "2" |
+| "nonce" | string | The block nonce |
+| "orphan_status" | bool | Indicates if a block is orphaned, should not happen with Atlantis |
+| "syncblock" | bool | Indicates wether a block is a syncblock, that is a single stable block used for rebuilding the chain |
+| "txcount" | int64 | Number of transactions included in the block |
+| "reward" | uint64 | The reward (base + fees) for this block |
+| "tips" | []string | Block IDs of the parent of this block |
+| "timestamp" | uint64 | The timestamp of the block |
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*JSON structure block_header*
+
+````
+payload = {'jsonrpc': '2.0', 'id':'1', 'method': 'getlastblockheader'}
+
+result = {
+'block_header':
+{
+  'depth': 0,
+  'difficulty':'2049682764',
+  'hash':'5 d49e6e9eea00a7c066e14f4ebc05473b39306d8ba05d741f3955658f17322e2',
+  'height': 397287 ,
+  'topoheight': 563285 ,
+  'major_version': 2,
+  'minor_version': 2,
+  'nonce': 806404222 ,
+  'orphan_status': False ,
+  'syncblock': False ,
+  'txcount': 0,
+  'reward': 1496206893845 ,
+  'tips': ['7527285409 f6b7133153a25a1f2f9848dc95758a0be7e9d79365ac3854841644','e9f065645839501f43ce1aae95e491d19ae542fabd99a33b049793862720647c'],'timestamp': 1533702138
+},
+'status':'OK'
+}
+````
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of getlastblockheader output*
+
 
 
 
