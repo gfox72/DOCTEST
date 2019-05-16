@@ -609,6 +609,33 @@ Result = {
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of gettxpool output*
 
+# 3.3 Methods via GET
+For compability reasons, some RPC methods work using HTTP GET requests. Thereby the
+method name is part of the URL and the parameters are transmitted in the payload.
+
+```python
+#construct payload for HTTP request
+payload = {" key_images": ['7ab535bac7d0900cc4b71362e7a3037fbdff203df728a99001b3ceea925f4cde']}
+
+#send request
+r = requests.get('http://127.0.0.1:20206/ is_key_image_spent', json=payload,
+   headers ={ ' Connection': 'close'})
+
+#read response object
+  if (r.status_code == requests.codes.ok):
+    jsondata = r.json ()
+    result = jsondata ["result"]
+
+#result = {
+# ’spent_status’: [1],
+# ’status’: ’OK’
+#}
+````
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example Python script*
+
+
+
+
 
 
 
