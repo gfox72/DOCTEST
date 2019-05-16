@@ -5,10 +5,9 @@ title: DERO ATLANTIS RPC API
 author: Captain
 created: 2018/9/4
 status: ACTIVE
-revision: 2.1
+revision: [2.1](REVISIONS)
 ---
 
-[Revision info](#REVISIONS)
 
 <img align="right" src="/ASSETS/DERO_LOGO_320x320.png" width="80">
 </br>
@@ -1138,7 +1137,7 @@ result = {
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example output of get_transfers*
 
-# Revision info <a name="REVISION"></a>
+# Revision info <a name="REVISIONS"></a>
 
 | REV | Date  | Author | Description |           
 | 2.0 | 2018/09/04 | Captain | PDF version published on DERO Github |
