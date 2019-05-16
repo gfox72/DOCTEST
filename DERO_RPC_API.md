@@ -224,7 +224,7 @@ method has no parameters.
 |"top_block_hash"| string | Block ID of the newest block |
 |"tx_count"| uint64 | | Unused |
 |"tx_pool_size"| uint64 | Number of pending transactions in the mempool |
-|"dynamic_fee_per_kb"| | uint64 | Transaction fee |
+|"dynamic_fee_per_kb"| uint64 | Transaction fee |
 |"total_supply"| uint64 | Total coin supply (minus premine) |
 |"median_block_Size"| uint64 | Max blocksize in bytes (currently 1.25 MB) |
 |"white_peerlist_size"| uint64 | Unused |
@@ -319,8 +319,8 @@ blocktemplate_blob and blockhashing_blob in hex |
 | Result | Type  | Description             |
 | ----------|:-----:| -------------------- |
 |"blid"| string | The new Block ID |
-|"status"| string | Returns"OK"if ok, otherwise an error message
-e.g."Could NOT decode block","REJECTED"etc. |
+|"status"| string | Returns "OK" if ok, otherwise an error message
+e.g."Could NOT decode block", "REJECTED" etc. |
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Results of submitblock*
 
@@ -340,8 +340,8 @@ This is equal to the top unstable height. This method is called without paramete
 
 | Result | Type  | Description             |
 | ----------|:-----:| -------------------- |
-"block_header"block_header The block header
-"status"string Always returns"OK"
+| "block_header" | block_header | The block header |
+| "status" | string | Always returns "OK" |
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Results of getlastblockheader*
 
@@ -352,8 +352,8 @@ This is equal to the top unstable height. This method is called without paramete
 |"hash"| string | Hash of the block, serves as block ID |
 |"height"| int64 | The height of the block |
 |"topoheight"| int64 | The topheight of the block |
-|"major_version"| uint64 | Current Atlanis blocks have major version"2"|
-|"minor_version"| uint64 | Current Atlanis blocks have minor version"2"|
+|"major_version"| uint64 | Current Atlanis blocks have major version "2"|
+|"minor_version"| uint64 | Current Atlanis blocks have minor version "2"|
 |"nonce"| string | The block nonce |
 |"orphan_status"| bool | Indicates if a block is orphaned, should not happen with Atlantis |
 |"syncblock"| bool | Indicates wether a block is a syncblock, that is a single stable block used for rebuilding the chain |
