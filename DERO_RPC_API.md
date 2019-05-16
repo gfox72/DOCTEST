@@ -76,11 +76,12 @@ Amounts in Dero have a resolution of 112 decimals and are handled as unsigned 64
 
 As Dero combines DAG and Blockchain, it uses different height information than traditional
 blockchains. Dero blocks have an additional height value, called the topological height.
+
 The topological height is unique for each block, while at each blockchain height there can be
 multiple blocks associated. Each blockchain height contains at least a main block and optional
 side blocks.
 
-<img align="center" src="/ASSETS/DEV1_1.png" width="320">
+<img align="center" src="/ASSETS/DEV1/DEV1_1.png" width="320">
 
 # 1.2 Code examples
 
@@ -112,6 +113,26 @@ if (r. status_code == requests.codes.ok):
 curl -X POST http://127.0.0.1:20206/json_rpc -d '{"jsonrpc":"2.0","id ":"1","method":"getblockcount"}' -H 'Content-Type: application / json'
 ```
     * Example using Curl
+
+# Chapter 2
+## Quick Overview
+
+| Method     | Section           | Description  |
+| ------------- |:-------------:| -----:|
+| getblockcount | 3.2.1 | Returns the currently synced height of the chain |
+| get_info | 3.2.2 | Returns various info about the daemon and network |
+| getblocktemplate | 3.2.3 | Return a block template (used for mining a block) |
+| submitblock | 3.2.4 | Submits a mined block to the network |
+| getlastblockheader | 3.2.5 | Returns the latest blockheader of the currently synced height |
+| getblockheaderbyhash | 3.2.6 | Returns a blockheader from its hash |
+| getblockheaderbytopoheight | 3.2.7 | Returns the blockheader from given topoheight |
+| getblockheaderbyheight | 3.2.8 | Returns the blockheader from given height |
+| getblock | 3.2.9 | Returns a block from its given hash |
+| gettxpool | 3.2.10 | Returns a list of all the pending txhashes in the mempool |
+| getheight | 3.3.1 | Returns the currently synced height and topoheight of the chain |
+| gettransactions | 3.3.2 | Returns the specified transactions from either the blockchain or mempool |
+| sendrawtransaction | 3.3.3 | Send a raw transaction to the network |
+| is_key_image_spent | 3.3.4 | Checks if one of the supplied key images has been spent |
 
 
 
