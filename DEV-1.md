@@ -188,7 +188,7 @@ currenty unstable height. This method is called without parameters.
 | Result    | Type  | Description             |
 | ----------|:-----:| ----------------------- |
 |"count" | uint64 | The current blockheight |
-|"status"| Strin | Always returns"OK"   |
+|"status"| String | Always returns "OK"   |
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Results of getblockcount*
 
@@ -218,10 +218,10 @@ method has no parameters.
 |"incoming_connections_count" | uint64 | Unused |
 |"outgoing_connections_count" | uint64 | Unused |
 |"target" | uint64 | | Target blocktime in seconds |
-|"target_height" | uint64 | | Unused |
+|"target_height" | uint64 | Unused |
 |"testnet"| bool | Indicates if this is a testnet |
-|"top_block_hash"| string | Block ID of the newest block |
-|"tx_count"| uint64 | | Unused |
+|"top_block_hash" | string | Block ID of the newest block |
+|"tx_count"| uint64 | Unused |
 |"tx_pool_size"| uint64 | Number of pending transactions in the mempool |
 |"dynamic_fee_per_kb"| uint64 | Transaction fee |
 |"total_supply"| uint64 | Total coin supply (minus premine) |
