@@ -318,8 +318,7 @@ is unnamed as the data is transmitted as array and accessed by-position
 | Result | Type  | Description             |
 | ----------|:-----:| -------------------- |
 |"blid"| string | The new Block ID |
-|"status"| string | Returns "OK" if ok, otherwise an error message
-e.g."Could NOT decode block", "REJECTED" etc. |
+|"status"| string | Returns "OK" if ok, otherwise an error message e.g."Could NOT decode block", "REJECTED" etc. |
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Results of submitblock*
 
