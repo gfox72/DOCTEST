@@ -167,15 +167,18 @@ payload.
 
 ```` python
 # construct payload
-payload = {'jsonrpc ': '2.0 ', 'id ': '1', 'method ': 'getheight '}
+payload = {'jsonrpc ': '2.0', 'id': '1', 'method': 'getheight'}
+
 #send request
-r = requests . post ('http ://127.0.0.1:20206/ json_rpc ', json = payload , headers ={ '
-Connection ': 'close '})
+r = requests.post('http://127.0.0.1:20206/json_rpc',json=payload,headers ={'Connection': 'close'})
+
 #read response
-i f (r. status_code == requests . codes .ok):
-jsondata = r. json ()
-result = jsondata [" result "]
+if (r. status_code == requests.codes.ok):
+    jsondata = r.json()
+    result = jsondata ["result"]
+
 #result = {
 # ’height’:416543
-````
-fd
+#}
+
+ffdf
