@@ -25,4 +25,4 @@ STATUS: ACTIVE
   
 </br> </br></br></br></br>
 ## UPDATES
-here we'll keep track of which documents where added and when
+here we'll keep track of which documents were added and when
