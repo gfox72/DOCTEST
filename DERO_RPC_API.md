@@ -928,6 +928,126 @@ Result = {
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of transfer output*
 
+## 4.2.5 transfer_split
+The method "transfer_split" is equal to the "transfer" method in 4.2.4 and kept for compatibility
+reasons.
+
+```python
+payload = {'jsonrpc': '2.0', 'id': '1', 'method': 'transfer_split', "params": {"destinations": [{"amount": amount , "address": address}, {"amount": amount , "address": address}], "Mixin": 6, "unlock_time": 0, "payment_id":payment_id, "get_tx_key":True, "priority": 1.0, "do_not_relay":False, "get_tx_hex":False}}
+
+result ={
+  'fee_list': [4500000000],
+  ' amount_list': None,
+  ' tx_key_list': ['85f6db6a5bd034056494bae5b3ed2a43abed9535aa8733c56d4c937cb013720a'],
+  ' tx_hash_list': ['4f81195b866682051b2ffec0cc2af2884c696ab5ae92ab649dc7c2a7f6589b27'],
+  'tx_blob_list': None
+}
+````
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of transfer_split output*
+
+## 4.2.6 get_bulk_payments
+The method "get_bulk_payments" is used to get a bulk of transactions from a list of payment IDs.
+Note: The method aborts if atleast one payment ID is not found/invalid.
+
+| Parameter | Type  | Description             |
+| ----------|:-----:| ----------------------- |
+| "payment_ids" | [ ]string | List of payment IDs to be checked. If no payment ID is provided, all entries with any payment ID are returned. |
+| "min_block_height" | uint64 | Blockheight where to start searching |
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Parameters of get_bulk_payments*
+
+| Result | Type  | Description             |
+| ----------|:-----:| -------------------- |
+| "payments" | [ ]Transfer_Details | The details for the transactions |
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Results of get_bulk_payments*
+
+| Result | Type  | Description             |
+| ----------|:-----:| -------------------- |
+| "tx_hash" | string | The hash of the transaction |
+| "payment_id" | string | The payment ID |
+| "block_height" | uint64 | The blockheight of the transaction |
+| "amount" | uint64 | The amount received |
+| "unlock_time" | uint64 | The blockheight where it will be unlocked |
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*JSON structure Transfer_Details*
+
+```python
+payload = {'jsonrpc': '2.0', 'id': '1', 'method': 'get_bulk_payments', "params":
+{"payment_ids":payment_ids, "min_block_height":400}}
+
+result = {
+  'tx_hash': 'b6d200a5da00dac27f0f5020fc92870b96f583bc25f8d0f7ff3096f5d64f7e4a',
+  'payment_id': '533f1a4dc4f0a15095d384fafab07187222b13c9f18c02e6a289e36a5d6a5049 ',
+  'block_height': 421258,
+  'amount': 983800000000,
+  'unlock_time': 0
+}
+````
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of get_bulk_payments output*
+
+##4.2.7 query_key
+The method "query_key" is used to query either the secret key in mnemonic form or the view_key
+in hex form from the wallet.
+
+| Parameter | Type  | Description             |
+| ----------|:-----:| ----------------------- |
+| "key_type" | string | Type of key to query, can be "mnemonic" or "view_key" |
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Parameters of query_key*
+
+| Result | Type  | Description             |
+| ----------|:-----:| -------------------- |
+| "key" | string | The queried key |
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Results for query_key*
+
+```python
+payload = {'jsonrpc': '2.0', 'id':'1', 'method':'query_key', "params":{"key_type":"view_key "}}
+
+result = {
+  'key ':'b4a7478974345c5555efce9bf98b1a7bffc7e735e85c378d4ad04366b7e49809'
+}
+````
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of query_key output*
+
+## 4.2.8 make_integrated_address
+The method "make_integrated_address" is used to combine a payment_id and normal wallet address
+to create an integrated address.
+
+| Parameter | Type  | Description             |
+| ----------|:-----:| ----------------------- |
+| "payment_id" | string | 16 or 64 hex encoded payment ID |
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Parameters of make_integrated_address*
+
+| Result | Type  | Description             |
+| ----------|:-----:| -------------------- |
+| "integrated_address" | string | The integrated address |
+| "payment_id" | string | The payment ID used |
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*make_integrated_address*
+
+```python
+payload = {'jsonrpc': '2.0', 'id':'1', 'method':'make_integrated_address', "params": { "payment_id":"533f1a4dc4f0a15095d384fafab07187222b13c9f18c02e6a289e36a5d6a5049"}}
+
+Answer:{
+'integrated_address': 'dERimcuo7YfYGJNCC3KFpTNSZJm5ZEbfbb2hVqm4Nn...',
+'payment_id ': '533f1a4dc4f0a15095d384fafab07187222b13c9f18c02e6a289e36a5d6a5049'
+}
+````
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of make_integrated_address output*
+
+
+
+
+
+
+
+
+
+
+
 
 
 
