@@ -7,7 +7,7 @@ created: 2019-05-16
 status: ACTIVE
 ---
 
-<img align="right" src="/assets/DERO_LOGO_320x320.png" width="80">
+<img align="right" src="/ASSETS/DERO_LOGO_320x320.png" width="80">
 </br>
 </br>
 
@@ -22,4 +22,4 @@ status: ACTIVE
 ## DERO IMPROVEMENT PROCESS
   * DIP-1 : DERO IMPROVEMENT PROCESS OVERVIEW
   
-  
+
