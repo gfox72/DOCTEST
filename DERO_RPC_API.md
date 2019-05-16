@@ -80,7 +80,27 @@ The topological height is unique for each block, while at each blockchain height
 multiple blocks associated. Each blockchain height contains at least a main block and optional
 side blocks.
 
-<img align="center" src="/ASSETS/DEV1_1.jpg" width="320">
+<img align="center" src="/ASSETS/DEV1_1.png" width="320">
+
+# 1.2 Code examples
+
+The examples provided for each method are written in Python - using the ’request’ package to
+build the HTTP request and perform the JSON encoding.
+
+`#construct payload for HTTP request
+payload = {'jsonrpc ': '2.0 ', 'id ':'1', 'method ': ' getblockcount '}
+#send request
+5 r = requests . post ('http ://127.0.0.1:20206/ json_rpc ', json = payload , headers ={ '
+Connection ':'close '})
+#read response object
+i f (r. status_code == requests . codes .ok):
+jsondata = r. json ()
+10 result = jsondata [" result "]
+#Result of RPC call
+# result={
+# ’count’: 384982,
+15 # ’status’: ’OK’
+# }`
 
 
 
