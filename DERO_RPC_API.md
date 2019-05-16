@@ -441,7 +441,7 @@ The method "getblockheaderbytopoheight" returns the blockheader for the supplied
 
 | Result | Type  | Description             |
 | ----------|:-----:| -------------------- |
-|"block_header"| block_header | he block header, description of this structure can be found in 3.2.5 |
+|"block_header"| block_header | The block header, description of this structure can be found in 3.2.5 |
 |"status"| string | Always returns"OK"|
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Results of getblockheaderbytopoheight*
