@@ -311,7 +311,7 @@ is unnamed as the data is transmitted as array and accessed by-position
 
 | Parameter | Type  | Description             |
 | ----------|:-----:| ----------------------- |
-| Parameter Type Description | [ ]string | Array (without name) containing the processed blocktemplate_blob and blockhashing_blob in hex |
+|   | []string | Array (without name) containing the processed blocktemplate_blob and blockhashing_blob in hex |
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Parameters for submitblock*
 
