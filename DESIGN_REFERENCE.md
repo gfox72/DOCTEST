@@ -17,7 +17,7 @@ status: DRAFT
 1. [Why content management system ?](#whyCMS)
 2. [What is this document about ?](#about)
 3. [Who does what ?](#whoDoesWhat)
-4. [Document types](#docCat)
+4. [Document categories](#docCat)
 5. [Documentation workflow](#docWorkflow)
 6. [Design guidelines](#docDesign)
 
