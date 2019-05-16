@@ -713,6 +713,85 @@ Result = {
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of gettransactions output*
 
+# 3.3.3 sendrawtransaction
+The method "sendrawtransaction" takes a transaction as hex data and submits it into the mempool
+if valid. Various checks are performed to ensure the transaction is valid, however the boolean
+result fields are not used, so you have to check the "status" value.
+
+| Parameter | Type  | Description             |
+| ----------|:-----:| ----------------------- |
+| "tx_as_hex" | string | The tx data as hex |
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Parameters for sendrawtransaction*
+
+| Result | Type  | Description             |
+| ----------|:-----:| -------------------- |
+| "double_spend" | bool | Unused |
+| "fee_too_low" | bool | Unused |
+| "invalid_input" | bool | Unused |
+| "invalid_output" | bool | Unused |
+| "low_mixin" | bool | Unused |
+| "not_rct" | bool | Unused |
+| "not_relayed" | bool | Unused |
+| "overspend" | bool | Unused |
+| "too_big" | bool | Unused |
+| "status" | string | "OK" if tx send, otherwise error message |
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Results of sendrawtransaction*
+
+```python
+payload = {"tx_as_hex": '0200030200 e973029741f64eef6ad239ff00d168cb9f481ed4aff... '}
+
+#This transaction failed because it was already sent, double spent rejection
+Answer : {
+"status ":" Transaction
+    e3a35c1e829c28a714beed5e59af5da064ade8f581d27add9918d22fc615a10f rejected
+    by daemon, check daemon msgs",
+"double_spend":false,
+"fee_too_low":false,
+"invalid_input":false,
+"invalid_output":false,
+"low_mixin":false,
+"not_rct":false,
+"not_relayed":false,
+"overspend":false,
+"too_big":false,
+"string ":""
+}
+````
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of sendrawtransaction output*
+
+# 3.3.4 is_key_image_spent
+The method "is_key_image_spent" is used to check the status of a list of key_images.
+
+| Parameter | Type  | Description             |
+| ----------|:-----:| ----------------------- |
+| "key_images" | [ ]string | The key images as hex |
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Parameters for is_key_image_spent*
+
+| Result | Type  | Description             |
+| ----------|:-----:| -------------------- |
+| "spent_status" | [ ]int | 0 if okay, 1 spent in block chain, 2 spent in pool |
+| "status" | string | "OK" |
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Results of is_key_image_spent*
+
+```python
+payload = {"key_images": ['7ab535bac7d0900cc4b71362e7a303 ... ']}
+
+result = {
+'spent_status': [1],
+'status': 'OK'
+}
+````
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of is_key_image_spent output*
+
+
+
+
+
 
 
 
