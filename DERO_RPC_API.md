@@ -89,7 +89,6 @@ The examples provided for each method are written in Python - using the ’reque
 build the HTTP request and perform the JSON encoding.
 
 ```python
-
 #construct payload for HTTP request
 payload = {'jsonrpc': '2.0', 'id':'1','method': 'getblockcount'}
 
@@ -107,7 +106,7 @@ if (r. status_code == requests.codes.ok):
 #  ’status’: ’OK’
 # }
 ```
-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Example in pytho**
 
 ```curl
 curl -X POST http://127.0.0.1:20206/json_rpc -d '{"jsonrpc":"2.0","id ":"1","method":"getblockcount"}' -H 'Content-Type: application / json'
@@ -170,7 +169,7 @@ payload.
 payload = {'jsonrpc ': '2.0', 'id': '1', 'method': 'getheight'}
 
 #send request
-r = requests.post('http://127.0.0.1:20206/json_rpc',json=payload,headers ={'Connection': 'close'})
+r = requests.post('http://127.0.0.1:20206/json_rpc', json=payload, headers ={'Connection': 'close'})
 
 #read response
 if (r. status_code == requests.codes.ok):
@@ -180,5 +179,17 @@ if (r. status_code == requests.codes.ok):
 #result = {
 # ’height’:416543
 #}
+````
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Example in Phyton**
 
-ffdf
+# 3.2.1 getblockcount
+
+The method "getblockcount" returns the height of the (currently synced) chain. This is also the
+currenty unstable height. This method is called without parameters.
+
+| Result    | Type  | Description             |
+| ----------|:-----:| ----------------------- |
+| "count"   | uint64| The current blockheight |
+| "status"  | Strin | Always returns "OK"     |
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Results of getblockcount**
+
