@@ -324,7 +324,7 @@ e.g. "Could NOT decode block", "REJECTED" etc. |
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Results of submitblock*
 
-````
+````python
 payload = {'jsonrpc':'2.0','id':'1','method':'submitblock', "params":blockDatainHEX}
 Answer : {
 'blid': 591042,
@@ -364,35 +364,70 @@ This is equal to the top unstable height. This method is called without paramete
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*JSON structure block_header*
 
-````
-payload = {'jsonrpc': '2.0', 'id':'1', 'method': 'getlastblockheader'}
+````python
+payload = {'jsonrpc':'2.0','id':'1','method':'getlastblockheader'}
 
 result = {
 'block_header':
 {
-  'depth': 0,
-  'difficulty':'2049682764',
-  'hash':'5 d49e6e9eea00a7c066e14f4ebc05473b39306d8ba05d741f3955658f17322e2',
-  'height': 397287 ,
-  'topoheight': 563285 ,
-  'major_version': 2,
-  'minor_version': 2,
-  'nonce': 806404222 ,
-  'orphan_status': False ,
-  'syncblock': False ,
-  'txcount': 0,
-  'reward': 1496206893845 ,
-  'tips': ['7527285409 f6b7133153a25a1f2f9848dc95758a0be7e9d79365ac3854841644','e9f065645839501f43ce1aae95e491d19ae542fabd99a33b049793862720647c'],'timestamp': 1533702138
+ 'depth': 0,
+ 'difficulty':'2049682764',
+ 'hash':'5 d49e6e9eea00a7c066e14f4ebc05473b39306d8ba05d741f3955658f17322e2',
+ 'height': 397287 ,
+ 'topoheight': 563285 ,
+ 'major_version': 2,
+ 'minor_version': 2,
+ 'nonce': 806404222,
+ 'orphan_status': False,
+ 'syncblock': False,
+ 'txcount': 0,
+ 'reward': 1496206893845,
+ 'tips': ['7527285409f6b7133153a25a1f2f9848dc95758a0be7e9d79365ac3854841644','e9f065645839501f43ce1aae95e491d19ae542fabd99a33b049793862720647c'],'timestamp': 1533702138
 },
 'status':'OK'
 }
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of getlastblockheader output*
 
+# 3.2.6 getblockheaderbyhash
+The method "getblockheaderbyhash" returns the blockheader for the supplied blocks hash.
 
+| Parameter | Type  | Description             |
+| ----------|:-----:| ----------------------- |
+| "hash" | string | The hash (block ID) |
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Parameters for getblockheaderbyhash*
 
+| Result | Type  | Description             |
+| ----------|:-----:| -------------------- |
+| "block_header" | block_header | The block header, description of this structure can be found in 3.2.5 |
+| "status" | string | Always returns "OK" |
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Results of getblockheaderbyhash*
 
+````python
+payload = {'jsonrpc':'2.0','id':'1','method':'getblockheaderbyhash', "params ": {" hash ":'7 b6113e05eb72f7ed4231079f97f2708 ...'}}
+
+result =
+{'block_header':
+{
+  'depth': 112634 ,
+  'difficulty':'1938163580',
+  'hash':'7 b6113e05eb72f7ed4231079f97f2708c6c0eff8cb8a0eb2c079b7ebcdd90157',
+  'height': 320166 ,
+  'topoheight': 432401 ,
+  'major_version': 2,
+  'minor_version': 2,
+  'nonce': 2754379831 ,
+  'orphan_status': False ,
+  'syncblock': True ,
+  'txcount': 0,
+  'reward': 1515705893956 ,
+  'tips': ['59 a67a563e768da4e8d30940485c37fa22beea1da80c8850da6e690a2467ae5a'],
+  'timestamp': 1532790081
+},
+'status':'OK'
+}
+````
 
 
