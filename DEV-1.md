@@ -143,7 +143,7 @@ curl -X POST http://127.0.0.1:20206/json_rpc -d'{"jsonrpc":"2.0","id":"1","metho
 | transfer | 4.2.4 | Send Dero to another wallet address |
 | transfer_split | 4.2.5 | Same as transfer |
 | get_bulk_payments | 4.2.6 | Return payments with requested paymentIDs and filtered by height requested |
-| query_key | 4.2.7 | eturn seed or view key |
+| query_key | 4.2.7 | Return seed or view key |
 | make_integrated_address | 4.2.8 | Generate integrated address with specified payment IDs |
 | split_integrated_address | 4.2.9 | Split integrated address into standard wallet addressand payment ID |
 | get_transfer_by_txid | 4.2.10 | Get transfer information by ID |
