@@ -22,5 +22,7 @@ STATUS: ACTIVE
 ## DERO IMPROVEMENT PROCESS
   * [DIP-1](/DIP-1.md) : DERO IMPROVEMENT PROCESS OVERVIEW
   
-# UPDATES
+  
+</br> </br></br></br></br>
+## UPDATES
 here we'll keep track of which documents where added and when
