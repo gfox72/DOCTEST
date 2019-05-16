@@ -96,16 +96,24 @@ payload = {'jsonrpc': '2.0', 'id':'1','method': 'getblockcount'}
 r = requests.post('http://127.0.0.1:20206/json_rpc', json=payload, headers ={'Connection':'close'})
 
 #read response object
-if (r. status_code == requests codes.ok):
-  jsondata = r. json ()
-  result = jsondata ["result"]
+if (r. status_code == requests.codes.ok):
+  jsondata = r.json()
+  result = jsondata["result"]
 
 #Result of RPC call
 # result={
-# ’count’: 384982,15
-# ’status’: ’OK’
+#  ’count’: 384982,
+#  ’status’: ’OK’
 # }
 ```
+    * Example in Phython
+
+```curl
+curl -X POST http://127.0.0.1:20206/json_rpc -d '{"jsonrpc":"2.0","id ":"1","method":"getblockcount"}' -H 'Content-Type: application / json'
+```
+    * Example using Curl
+
+
 
 
 
