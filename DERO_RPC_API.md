@@ -633,6 +633,30 @@ r = requests.get('http://127.0.0.1:20206/ is_key_image_spent', json=payload,
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example Python script*
 
+# 3.3.1 getheight
+The method "getheight" returns the different heights of the blockchain. It is called without parameters.
+
+| Result | Type  | Description             |
+| ----------|:-----:| -------------------- |
+| "height" | uint64 | Current blockchain height |
+| "stableheight" | int64 | Current stable height |
+| "topoheight" | int64 | Current topoheight |
+| "status" | string | Always returns "OK" |
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Results of gettxpool*
+
+```python
+r = requests.get('http://127.0.0.1:20206/getheight')
+
+result = {
+'height': 413281,
+'stableheight': 413271,
+'topoheight': 591277,
+'status': 'OK'
+}
+````
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of gettxpool output*
+
 
 
 
