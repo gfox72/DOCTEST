@@ -7,6 +7,7 @@ type: META
 created: 2019-05-14
 status: ACTIVE
 ---
+<a name="top"></a>
 [see revisions](#REVISIONS)
 
 <img align="right" src="/ASSETS/DERO_LOGO_320x320.png" width="80">
@@ -211,3 +212,6 @@ Copyright and related rights waived via [CC0](https://creativecommons.org/public
 
 <a name="REVISIONS"></a>
 ## REVISIONS
+
+
+[Back to top](#top)
