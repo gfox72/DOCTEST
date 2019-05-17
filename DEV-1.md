@@ -13,7 +13,7 @@ revision: 2.1
 </br>
 </br>
 
-# DEV-1: DERO ATLANTIS RPC API V2.0
+# DEV-1: DERO ATLANTIS RPC API
 
 ## Table of contents
 
