@@ -162,8 +162,8 @@ curl -X POST http://127.0.0.1:20206/json_rpc -d'{"jsonrpc":"2.0","id":"1","metho
 When launched, the Dero daemon automatically starts the RPC server interface at port 20206.
 You can change the port by using the rpc-bind parameter:
 `.\ dero - wallet - cli . exe --rpc - bind =127.0.0.1:20206`
-
-## 3.2 Methods via POST <a name="3.2"></a>
+<a name="3.2"></a>
+## 3.2 Methods via POST 
 Most RPC methods work by issuing HTTP POST requests and sending the parameters in the
 payload.
 
@@ -184,7 +184,6 @@ if (r. status_code == requests.codes.ok):
 #}
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example Phyton script*
-
 <a name="3.2.1"></a>
 ## 3.2.1 getblockcount 
 The method "getblockcount" returns the height of the (currently synced) chain. This is also the
@@ -206,8 +205,8 @@ result ={
 ````
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of getblockcount output*
-
-## 3.2.2 get_info <a name="3.2.2"></a>
+<a name="3.2.2"></a>
+## 3.2.2 get_info 
 The method "get_info" returns various info about the daemon and the state of the network. This
 method has no parameters.
 
@@ -266,8 +265,8 @@ result = {
 ````
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Results of get_info output*
-
-## 3.2.3 getblocktemplate <a name="3.2.3"></a>
+<a name="3.2.3"></a>
+## 3.2.3 getblocktemplate 
 Return a block template (used for mining a block).
 
 | Parameter | Type  | Description             |
@@ -307,8 +306,8 @@ result = {
 }
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of getblocktemplate output*
-
-## 3.2.4 submitblock <a name="3.2.4"></a>
+<a name="3.2.4"></a>
+## 3.2.4 submitblock 
 Submits a processed blocktemplate_blob and blockhashing_blob to the daemon. The parameter
 is unnamed as the data is transmitted as array and accessed by-position
 (see https://www.jsonrpc.org/specification#parameter_structures).
@@ -333,10 +332,9 @@ Answer : {
 'status':'OK'
 }
 ````
-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of submitblock output*
-
-## 3.2.5 getlastblockheader <a name="3.2.5"></a>
+<a name="3.2.5"></a>
+## 3.2.5 getlastblockheader 
 The method "getlastblockheader" returns the latest blockheader of the (currently synced) chain.
 This is equal to the top unstable height. This method is called without parameters.
 
@@ -390,8 +388,8 @@ result = {
 }
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of getlastblockheader output*
-
-## 3.2.6 getblockheaderbyhash <a name="3.2.6"></a>
+<a name="3.2.6"></a>
+## 3.2.6 getblockheaderbyhash 
 The method "getblockheaderbyhash" returns the blockheader for the supplied blocks hash.
 
 | Parameter | Type  | Description             |
@@ -433,8 +431,8 @@ result =
 ````
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of getblockheaderbyhash output*
-
-## 3.2.7 getblockheaderbytopoheight <a name="3.2.7"></a>
+<a name="3.2.7"></a>
+## 3.2.7 getblockheaderbytopoheight 
 The method "getblockheaderbytopoheight" returns the blockheader for the supplied topoheight.
 
 | Parameter | Type  | Description             |
@@ -478,8 +476,8 @@ result = {
 }
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of getblockheaderbytopoheight output*
-
-## 3.2.8 getblockheaderbyheight <a name="3.2.8"></a>
+<a name="3.2.8"></a>
+## 3.2.8 getblockheaderbyheight 
 The method "getblockheaderbyheight" returns the blockheader for the supplied blockchain topoheight,
 it does the same as the getblockheaderbytopoheight function.
 
@@ -523,8 +521,8 @@ eb2258c6459e05966d88bcc6b46191910a512ffa17f7f813c480fe0682456f38'],
 }
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of getblockheaderbyheight output*
-
-## 3.2.9 getblock <a name="3.2.9"></a>
+<a name="3.2.9"></a>
+## 3.2.9 getblock 
 The method "getblock" returns the data of a block from either the given height or hash.
 
 | Parameter | Type  | Description             |
@@ -583,8 +581,8 @@ result = {
 }
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of getblockheaderbyheight output*
-
-## 3.2.10 gettxpool <a name="3.2.10"></a>
+<a name="3.2.10"></a>
+## 3.2.10 gettxpool 
 The method "gettxpool" returns the tx hashes that are currently in the mempool. This method
 has no parameters.
 
@@ -610,8 +608,8 @@ Result = {
 }
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of gettxpool output*
-
-## 3.3 Methods via GET <a name="3.3"></a>
+<a name="3.3"></a>
+## 3.3 Methods via GET 
 For compability reasons, some RPC methods work using HTTP GET requests. Thereby the
 method name is part of the URL and the parameters are transmitted in the payload.
 
@@ -634,8 +632,8 @@ r = requests.get('http://127.0.0.1:20206/ is_key_image_spent', json=payload,
 #}
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example Python script*
-
-## 3.3.1 getheight <a name="3.3.1"></a>
+<a name="3.3.1"></a>
+## 3.3.1 getheight 
 The method "getheight" returns the different heights of the blockchain. It is called without parameters.
 
 | Result | Type  | Description             |
@@ -658,8 +656,8 @@ result = {
 }
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of gettxpool output*
-
-## 3.3.2 gettransactions <a name="3.3.2"></a>
+<a name="3.3.2"></a>
+## 3.3.2 gettransactions 
 The method "gettransactions" returns the transaction data for a list of transaction IDs in hex and
 JSON format.
 
@@ -714,8 +712,8 @@ Result = {
 }
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of gettransactions output*
-
-## 3.3.3 sendrawtransaction <a name="3.3.3"></a>
+<a name="3.3.3"></a>
+## 3.3.3 sendrawtransaction 
 The method "sendrawtransaction" takes a transaction as hex data and submits it into the mempool
 if valid. Various checks are performed to ensure the transaction is valid, however the boolean
 result fields are not used, so you have to check the "status" value.
@@ -761,10 +759,9 @@ Answer : {
 "string ":""
 }
 ````
-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of sendrawtransaction output*
-
-## 3.3.4 is_key_image_spent <a name="3.3.4"></a>
+<a name="3.3.4"></a>
+## 3.3.4 is_key_image_spent 
 The method "is_key_image_spent" is used to check the status of a list of key_images.
 
 | Parameter | Type  | Description             |
@@ -792,10 +789,10 @@ result = {
 
 
 # Chapter 4 
-
-## DERO Wallet RPC Interface <a name="4"></a>
-
-## 4.1 Introduction <a name="4.1"></a>
+<a name="4"></a>
+## DERO Wallet RPC Interface 
+<a name="4.1"></a>
+## 4.1 Introduction 
 To the use the RPC interface, the wallet has to be started with the rpc-server function enabled:
 `.\dero -wallet-cli.exe --rpc-server`
 
@@ -806,8 +803,8 @@ The default port number for the wallet is 20209, but this can be also changed:
 `.\dero-wallet-cli.exe --rpc -server --rpc -login=<username:password> --rpc -bind=<127.0.0.1:20209>`
 
 Note: the Dero daemon has to also be started to sync up the wallet transactions.
- 
-## 4.2 Methods via POST <a name="4.2"></a>
+<a name="4.2"></a>
+## 4.2 Methods via POST 
 All wallet RPC methods work by issuing HTTP POST requests and sending the parameters in
 the payload.
 
@@ -823,8 +820,8 @@ result = {
 }
 `````
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example Python script*
-
-## 4.2.1 getaddress <a name="4.2.1"></a>
+<a name="4.2.1"></a>
+## 4.2.1 getaddress 
 The method "getaddress" method is used to the address from the wallet. This method has no
 parameters.
 
@@ -842,8 +839,8 @@ Result = {
 }
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of getaddress output*
-
-## 4.2.2 getbalance <a name="4.2.2"></a>
+<a name="4.2.2"></a>
+## 4.2.2 getbalance 
 The method "getbalance" method is used to get the current balance and unlocked from the wallet.
 This method has no parameters.
 
@@ -863,8 +860,8 @@ Result = {
 }
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of getbalance output*
-
-## 4.2.3 getheight <a name="4.2.3"></a>
+<a name="4.2.3"></a>
+## 4.2.3 getheight 
 The method "getheight" method is used to get the currently synced blockchain height from the
 wallet. This method has no parameters.
 
@@ -882,8 +879,8 @@ Result = {
 }
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of getheight output*
-
-## 4.2.4 transfer <a name="4.2.4"></a>
+<a name="4.2.4"></a>
+## 4.2.4 transfer 
 The method "transfer" method is used to create one or multiple transactions from a list of destinations.
 The optionally returned tx_key can used to prove that the amount was sent to the address
 using the Dero block explorer.
@@ -929,8 +926,8 @@ Result = {
 }
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of transfer output*
-
-## 4.2.5 transfer_split <a name="4.2.5"></a>
+<a name="4.2.5"></a>
+## 4.2.5 transfer_split 
 The method "transfer_split" is equal to the "transfer" method in [4.2.4](4.2.4) and kept for compatibility
 reasons.
 
@@ -946,8 +943,8 @@ result ={
 }
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of transfer_split output*
-
-## 4.2.6 get_bulk_payments <a name="4.2.6"></a>
+<a name="4.2.6"></a>
+## 4.2.6 get_bulk_payments 
 The method "get_bulk_payments" is used to get a bulk of transactions from a list of payment IDs.
 Note: The method aborts if atleast one payment ID is not found/invalid.
 
@@ -987,8 +984,8 @@ result = {
 }
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of get_bulk_payments output*
-
-##4.2.7 query_key <a name="4.2.7"></a>
+<a name="4.2.7"></a>
+##4.2.7 query_key 
 The method "query_key" is used to query either the secret key in mnemonic form or the view_key
 in hex form from the wallet.
 
@@ -1012,8 +1009,8 @@ result = {
 }
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of query_key output*
-
-## 4.2.8 make_integrated_address <a name="4.2.8"></a>
+<a name="4.2.8"></a>
+## 4.2.8 make_integrated_address 
 The method "make_integrated_address" is used to combine a payment_id and normal wallet address
 to create an integrated address.
 
@@ -1039,8 +1036,8 @@ Answer:{
 }
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of make_integrated_address output*
-
-## 4.2.9 split_integrated_address <a name="4.2.9"></a>
+<a name="4.2.9"></a>
+## 4.2.9 split_integrated_address 
 The method "split_integrated_address" is used to get the payment_id and normal wallet address
 from an integrated address.
 
@@ -1066,8 +1063,8 @@ result = {
 }
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of split_integrated_address output*
-
-## 4.2.10 get_transfer_by_txid <a name="4.2.10"></a>
+<a name="4.2.10"></a>
+## 4.2.10 get_transfer_by_txid 
 The method "get_transfer_by_txid" is used to get transaction details for a specific transaction ID.
 
 | Parameter | Type  | Description             |
@@ -1097,8 +1094,8 @@ result = {
 }
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example of get_transfer_by_txid output*
-
-## 4.2.11 get_transfers <a name="4.2.11"></a>
+<a name="4.2.11"></a>
+## 4.2.11 get_transfers 
 The method "get_transfers" is used to get all out/ingoing transactions from a wallet. You can use
 the min_height and max_height parameters to narrow down the scope.
 
@@ -1140,9 +1137,8 @@ result = {
 }
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example output of get_transfers*
-
-# Revision info <a name="REVISIONS"></a>
-
+<a name="REVISIONS"></a>
+# Revision info 
 | REV | Date  | Author | Description |           
 | 2.0 | 2018/09/04 | Captain | PDF version published on DERO Github |
 | 2.1 | 2019/05/16 | Gfox | migrated to .MD format |
