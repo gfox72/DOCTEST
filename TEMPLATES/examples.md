@@ -93,8 +93,9 @@ This is centered but **markdown** doesn't seem to *work* in html sections :(
 
 ## Tables
 NAtive markdown tables:
+
 | Column1     | *Column2*           | **Column3**  |
-| ------------- |:-------------:| ----- |
+| ------------- | ------------- |:-----:|
 | info1 | info2 | This is a somewhat longer information, note how the tables scales automatically |
 
 ## links - part II
