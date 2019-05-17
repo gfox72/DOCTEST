@@ -202,9 +202,7 @@ DIPs may also have a `superseded-by` header indicating that an DIP has been rend
 # 9. History 
 This document was derived heavily from Etherium's [EIP-1](https://eips.ethereum.org/EIPS/eip-1) which was in turn derived from Bitcoin’s [BIP-0001](https://github.com/bitcoin/bips) written by Amir Taaki which in turn was derived from Python’s [PEP-0001](https://www.python.org/dev/peps/). In many places text was simply copied and modified. These original authors are not responsible for its use in the Dero Improvement Process, and should not be bothered with technical questions specific to Dero or the DIP. Please direct all comments to the DIP editors.
 
-  * May 15, 2019: DIP 1 initial drafted
-
-See the revision history for further details, which is also available by clicking on the History button in the top right of the DIP.
+See the [revision history](#REVISIONS) for further details, which is also available by clicking on the History button in the top left of the DIP.
 
 <a name="DIPCopyright"></a>
 # 10. Copyright
@@ -214,7 +212,7 @@ Copyright and related rights waived via [CC0](https://creativecommons.org/public
 # Revision info 
 | REV | Date  | Author/Editor | Description |    
 | ----| ----- | ------ |:-----------:|
-| 1.0 | 2019/05/16 | Gfox/Dank | first version |
+| 1.0 | 2019/05/16 | Gfox/Dank | first version DIP-1 |
 
 
 [Back to top](#top)
