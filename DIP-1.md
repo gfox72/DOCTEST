@@ -17,16 +17,16 @@ revision: 1.0
 # DIP-1: DIP Purpose and Guidelines 
 
 ## Table of contents
-1. [What is a DIP ?](#WhatisaDIP)
-2. [What makes a succesfull DIP](#DipSuccess)
-3. [Dip Rationale](#DipRationale)
-4. [Dip Editors](#DipEditors)
-5. [Dip Types](#DipTypes)
-6. [Dip Formats and templates](#DipFormats)
-7. [Dip Workflow](#DipWorkflow)
-8. [DIP Header Preamble](#DipPreamble)
-9. [History](#DipHistory)
-10. [Copyright](#DipCopyright)
+  * 1. [What is a DIP ?](#WhatisaDIP)
+  * 2. [What makes a succesfull DIP](#DipSuccess)
+  * 3. [Dip Rationale](#DipRationale)
+  * 4. [Dip Editors](#DipEditors)
+  * 5. [Dip Types](#DipTypes)
+  * 6. [Dip Formats and templates](#DipFormats)
+  * 7. [Dip Workflow](#DipWorkflow)
+  * 8. [DIP Header Preamble](#DipPreamble)
+  * 9. [History](#DipHistory)
+  * 10. [Copyright](#DipCopyright)
 
 
 ## What is a DIP ? <a name="WhatisaDIP"></a>
