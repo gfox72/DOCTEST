@@ -7,7 +7,7 @@ created: 2018/9/4
 status: ACTIVE
 revision: 2.1
 ---
-[see revisions](REVISIONS)
+[see revisions](#REVISIONS)
 
 <img align="right" src="/ASSETS/DERO_LOGO_320x320.png" width="80">
 </br>
