@@ -1,3 +1,4 @@
+<a name="top"></a>
 ---
 category: DIP
 ref: 1
@@ -8,7 +9,7 @@ created: 2019-05-14
 status: ACTIVE
 revision: 1.0
 ---
-<a name="top"></a>
+
 [see revisions](#REVISIONS)
 
 <img align="right" src="/ASSETS/DERO_LOGO_320x320.png" width="80">
