@@ -1137,7 +1137,9 @@ result = {
 }
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example output of get_transfers*
+
 <a name="REVISIONS"></a>
+
 # Revision info 
 | REV | Date  | Author | Description |           
 | 2.0 | 2018/09/04 | Captain | PDF version published on DERO Github |
