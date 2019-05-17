@@ -91,15 +91,16 @@ This is centered but **markdown** doesn't seem to *work* in html sections :(
 
 
 ## Emoji's
-an overview of emoji's here https://gist.github.com/rxaviers/7360908
+An overview of emoji's can be found [here](https://gist.github.com/rxaviers/7360908) but these are the most usefull ones:
+
 :x:
+:white_check_mark:
 :warning: 
 :exclamation:
 :bangbang:
 :question:
 :point_right:
 :arrow_right:
-:no_entry_sign:
 :no_entry:
 
 ## Tables
