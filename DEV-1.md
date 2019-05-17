@@ -17,10 +17,10 @@ revision: 2.1
 
 ## Table of contents
 
-1 [Introduction](#1)</br>
-  1.1 [Data types](#1.1)</br>
-  1.2 [Code examples](#1.2)</br>
-2 [Quick Overview](#2)</br>
+  * 1 [Introduction](#1)</br>
+    * 1.1 [Data types](#1.1)</br>
+    * 1.2 [Code examples](#1.2)</br>
+  * 2 [Quick Overview](#2)</br>
 3 [DERO Daemon RPC Interface](#3)</br>
   3.1 [Introduction](#3.1)</br>
   3.2 [Methods via POST](#3.2)</br>
