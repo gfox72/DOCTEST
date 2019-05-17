@@ -64,8 +64,22 @@ if (i == 1) then {
 }
 ````
 
+## Positioning of text
+Markdown doesn't support tabs, so positioning text can be done with some html language like this
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example in Curl*
 
+or like this
+<p align="left">I'm Left</p>
+<p align="center">I'm Centered</p>
+<p align="right">I'm right</p>
+
+## Tables
+  
+| Column1     | *Column2*           | **Column3**  |
+| ------------- |:-------------:| ----- |
+| info1 | info2 | This is a somewhat longer information, note how the tables scales automatically |
+
+## links - part II
 <a name="test"></a>
 The links will land here
 
