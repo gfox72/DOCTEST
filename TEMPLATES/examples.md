@@ -90,7 +90,17 @@ This is centered but **markdown** doesn't seem to *work* in html sections :(
 <p align="right">I'm right</p>
 
 
-
+## Emoji's
+an overview of emoji's here https://gist.github.com/rxaviers/7360908
+:x:
+:warning: 
+:exclamation:
+:bangbang:
+:question:
+:point_right:
+:arrow_right:
+:no_entry_sign:
+:no_entry:
 
 ## Tables
 NAtive markdown tables:
