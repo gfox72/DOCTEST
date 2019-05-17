@@ -3,7 +3,7 @@ category: DIP
 ref: 1
 title: DIP Purpose and guidelines
 author: gfox, dank
-type: CORE
+type: META
 created: 2019-05-14
 status: ACTIVE
 ---
@@ -36,7 +36,7 @@ Each DIP should have the following parts:
   * **Preamble** - RFC 822 style headers containing metadata about the DIP, including the DIP number, a short descriptive title (limited to a maximum of 44 characters), and the author details. See [below for details](#DipPreamble).
   * **Simple Summary** - “If you can’t explain it simply, you don’t understand it well enough.” Provide a simplified and layman-accessible explanation of the DIP.
   * **Abstract** - a short (~200 word) description of the technical issue being addressed.
-  * **Motivation** (*optional) - The motivation is critical for DIPs that want to change the Ethereum protocol. It should clearly explain why the existing protocol specification is inadequate to address the problem that the DIP solves. DIP submissions without sufficient motivation may be rejected outright.
+  * **Motivation** (*optional) - The motivation is critical for DIPs that want to change the DERP protocol. It should clearly explain why the existing protocol specification is inadequate to address the problem that the DIP solves. DIP submissions without sufficient motivation may be rejected outright.
   * **Specification** - The technical specification should describe the syntax and semantics of any new feature. The specification should be detailed enough to allow competing, interoperable implementations for any of the current DERO platforms **<< NEEDS REVIEW IF APPLICABLE**.
   * **Rationale** - The rationale fleshes out the specification by describing what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work, e.g. how the feature is supported in other languages. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.
   * **Backwards Compatibility** - All DIPs that introduce backwards incompatibilities must include a section describing these incompatibilities and their severity. The DIP must explain how the author proposes to deal with these incompatibilities. DIP submissions without a sufficient backwards compatibility treatise may be rejected outright.
@@ -76,7 +76,7 @@ There are three types of DIP:
     * **Networking** – core dev to comment
     *	**Interface** - includes improvements around client API/RPC specifications and standards and also certain language-level standards. The label “interface” aligns with the interface repository and discussion should primarily occur in that repository before a DIP is submitted to the DIPs repository.
     *	**ERC** - application-level standards and conventions, including contract standards such as token standards, name registries, URI schemes, library/package formats and wallet formats.
-  *	A **Meta DIP** describes a process surrounding Ethereum or proposes a change to (or an event in) a process. Process DIPs are like Standards Track DIPs but apply to areas other than the DERO protocol itself. They may propose an implementation, but not to DERO’s codebase; they often require community consensus; unlike Informational DIPs, they are more than recommendations, and users are typically not free to ignore them. Examples include procedures, guidelines, changes to the decision-making process, and changes to the tools or environment used in DERO development. Any meta-DIP is also considered a Process DIP.
+  *	A **Meta DIP** describes a process surrounding DERO or proposes a change to (or an event in) a process. Process DIPs are like Standards Track DIPs but apply to areas other than the DERO protocol itself. They may propose an implementation, but not to DERO’s codebase; they often require community consensus; unlike Informational DIPs, they are more than recommendations, and users are typically not free to ignore them. Examples include procedures, guidelines, changes to the decision-making process, and changes to the tools or environment used in DERO development. Any meta-DIP is also considered a Process DIP.
   *	An **Informational DIP** describes a DERO design issue, or provides general guidelines or information to the DERO community, but does not propose a new feature. Informational DIPs do not necessarily represent DERO community consensus or a recommendation, so users and implementers are free to ignore Informational DIPs or follow their advice.
 
 It is highly recommended that a single DIP contain a single key proposal or new idea. The more focused the DIP, the more successful it tends to be. A change to one client doesn’t require an DIP; a change that affects multiple clients, or defines a standard for multiple apps to use, does.
@@ -107,8 +107,8 @@ Each status change is requested by the DIP author and reviewed by the DIP editor
     * :x: A Last Call which results in material changes or substantial unaddressed technical complaints will cause the DIP to revert to Draft.
     * :arrow_right: Accepted (Core DIPs only) – A successful Last Call without material changes or unaddressed technical complaints will become Accepted.
     * :arrow_right: Final (Not core DIPs) – A successful Last Call without material changes or unaddressed technical complaints will become Final.
-  * **Accepted (Core DIPs only)** – This DIP is in the hands of the Ethereum client developers. Their process for deciding whether to encode it into their clients as part of a hard fork is not part of the DIP process.
-    * :arrow_right: Final – Standards Track Core DIPs must be implemented in at least three viable Ethereum clients before it can be considered Final. When the implementation is complete and adopted by the community, the status will be changed to “Final”.
+  * **Accepted (Core DIPs only)** – This DIP is in the hands of the DERO client developers. Their process for deciding whether to encode it into their clients as part of a hard fork is not part of the DIP process.
+    * :arrow_right: Final – Standards Track Core DIPs must be implemented in at least three viable DERO clients before it can be considered Final. When the implementation is complete and adopted by the community, the status will be changed to “Final”.
   * **Final** – This DIP represents the current state-of-the-art. A Final DIP should only be updated to correct errata.
   
 Other exceptional statuses include:
