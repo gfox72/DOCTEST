@@ -77,7 +77,7 @@ if (i == 1) then {
 }
 ````
 
-## Positioning of text an content
+## Positioning of text and content
 Markdown doesn't support tabs, so positioning text can be done with some html language like this
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example in Curl*
 
@@ -92,7 +92,7 @@ This is centered but **markdown** doesn't seem to *work* in html sections :(
 
 
 ## Tables
-  
+NAtive markdown tables:
 | Column1     | *Column2*           | **Column3**  |
 | ------------- |:-------------:| ----- |
 | info1 | info2 | This is a somewhat longer information, note how the tables scales automatically |
