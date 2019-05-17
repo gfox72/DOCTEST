@@ -6,6 +6,7 @@ author: gfox, dank
 type: META
 created: 2019-05-14
 status: ACTIVE
+revision: 1.0
 ---
 <a name="top"></a>
 [see revisions](#REVISIONS)
@@ -211,7 +212,10 @@ See the revision history for further details, which is also available by clickin
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
 
 <a name="REVISIONS"></a>
-## REVISIONS
+# Revision info 
+| REV | Date  | Author/Editor | Description |    
+| ----| ----- | ------ |:-----------:|
+| 1.0 | 2019/05/16 | Gfox/Dank | first version |
 
 
 [Back to top](#top)
