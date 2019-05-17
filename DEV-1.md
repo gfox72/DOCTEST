@@ -84,8 +84,8 @@ multiple blocks associated. Each blockchain height contains at least a main bloc
 side blocks.
 
 <img align="center" src="/ASSETS/DEV1/DEV1_1.png" width="800">
-
-## 1.2 Code examples <a name="1.2"></a>
+<a name="1.2"></a>
+## 1.2 Code examples 
 
 The examples provided for each method are written in Python - using the ’request’ package to
 build the HTTP request and perform the JSON encoding.
@@ -116,7 +116,8 @@ curl -X POST http://127.0.0.1:20206/json_rpc -d'{"jsonrpc":"2.0","id":"1","metho
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example in Curl*
 
 # Chapter 2 
-## Quick Overview <a name="2"></a>
+<a name="2"></a>
+## Quick Overview 
   
 | Method     | Section           | Description  |
 | ------------- |:-------------:| ----- |
@@ -154,9 +155,10 @@ curl -X POST http://127.0.0.1:20206/json_rpc -d'{"jsonrpc":"2.0","id":"1","metho
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Wallet RPC methods*
   
 # Chapter 3 
-## DERO Daemon RPC Interface <a name="3"></a>
-
-## 3.1 Introduction <a name="3.1"></a>
+<a name="3"></a>
+## DERO Daemon RPC Interface 
+<a name="3.1"></a>
+## 3.1 Introduction 
 When launched, the Dero daemon automatically starts the RPC server interface at port 20206.
 You can change the port by using the rpc-bind parameter:
 `.\ dero - wallet - cli . exe --rpc - bind =127.0.0.1:20206`
