@@ -26,8 +26,11 @@ This is a [link](#test) to a section further down which has a html tag reference
 ## Images
 Html language is used to size and position images
 We prefer using relative references in the Github repository
+
 <img align="right" src="/ASSETS/DERO_LOGO_320x320.png" width="120">
+
 <img align="center" src="/ASSETS/DERO_LOGO_320x320.png" width="50">
+
 
 ## Line breaks
 This
