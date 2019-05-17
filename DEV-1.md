@@ -55,7 +55,8 @@ revision: 2.1
       * 4.2.11 [get_transfers](#4.2.11)
 
 # Chapter 1
-## Introduction <a name="1"></a>
+<a name="1"></a>
+## Introduction
 This document describes the RPC API for the Dero daemon and wallet which are implemented
 according to the JSON RPC 2.0 standard.
 We will give a description of the available RPC methods with their parameters and results and
@@ -182,7 +183,8 @@ if (r. status_code == requests.codes.ok):
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example Phyton script*
 
-## 3.2.1 getblockcount <a name="3.2.1"></a>
+<a name="3.2.1"></a>
+## 3.2.1 getblockcount 
 The method "getblockcount" returns the height of the (currently synced) chain. This is also the
 currenty unstable height. This method is called without parameters.
 
