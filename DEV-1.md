@@ -1146,6 +1146,11 @@ result = {
 | 2.1 | 2019/05/16 | Gfox | migrated to .MD format |
 | 2.0 | 2018/09/04 | Captain | PDF version published on DERO Github |
 
+| REV | Date  | Author/Editor | Description |    
+| === | === | ===== |:======:|
+| 2.1 | 2019/05/16 | Gfox | migrated to .MD format |
+| 2.0 | 2018/09/04 | Captain | PDF version published on DERO Github |
+
 
 
 
