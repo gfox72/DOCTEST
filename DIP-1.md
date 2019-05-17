@@ -5,7 +5,7 @@ title: DIP Purpose and guidelines
 author: gfox, dank
 type: META
 created: 2019-05-14
-status: ACTIVE
+status: DRAFT
 revision: 1.0
 ---
 <a name="top"></a>
