@@ -7,6 +7,7 @@ type: META
 created: 2019-05-14
 status: ACTIVE
 ---
+[see revisions](#REVISIONS)
 
 <img align="right" src="/ASSETS/DERO_LOGO_320x320.png" width="80">
 </br>
@@ -117,8 +118,8 @@ Other exceptional statuses include:
   * **Rejected** – An DIP that is fundamentally broken or a Core DIP that was rejected by the Core Devs and will not be implemented.
   * **Active** – This is similar to Final, but denotes an DIP which may be updated without changing its DIP number.
   * **Superseded** – An DIP which was previously final but is no longer considered state-of-the-art. Another DIP will be in Final status and reference the Superseded DIP.
-  
-# DIP Header Preamble <a name="DIPPreamble"></a>
+<a name="DIPPreamble"></a> 
+# DIP Header Preamble 
 Each DIP must begin with an RFC 822 style header preamble, preceded and followed by three hyphens (`---`). The headers must appear in the following order. Headers marked with “*” are optional and are described below. All other headers are required.
 
 `category:` DIP
@@ -196,13 +197,17 @@ DIPs may have a `requires` header, indicating the DIP numbers that this DIP depe
 
 `superseded-by` and `replaces` headers
 DIPs may also have a `superseded-by` header indicating that an DIP has been rendered obsolete by a later document; the value is the number of the DIP that replaces the current document. The newer DIP must have a replaces header containing the number of the DIP that it rendered obsolete.
-
-# History <a name="DIPHistory"></a>
+<a name="DIPHistory"></a>
+# History 
 This document was derived heavily from Etherium's [EIP-1](https://eips.ethereum.org/EIPS/eip-1) which was in turn derived from Bitcoin’s [BIP-0001](https://github.com/bitcoin/bips) written by Amir Taaki which in turn was derived from Python’s [PEP-0001](https://www.python.org/dev/peps/). In many places text was simply copied and modified. These original authors are not responsible for its use in the Dero Improvement Process, and should not be bothered with technical questions specific to Dero or the DIP. Please direct all comments to the DIP editors.
 
   * May 15, 2019: DIP 1 initial drafted
 
 See the revision history for further details, which is also available by clicking on the History button in the top right of the DIP.
 
-# Copyright <a name="DIPCopyright"></a>
+<a name="DIPCopyright"></a>
+# Copyright
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
+
+<a name="REVISIONS"></a>
+## REVISIONS
