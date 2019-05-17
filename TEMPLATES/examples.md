@@ -64,14 +64,19 @@ if (i == 1) then {
 }
 ````
 
-## Positioning of text
+## Positioning of text an content
 Markdown doesn't support tabs, so positioning text can be done with some html language like this
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example in Curl*
 
 or like this
 <p align="left">I'm Left</p>
-<p align="center">I'm Centered</p>
+<p align="center">
+This is centered but **markdown** doesn't seem to *work* in html sections :(
+</p>
 <p align="right">I'm right</p>
+
+
+
 
 ## Tables
   
