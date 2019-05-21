@@ -618,7 +618,7 @@ method name is part of the URL and the parameters are transmitted in the payload
 payload = {" key_images": ['7ab535bac7d0900cc4b71362e7a3037fbdff203df728a99001b3ceea925f4cde']}
 
 #send request
-r = requests.get('http://127.0.0.1:20206/ is_key_image_spent', json=payload,
+r = requests.get('http://127.0.0.1:20206/is_key_image_spent', json=payload,
    headers ={ ' Connection': 'close'})
 
 #read response object
