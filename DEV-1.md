@@ -161,7 +161,7 @@ curl -X POST http://127.0.0.1:20206/json_rpc -d'{"jsonrpc":"2.0","id":"1","metho
 ## 3.1 Introduction 
 When launched, the Dero daemon automatically starts the RPC server interface at port 20206.
 You can change the port by using the rpc-bind parameter:
-`.\ dero - wallet - cli . exe --rpc - bind =127.0.0.1:20206`
+`.\dero-wallet-cli.exe --rpc-bind=127.0.0.1:20206`
 <a name="3.2"></a>
 ## 3.2 Methods via POST 
 Most RPC methods work by issuing HTTP POST requests and sending the parameters in the
