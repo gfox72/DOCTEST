@@ -30,20 +30,29 @@ Start by downloading the appropriate binary for your operating system and unpack
 Once unpacked you will typically find 3 files in your folder:
 <img align="left" src="/ASSETS/MAN-1/DERO_WALLET_UNPACK.png" width="320">
 
-
-
+</br>
+</br>
+</br>
+</br>
 
 To create and access your wallet, you will be using the dero-wallet-cli file.
 To have your wallet sync with the DERO network, you will use the derod file (DERO Daemon).
 
 Navigate to the folder which contains your DERO wallet files and execute the dero-wallet-cli application, this should give you a terminal window showing some version info and then the DERO wallet menu.
-<img align="left" src="/ASSETS/MAN-1/DERO_WALLET_MENU.png" width="320">
-
+<img align="left" src="/ASSETS/MAN-1/DERO_WALLET_MENU.png" width="480">
+</br></br></br></br></br></br></br>
 
 As shown in the next image, select option 2 (2+enter) to create a new wallet, you will be promted to provide a wallet name.
 As you will be able to create multiple wallets, make sure the naming of your wallet is a clear and unique identifier allowing you to easily remember/retreive it in case you haven't used in for a while. In our example below we chose dero_test.db (we added the .db extension explictly). Upon entering the name, you will be prompted to provide a password to access your wallet, again make sure this is something you will remember later. As you enter keystrokes the number between brackets will show how many characters you have entered. After entering the password and confirming it, you will be asked to select your preferred language for the wallet interface, in our example we selected English by entering 0.
 
-<img align="left" src="/ASSETS/MAN-1/DERO_WALLET_CREATE.png" width="320">
+<img align="left" src="/ASSETS/MAN-1/DERO_WALLET_CREATE.png" width="480">
+</br></br></br></br></br></br></br>
+
+Once you provided this information and selection of language, your wallet will be created. In case a technical issue would prevent you to use or retrieve your wallet file, you can restore it from the blockchain by using a so called SEED. A SEED is a set of 25 words which **allows to obtain full access to your wallet funds so as stated by the interface, write them down and store them in a safe place.** The SEED in the example above starts with the words *argue nylon tamper* etc.  
+
+You have now created your wallet file ready for use.
+
+:exclamation:Your wallet file location may vary depending on your operating system or configuration, it's advised to do a system search on the wallet name so you know where your file is situated.
 
 
 
@@ -56,80 +65,3 @@ As you will be able to create multiple wallets, make sure the naming of your wal
 
 
 
-## Who does what ? <a name="whoDoesWhat"></a>
-The Dero project involves several groups of people interacting with eachother:
-  * **Core** development team : develops technology and master all the technical knowhow
-  * **Staff** members : interact with Core development team and perform specifc trusted functions such as moderator, marketing, documentation
-  * Community Advisory Board members (**DCAB**) : represent the community and consolidate suggestions or concerns
-  * Community members : users, investors, developpers, enthousiasts
-  * **Stargate** testers : developpers
-
-Assignment of these roles is done by Dero Staff members (mostly moderators) and identification via means of tagging on the Dero discord.
-
-For documentation creation and management, there is a lead Staff member working with DCAB members to:
-  * Establish document management strucutre tailored to the project needs and its users
-  * Align and standardize on formatting
-  * Prioritize document creating
-Once the document management structured is established and standardization and formatting are proven to work efficiently, more involvement 
-from the community will be encouraged and facilitated to make Dero's documentation decentralized and a best in class reference for its users.
-
-## Document categories<a name="docCat"></a>
-As the project grows, decisions on different document types may evolve in function of the demand from its community and individuals developping on the Dero blockchain. Currently, the following categories are considered required to start with:
-  * DIP : Dero Improvement Process documents - see DIP-1 for reference
-  * INFO : Informational and guidelines (as this very document)
-  * APP : Application notes demonstrating technical possiblities
-  * WP : Whitepaper or variations thereof
-  * SPEC : Specifications
-  * TECH : Technical information on the DERO project and features
-  * DEV : Developper documentation
-  
-## Documentation workflow <a name="docWorkflow"></a>
-Requests for documentation (creation or editing) can originate from many different sources and require to be channeled so they can be filtered/vetted, 
-prioritized and directed to document authors, approved and published. 
-
-`source of request > documentation lead > document creation by author > approval by doc lead  > publish`
-
-## Design guidelines <a name="docDesign"></a>
-Following design guidelines apply to all types of documentation and are to be applied by document authors:
-
-Each document should be written in markdown format and start with a header as descrived also in DIB-1 which will provide a table structure 
-at top of the document:
-> `---` </br>
-> `category:`</br>
-> `ref:`</br>
-> `title:`</br>
-> `author:`</br>
-> `created:`</br>
-> `status:`</br>
-> `---`</br>
-
-Then, the DERO logo should be used:
-> `<img align="right" src="/assets/DERO_LOGO_320x320.png" width="80">`</br>
-> `</br>`</br>
-> `</br>`</br>
-Mind that as for the logo insertion, all images should be referenced relative to the document root, under a folder /assets
-
-Then, the title of the document, using # to make a heading. An example:
-
-> `# DIP-1: DIP Purpose and Guidelines`
-
-After the document title, there should be a table of contents.
-
-> `## Table of contents` </br>
-> `1. [Chapter1](#link1)` </br>
-> `2. [Chapter2](#link2)` </br>
-> `3. [You get the point](#link3)` </br>
-
-Then the first reference/chapter with the link used for the table of contents or reference within the document:
-> `## Chapter 1 <a name="link1"></a>`
-
-For formatting you can reference the [general markdown syntax for github](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) but hereafter some quick examples of the most commonly used ones:
-
-`**bold text**`gives **bold text**</br>
-` * first bullet`gives a bullet like below</br>
-  * first bullet
-
-`    * second bullet`givess a secondary bullet like below</br>
-    * second bullet
-    
-:exclamation: This document itself can also be reviewed for most common MD syntax.
