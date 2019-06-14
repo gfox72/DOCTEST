@@ -68,8 +68,6 @@ If you prefer to keep and sync your wallet with a local copy of the DERO blockch
 
 As shown in the above picture, the *derod* application will provide some basic information on it's version and file locations (daemon data directory being the one where the blockchain will be stored). The sync progress is shown at the left bottom, in our example it is showing 2592980/3519905 [2628334/3562862]. The numbers between the square brackets show the current DERO blockchain block height and the numbers in front indicate the local blockchain sync height. Until these set of numbers are identical, your wallet is not fully synced and may not show you a correct balance or latest transactions. Below shows a fully synced wallet/daemon.
 
-<img align="left" src="/ASSETS/MAN-1/FULLY_SYNCED.png" width="320">
-
 ### Syncing with a remote node
 If you prefer not to download and keep the full blockchain on your system, you can opt to connect to a so called remote node. To do so, you will start the wallet application with some additional command parameters which is something you can best do via a terminal or shell window (depending on your OS). The parameter to start your wallet application with and have it sync with a remote node is *--daemon-address=https://rwallet.dero.live*. Newer versions of the wallet allow you to do this with the parameter *--remote*.
  
