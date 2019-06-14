@@ -27,7 +27,8 @@ A wallet allows you to manage your DERO funds, it allows you to intiate or consu
 Pre-compiled DERO wallet binaries are available for most common operating systems (ARM, INTEL, MAC, Windows, FreeBSD, OpenBSD, Linux etc) and can be downloaded from [the Dero Github](https://github.com/deroproject/derosuite/releases). 
 These wallets are so called CLI (Command Line Interface) applications which are intended to be run in a terminal or shell window. This manual assumes you are familiar with basic navigation and running applications on your specific OS.
 
-## Creating a wallet<a name="create"></a>
+<a name="create"></a>
+## Creating a wallet
 Start by downloading the appropriate binary for your operating system and unpack the file to a folder of choice (but one that you will easily remember once you need it !).
 Once unpacked you will typically find 3 files in your folder:
 <img align="left" src="/ASSETS/MAN-1/DERO_WALLET_UNPACK.png" width="320">
@@ -53,7 +54,8 @@ You have now created your wallet file ready for use, see next step how to sync y
 
 :exclamation:Your wallet file location may vary depending on your operating system or configuration, it's advised to do a system search on the wallet name so you know where your file is situated.
 
-## Syncing your wallet<a name="syncing"></a>
+<a name="syncing"></a>
+## Syncing your wallet
 
 Now that you have created your wallet, you will open it by running the dero_wallet_cli application and providing your wallet file name and password. To have your wallet show your funds, it is required to have it syncronized with the DERO blockchain.
 As shown in previous image at the bottom left, the sync status will be shown by 2 numbers separated by a /.
@@ -70,8 +72,9 @@ As shown in the above picture, the *derod* application will provide some basic i
 
 ### Syncing with a remote node
 If you prefer not to download and keep the full blockchain on your system, you can opt to connect to a so called remote node. To do so, you will start the wallet application with some additional command parameters which is something you can best do via a terminal or shell window (depending on your OS). The parameter to start your wallet application with and have it sync with a remote node is *--daemon-address=https://rwallet.dero.live*. Newer versions of the wallet allow you to do this with the parameter *--remote*.
- 
-## Using your wallet<a name="using"></a>
+
+<a name="using"></a>
+## Using your wallet
 When you run both *derod* and *dero-wallet-cli* applications, your wallet should automatically connect to the daemon and show the sync status, in a fully synced status like in below image, all numbers will match.
 
 <img align="left" src="/ASSETS/MAN-1/FULLY_SYNCED.png" width="320">
