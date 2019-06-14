@@ -26,9 +26,9 @@ Pre-compiled DERO wallet binaries are available for most common operating system
 These wallets are so called CLI (Command Line Interface) applications which are intended to be run in a terminal or shell window. 
 
 ## Creating a wallet<a name="create"></a>
-Start by downloading the appropriate binary for your operating system and uncompress it to a folder of choice but one that you will easily remember once you need it.
+Start by downloading the appropriate binary for your operating system and unpack the file to a folder of choice (but one that you will easily remember once you need it !).
 Once unpacked you will typically find 3 files in your folder:
-<img align="left" src="/ASSETS/DERO_CLI_WALLET_PACKAGE.png" width="80">
+<img align="left" src="/ASSETS/MAN-1/DERO_WALLET_UNPACK.png" width="80">
 
 
 
