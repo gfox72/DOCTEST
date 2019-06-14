@@ -30,7 +30,7 @@ These wallets are so called CLI (Command Line Interface) applications which are 
 Start by downloading the appropriate binary for your operating system and unpack the file to a folder of choice (but one that you will easily remember once you need it !).
 Once unpacked you will typically find 3 files in your folder:
 <img align="left" src="/ASSETS/MAN-1/DERO_WALLET_UNPACK.png" width="320">
-</br></br></br></br>
+</br></br></br></br></br>
 
 To create and access your wallet, you will be using the *dero-wallet-cli* file (name may vary with OS version).
 
@@ -63,7 +63,6 @@ As the DERO wallet application itself does not sync with the blockchain, there a
 If you prefer to keep and sync your wallet with a local copy of the DERO blockchain you will have to prepare for downloading a substantial amount of data which will be over 25Gb in size (at time of writing this document). **Running and connecting to your own Derod daemon is the most safe and secure way for doing transactions on Dero's Blockchain.** To download and gather all this data locally, you will use the *derod* application next to the *dero-wallet-cli* application. Once you start the *derod* application (naming may vary based on OS system), it will start to sync with the blockchain. The total time to download and sync your wallet depends on network connection and harddrive technolgy, SSD drives speed up things significantly while with traditional HDD it may take a few days to do the full sync.
 
 <img align="left" src="/ASSETS/MAN-1/DERO_DAEMON.png" width="480">
-</br></br></br></br></br></br></br></br></br></br></br>
 
 As shown in the above picture, the *derod* application will provide some basic information on it's version and file locations (daemon data directory being the one where the blockchain will be stored). The sync progress is shown at the left bottom, in our example it is showing 2592980/3519905 [2628334/3562862]. The numbers between the square brackets show the current DERO blockchain block height and the numbers in front indicate the local blockchain sync height. Until these numbers are identical, your wallet is not fully synced and may not show correct balance.
 
