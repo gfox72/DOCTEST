@@ -23,12 +23,21 @@ status: DRAFT
 ## Introduction<a name="req"></a>
 A wallet allows you to manage your DERO funds, it allows you to intiate or consult transactions, view balance and consult the security related information.  
 Pre-compiled DERO wallet binaries are available for most common operating systems (ARM, INTEL, MAC, Windows, FreeBSD, OpenBSD, Linux etc) and can be downloaded from [the Dero Github](https://github.com/deroproject/derosuite/releases). 
-These wallets are so called CLI (Command Line Interface) applications which are intended to be run in a terminal or shell window. 
+These wallets are so called CLI (Command Line Interface) applications which are intended to be run in a terminal or shell window. This manual assumes you are familiar with basic navigation and running applications on your specific OS.
 
 ## Creating a wallet<a name="create"></a>
 Start by downloading the appropriate binary for your operating system and unpack the file to a folder of choice (but one that you will easily remember once you need it !).
 Once unpacked you will typically find 3 files in your folder:
-<img align="left" src="/ASSETS/MAN-1/DERO_WALLET_UNPACK.png" width="80">
+<img align="left" src="/ASSETS/MAN-1/DERO_WALLET_UNPACK.png" width="480">
+
+To create and access your wallet, you will use the dero-wallet-cli file.
+To have your wallet sync with the DERO network, you will use the derod file (DERO Daemon).
+
+Navigate to the folder which contains your DERO wallet files and execute the dero-wallet-cli application, this should give you a terminal window showing some version info and then the DERO wallet menu.
+<img align="left" src="/ASSETS/MAN-1/DERO_WALLET_MENU.png" width="480">
+
+
+
 
 
 
