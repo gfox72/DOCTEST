@@ -42,7 +42,7 @@ As shown in the next image, select option 2 (2+enter) to create a new wallet, yo
 As you will be able to create multiple wallets, make sure the naming of your wallet is a clear and unique identifier allowing you to easily remember/retreive it in case you haven't used in for a while. In our example below we chose dero_test.db (we added the .db extension explictly). Upon entering the name, you will be prompted to provide a password to access your wallet, again make sure this is something you will remember later. As you enter keystrokes the number between brackets will show how many characters you have entered. After entering the password and confirming it, you will be asked to select your preferred language for the wallet interface, in our example we selected English by entering 0.
 
 <img align="left" src="/ASSETS/MAN-1/DERO_WALLET_CREATE.png" width="480">
-</br></br></br></br></br></br></br></br></br></br></br>
+
 
 Once you provided this information and selection of language, your wallet will be created. In case a technical issue would prevent you to use or retrieve your wallet file, you can restore it from the blockchain by using a so called SEED. A SEED is a set of 25 words which **allows to obtain full access to your wallet funds so as stated by the interface, write them down and store them in a safe place.** The SEED in the example above starts with the words *argue nylon tamper* etc.  
 
@@ -62,7 +62,8 @@ As the DERO wallet application itself does not sync with the blockchain, there a
 ### Syncing with a local copy of the DERO blockchain
 If you prefer to keep and sync your wallet with a local copy of the DERO blockchain you will have to prepare for downloading a substantial amount of data which will be over 25Gb in size (at time of writing this document). **Running and connecting to your own Derod daemon is the most safe and secure way for doing transactions on Dero's Blockchain.** To download and gather all this data locally, you will use the *derod* application next to the *dero-wallet-cli* application. Once you start the *derod* application (naming may vary based on OS system), it will start to sync with the blockchain. The total time to download and sync your wallet depends on network connection and harddrive technolgy, SSD drives speed up things significantly while with traditional HDD it may take a few days to do the full sync.
 
-<img align="left" src="/ASSETS/MAN-1/DERO_DAEMON.png" width="480">
+<img align="left" src="/ASSETS/MAN-1/DERO_DAEMON.png" width="640">
+</br></br></br></br></br></br></br></br></br></br></br>
 
 As shown in the above picture, the *derod* application will provide some basic information on it's version and file locations (daemon data directory being the one where the blockchain will be stored). The sync progress is shown at the left bottom, in our example it is showing 2592980/3519905 [2628334/3562862]. The numbers between the square brackets show the current DERO blockchain block height and the numbers in front indicate the local blockchain sync height. Until these numbers are identical, your wallet is not fully synced and may not show correct balance.
 
