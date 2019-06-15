@@ -40,8 +40,7 @@ Navigate to the folder which contains your DERO wallet files and execute the der
 <img align="left" src="/ASSETS/MAN-1/DERO_WALLET_MENU.png" width="480">
 </br></br></br></br></br></br></br></br></br></br></br></br>
 
-As shown in the next image, select option 2 (2+enter) to create a new wallet, you will be promted to provide a wallet name.
-As you will be able to create multiple wallets, make sure the naming of your wallet is a clear and unique identifier allowing you to easily remember/retreive it in case you haven't used in for a while. In our example below we chose dero_test.db (we added the .db extension explictly). Upon entering the name, you will be prompted to provide a password to access your wallet, again make sure this is something you will remember later. As you enter keystrokes the number between brackets will show how many characters you have entered. After entering the password and confirming it, you will be asked to select your preferred language for the wallet interface, in our example we selected English by entering 0.
+As shown in the next image, select option 2 (2+enter) to create a new wallet after which we are prompted to provide a wallet name. Since we are able to create multiple wallets, make sure the naming of your wallet is a clear and unique identifier allowing you to easily remember/retreive it in case you haven't used in for a while. In our example below we chose dero_test.db (we added the .db extension explictly). Upon entering the name, you will be prompted to provide a password to access your wallet, again make sure this is something you will remember later. As you enter keystrokes the number between brackets will show how many characters you have entered. After entering the password and confirming it, you will be asked to select your preferred language for the wallet interface, in our example we selected English by entering 0.
 
 <img align="left" src="/ASSETS/MAN-1/DERO_WALLET_CREATE.png" width="480">
 
