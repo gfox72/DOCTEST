@@ -21,8 +21,8 @@ status: DRAFT
 5. [Back up a wallet](#backup)
 6. [Recover a wallet](#recover)
 
-
-## Introduction<a name="req"></a>
+<a name="req"></a>
+## Introduction
 A wallet allows you to manage your DERO funds, it allows you to intiate or consult transactions, view balance and consult the security related information.  
 Pre-compiled DERO wallet binaries are available for most common operating systems (ARM, INTEL, MAC, Windows, FreeBSD, OpenBSD, Linux etc) and can be downloaded from [the Dero Github](https://github.com/deroproject/derosuite/releases). 
 These wallets are so called CLI (Command Line Interface) applications which are intended to be run in a terminal or shell window. This manual assumes you are familiar with basic navigation and running applications on your specific OS.
@@ -88,7 +88,6 @@ When accesing your wallet, there are menu options available to either display th
 
 <a name="recover"></a>
 ## Recover your wallet
-
 To restore your wallet you will need either the 25 words SEED or a 64 hex character private spend key. These could both be generated when you created or started using your wallet as explained above. Select the corresponding option and follow the instructions to recover your wallet.
 
 
