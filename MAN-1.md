@@ -19,7 +19,7 @@ status: DRAFT
 3. [Syncing your wallet](#syncing)
 4. [Using your wallet](#using)
 5. [Back up a wallet](#backup)
-6. [Restore a wallet](#restore)
+6. [Recover a wallet](#recover)
 
 
 ## Introduction<a name="req"></a>
@@ -36,7 +36,7 @@ Once unpacked you will typically find 3 files in your folder:
 
 To create and access your wallet, you will be using the *dero-wallet-cli* file (name may vary with OS version).
 
-Navigate to the folder which contains your DERO wallet files and execute the dero-wallet-cli application, this should give you a terminal window showing some version info and then the DERO wallet menu.
+Navigate to the folder which contains the extracted files and execute the dero-wallet-cli application, this should give you a terminal window showing some version info and then the DERO wallet menu.
 <img align="left" src="/ASSETS/MAN-1/DERO_WALLET_MENU.png" width="480">
 </br></br></br></br></br></br></br></br></br></br></br></br>
 
@@ -51,7 +51,7 @@ You have now created your wallet file ready for use, see next step how to sync y
 
 :exclamation: To stop using your wallet, it's advised to close the application by selecting 0 from the menu, this will allow the application to store its last state before shutting down.
 
-:exclamation:Your wallet file location may vary depending on your operating system or configuration, it's advised to do a system search on the wallet name so you know where your file is situated.
+:exclamation:Your wallet file location may vary depending on your operating system or configuration, it's advised to do a system search on the wallet name so you know where your file is situated in case you want to take a backup.
 
 <a name="syncing"></a>
 ## Syncing your wallet
@@ -80,9 +80,16 @@ When you run both *derod* and *dero-wallet-cli*, the wallet application will aut
 
 <img align="left" src="/ASSETS/MAN-1/FULLY_SYNCED.png" width="320">
 
+The menu show several options that let you manage your funds. 
 
+<a name="backup"></a>
+## Backing up your wallet
+When accesing your wallet, there are menu options available to either display the 25 word recover SEED phrase (option 2) or your private spend key (subset of the wallet keys which you can display with option 3). When you securely store these informations, you will be able to recover your wallet. Alternatively, you can also make and securely store a backup of the wallet db file itself as mentioned under the section how to create a wallet.
 
+<a name="recover"></a>
+## Recover your wallet
 
+To restore your wallet you will need either the 25 words SEED or a 64 hex character private spend key. These could both be generated when you created or started using your wallet as explained above. Select the corresponding option and follow the instructions to recover your wallet.
 
 
 
