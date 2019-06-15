@@ -46,9 +46,9 @@ As you will be able to create multiple wallets, make sure the naming of your wal
 <img align="left" src="/ASSETS/MAN-1/DERO_WALLET_CREATE.png" width="480">
 
 
-Once you provided this information and selection of language, your wallet will be created. In case a technical issue would prevent you to use or retrieve your wallet file, you can restore it from the blockchain by using a so called SEED. A SEED is a set of 25 words which **allows to obtain full access to your wallet funds so as stated by the interface, write them down and store them in a safe place.** The SEED in the example above starts with the words *argue nylon tamper* etc.  
+Once you provided this information and selection of language, your wallet will be created. In case a technical issue would prevent you to use or retrieve your wallet file, you can restore it from the blockchain by using a so called SEED. A SEED is a set of 25 words which **allows to obtain full access to your wallet funds so as stated by the interface, write them down and store them in a safe place.** The SEED in the screenshot above starts with the words *argue nylon tamper* etc.  
 
-You have now created your wallet file ready for use, see next step how to sync your wallet.
+You have now created your wallet file ready for use, see next step how to sync your wallet to the DERO blockchain.
 
 :exclamation: To stop using your wallet, it's advised to close the application by selecting 0 from the menu, this will allow the application to store its last state before shutting down.
 
@@ -68,7 +68,8 @@ If you prefer to keep and sync your wallet with a local copy of the DERO blockch
 <img align="left" src="/ASSETS/MAN-1/DERO_DAEMON.png" width="800">
 </br></br></br></br></br></br></br></br></br></br></br>
 
-As shown in the above picture, the *derod* application will provide some basic information on version and file locations (daemon data directory being the one where the blockchain will be stored). The sync progress is shown at the left bottom, in our example it is showing 2592980/3519905 [2628334/3562862]. The first two numbers (without brackets) indicate the local blockchain sync status of which the first showing the *local blockheight*. The last 2 numbers between the square brackets show the DERO blockchain with the first one being the *DERO blockchain block height*.  As long the local blockheight does not match the DERO blockchain blockheight, your wallet will not be able to fully sync and may not show you a correct balance or latest transactions. In our example it shows 2592980 local against 2628334 which means were not in sync with 35354 blocks left to sync by the daemon.
+As shown in the above picture, the *derod* application will provide some basic information on version and file locations (daemon data directory being the one where the blockchain will be stored). The sync progress is shown at the left bottom, in our example it is showing 2592980/3519905 [2628334/3562862]. The first two numbers (without brackets) indicate the local blockchain sync status of which the first showing the *local blockheight*. The last 2 numbers between the square brackets show the DERO blockchain with the first one being the *DERO blockchain block height*.  As long the local blockheight does not match the DERO blockchain blockheight, your wallet will not be able to fully sync and may not show you a correct balance or latest transactions. In our example it shows 2592980 local against 2628334 which means were not in sync with 35354 blocks left to sync by the daemon. 
+:exclamation: When stopping the derod daemon application, it's advised to close the application by entering EXIT on the promt, this will allow the application to store its last state before shutting down and avoid need for resyncing upon next run.
 
 ### Syncing with a remote node
 If you prefer not to download and keep the full blockchain on your system, you can opt to connect to a so called remote node. To do so, you will start the wallet application with some additional command parameters which is something you can best do via a terminal or shell window (depending on your OS). The parameter to start your wallet application with and have it sync with a remote node is *--daemon-address=https://rwallet.dero.live*. Newer versions of the wallet allow you to do this with the parameter *--remote*.
